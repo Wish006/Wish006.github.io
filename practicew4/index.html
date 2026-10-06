@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scene Layout Webpage</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Enforce Times New Roman for ALL text globally */
+        body, * {
+            font-family: "Times New Roman", Times, serif !important;
+        }
+        
+        /* Custom scrollbar behavior for smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-white m-0 p-0 text-black">
+    <!-- Main container divided into Left, Center, Right columns -->
+    <div class="flex flex-row min-h-screen w-full">
+        <!-- Left blank column -->
+        <div class="w-1/6 md:w-1/4 bg-white"></div>
+
+        <!-- Center column containing all content -->
+        <div class="w-4/6 md:w-2/4 bg-white relative flex flex-col">
+
+            <!-- Fixed Headline -->
+            <div id="headline-container" class="sticky top-0 z-50 bg-[#fffacd] w-full pt-4 pb-4 px-4 shadow-sm">
+                <div class="text-[25px] font-bold">Here is Banner</div>
+                <!-- Light red rectangle indicator for Scene 1 -->
+                <div id="info-box" class="absolute right-4 bottom-[-110px] bg-[#ffcccb] p-3 text-[12px] font-normal w-24 flex flex-col justify-start hidden">
+                    <span>Information</span>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <!-- Content area below headline: Left sidebar (buttons) and Right content (scenes) -->
+            <div class="flex flex-row relative mt-6">
+                <!-- Left Sidebar with four buttons (fixed position while scrolling) -->
+                <div class="w-28 flex-shrink-0 sticky top-28 self-start flex flex-col space-y-2">
+                    <button onclick="scrollToScene('scene1')" id="btn-scene1" class="w-24 py-1 text-[12px] bg-gray-300 text-black text-center font-normal rounded-none hover:bg-gray-400 transition">Scene1</button>
+                    <button onclick="scrollToScene('scene2')" id="btn-scene2" class="w-24 py-1 text-[12px] bg-gray-300 text-black text-center font-normal rounded-none hover:bg-gray-400 transition">Scene2</button>
+                    <button onclick="scrollToScene('scene3')" id="btn-scene3" class="w-24 py-1 text-[12px] bg-gray-300 text-black text-center font-normal rounded-none hover:bg-gray-400 transition">Scene3</button>
+                    <button onclick="scrollToScene('scene4')" id="btn-scene4" class="w-24 py-1 text-[12px] bg-gray-300 text-black text-center font-normal rounded-none hover:bg-gray-400 transition">Scene4</button>
+                </div>
+
+                <!-- Right Content Area containing Scene sections -->
+                <div class="flex-grow pl-6 flex flex-col">
+                    
+                    <!-- Scene 1 Section -->
+                    <div id="scene1" class="scene-section min-h-[80vh] pt-4 flex flex-col">
+                        <div class="flex items-start">
+                            <span class="text-[20px] font-bold leading-none">Scene1</span>
+                        </div>
+                        <div class="flex-grow"></div>
+                    </div>
+
+                    <!-- Scene 2 Section -->
+                    <div id="scene2" class="scene-section min-h-[80vh] pt-4 flex flex-col">
+                        <div class="flex items-start">
+                            <span class="text-[20px] font-bold leading-none">Scene2</span>
+                        </div>
+                        <div class="flex-grow"></div>
+                    </div>
+
+                    <!-- Scene 3 Section -->
+                    <div id="scene3" class="scene-section min-h-[80vh] pt-4 flex flex-col">
+                        <div class="flex items-start">
+                            <span class="text-[20px] font-bold leading-none">Scene3</span>
+                        </div>
+                        <div class="flex-grow"></div>
+                    </div>
+
+                    <!-- Scene 4 Section -->
+                    <div id="scene4" class="scene-section min-h-[80vh] pt-4 flex flex-col">
+                        <div class="flex items-start">
+                            <span class="text-[20px] font-bold leading-none">Scene4</span>
+                        </div>
+                        <div class="flex-grow"></div>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="w-full bg-gray-300 p-4 text-center mt-12 mb-8">
+                        Here is footer
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Right blank column -->
+        <div class="w-1/6 md:w-1/4 bg-white"></div>
+    </div>
+
+    <script>
+        // Function to smoothly scroll to corresponding scene section
+        function scrollToScene(sceneId) {
+            const element = document.getElementById(sceneId);
+            const headlineContainer = document.getElementById('headline-container');
+            const offset = headlineContainer.offsetHeight + 10;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+
+        // Intersection Observer to detect active scene and toggle Information box
+        document.addEventListener("DOMContentLoaded", function() {
+            const scenes = document.querySelectorAll('.scene-section');
+            const infoBox = document.getElementById('info-box');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-100px 0px -50% 0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        
+                        // Control Information box visibility (only for Scene1)
+                        if (id === 'scene1') {
+                            infoBox.classList.remove('hidden');
+                        } else {
+                            infoBox.classList.add('hidden');
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            scenes.forEach(scene => {
+                observer.observe(scene);
+            });
+        });
+    </script>
+</body>
+</html>
+
