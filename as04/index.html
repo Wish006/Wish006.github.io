@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <header class="site-header">
+    <h1 class="glow-headline">小星星的晚安曲</h1>
+</header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小星星的晚安曲</title>
+    <style>
+        /* 重置預設邊距 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 讓整個網頁支援上下滾動吸附 (Scroll Snap) */
+        html, body {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+        }
+
+        /* 固定在最上方的標題列 */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            z-index: 1000; /* 確保標題浮在圖片上面 */
+            background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%); /* 漸層背景確保文字清晰 */
+            pointer-events: none; /* 避免遮擋到下方滑動操作 */
+        }
+
+        /* 大標題文字樣式 */
+        .site-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* 每一個圖片區塊佔滿整個螢幕視窗 */
+        .section {
+            width: 100vw;
+            height: 100vh;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 20px 20px 20px; /* 頂部預留空間給標題 */
+            text-align: center;
+        }
+
+        /* 圖片樣式 */
+        .section img {
+            max-width: 80%;
+            max-height: 60vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        /* 文字樣式 */
+        .section p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            line-height: 1.6;
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 第一張圖片與文字 -->
+    <div class="section">
+        <img src="images/星星1.jpg" alt="星星1">
+        <p>在很久很久以前，天空的角落裡住著一顆叫「小星」的小星星。
+
+小星是夜空裡最小、最不亮的一顆星。每當夜幕降臨，其他的星星夥伴都會發出耀眼奪目的光芒。只有小星，無論他怎麼用力微調自己的光，都只能發出像螢火蟲那樣微弱的柔光。
+
+小星常常覺得有點沮喪：「如果我能再亮一點點就好了，這樣大家在地上抬頭時，就能看見我了。」</p>
+    </div>
+
+    <!-- 第二張圖片與文字 -->
+    <div class="section">
+        <img src="images/星星2.jpg" alt="星星2">
+        <p>一個涼爽的秋夜，天空忽然刮起了一陣輕柔的晚風。晚風吹散了一朵躲在月亮後面的小烏雲，小烏雲迷路了，急得在空中轉圈圈，不知道該怎麼回到雲朵媽媽的身邊。
+
+夜空很大、很黑，小烏雲有點害怕，小聲地哭泣起來。</p>
+    </div>
+
+    <!-- 第三張圖片與文字 -->
+    <div class="section">
+        <img src="images/星星3.jpg" alt="星星3">
+        <p>小星聽到了哭聲，輕輕地滾到小烏雲身邊，溫柔地說：「小烏雲，別害怕，我來幫你照亮路吧。」
+
+小星知道自己的光不夠亮，沒有辦法像大星星那樣一下子照亮整個天空。於是他慢慢地飛在小烏雲的前面，把自己的微光集中起來，像一盞溫馨的小夜燈一樣，為小烏雲照亮腳下一小塊路。</p>
+    </div>
+
+    <!-- 第四張圖片與文字 -->
+    <div class="section">
+        <img src="images/星星4.jpg" alt="星星4">
+        <p>路過大熊座、穿過銀河小溪，小星一直耐心地陪著小烏雲。雖然他的光微弱，但正因為光線這樣柔和、不刺眼，小烏雲不再害怕，反而覺得好安心、好溫暖。</p>
+    </div>
+
+    <!-- 第五張圖片與文字 -->
+    <div class="section">
+        <img src="images/星星5.jpg" alt="星星5">
+        <p>沒過多久，小星就把小烏雲安全地送回了雲朵媽媽身邊。
+
+小烏雲緊緊抱住雲朵媽媽，甜甜地對小星說：「謝謝你，小星！你的光雖然不是最亮的，但卻是夜空裡最溫柔的，讓我一點都不害怕黑夜。」</p>
+    </div>
+
+    <!-- 第六張圖片與文字 -->
+    <div class="section">
+        <img src="images/星星6.jpg" alt="星星6">
+        <p>聽了小烏雲的話，小星心裡感到暖洋洋的。
+
+他終於明白，自己不需要成為最耀眼的那顆星。這份微小的光，正好能給需要陪伴的人帶來安心感。
+
+夜漸漸深了，天空飄過了幾朵軟綿綿的雲，像被子一樣輕輕蓋在夜空上。
+
+小星打了一個小小的哈欠，伸了個懶腰。
+小星閉上了眼睛，在漫天微風的撫摸下，漸漸沉睡過去，做了一個很香很甜的夢。</p>
+    </div>
+
+</body>
+</html>
