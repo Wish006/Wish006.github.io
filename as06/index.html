@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全頁滑動與自由捲動示範網頁</title>
+    <!-- 使用 Tailwind CSS 進行基礎與佈局設定 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 設定微軟正黑體字型與基礎重置 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+            height: 100%;
+            overflow: hidden; /* 防止出現雙滾動條 */
+        }
+
+        /* 主滾動容器：移除原生 scroll-behavior 與 scroll-snap，改由 JS 精準控制勻速滑動 */
+        .scroll-container {
+            height: 100vh;
+            width: 100%;
+            overflow-y: auto;
+            /* 隱藏滾動條但保持可滾動功能 */
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE/Edge */
+        }
+        
+        .scroll-container::-webkit-scrollbar {
+            display: none; /* Chrome/Safari/Opera */
+        }
+
+        /* 各區塊基礎設定 */
+        .page-section {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .vh-100 {
+            height: 100vh;
+        }
+
+        /* 第二頁總高度改為 300vh */
+        .section-2-container {
+            height: 300vh;
+            width: 100%;
+        }
+
+        /* 第三頁總高度 200vh */
+        .section-3-container {
+            height: 200vh;
+            width: 100%;
+        }
+
+        /* 第三頁下半部：墨綠色 */
+        .bg-dark-green {
+            background-color: #004d40;
+        }
+
+        /* 字型大小樣式規範 */
+        .text-main {
+            font-size: 20px;
+            color: #ffffff;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+
+        .text-sub {
+            font-size: 16px;
+            color: #ffffff;
+            line-height: 1.6;
+            margin-top: 8px;
+            white-space: pre-line;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 頁面滾動主容器 -->
+    <div class="scroll-container" id="scrollContainer">
+
+        <!-- 第一頁：紅色滿版 (100vh) -->
+        <section class="page-section vh-100 bg-red-600">
+            <div class="text-main">第一頁</div>
+        </section>
+
+        <!-- 第二頁：藍色區域改為 300vh 自由平滑捲動 -->
+        <section class="section-2-container page-section bg-blue-600">
+            <div class="text-main">第二頁</div>
+        </section>
+
+        <!-- 第三頁：總高 200vh，包含上半部綠色與下半部墨綠色 -->
+        <section class="section-3-container" id="section3">
+            <!-- 第三頁：上半部 (100vh 綠色) -->
+            <div class="page-section vh-100 bg-green-600">
+                <div class="text-main">第三頁：上半部</div>
+                <div class="text-sub">這一頁高200vh，&#10;往下正常捲動</div>
+            </div>
+
+            <!-- 第三頁：下半部 (100vh 墨綠色) -->
+            <div class="page-section vh-100 bg-dark-green">
+                <div class="text-main">第三頁：下半部</div>
+                <div class="text-sub">捲到最後，再往下捲，滑入第四頁</div>
+            </div>
+        </section>
+
+        <!-- 第四頁：紫色滿版 (100vh) -->
+        <section class="page-section vh-100 bg-purple-600">
+            <div class="text-main">第四頁</div>
+        </section>
+
+    </div>
+
+    <script>
+        const container = document.getElementById('scrollContainer');
+        let isAnimating = false;
+        
+        // 勻速（Linear）過渡動畫函數
+        function scrollToTargetLinear(targetY, speed = 1.2) {
+            if (isAnimating) return;
+            isAnimating = true;
+
+            const startY = container.scrollTop;
+            const distance = targetY - startY;
+            if (Math.abs(distance) < 1) {
+                isAnimating = false;
+                return;
+            }
+
+            // 計算動畫時長 (根據距離調整，保持恆定勻速)
+            const duration = Math.abs(distance) / speed;
+            let startTime = null;
+
+            function animate(currentTime) {
+                if (!startTime) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const progress = Math.min(timeElapsed / duration, 1);
+
+                // 線性（Linear）計算當前位置：完全勻速
+                container.scrollTop = startY + distance * progress;
+
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                } else {
+                    container.scrollTop = targetY;
+                    isAnimating = false;
+                }
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        // 滾輪事件監聽器
+        container.addEventListener('wheel', (e) => {
+            if (isAnimating) {
+                e.preventDefault();
+                return;
+            }
+
+            const viewHeight = window.innerHeight;
+            const currentScroll = container.scrollTop;
+            const direction = e.deltaY > 0 ? 1 : -1;
+
+            // 定義各重要頁面的觸發位置點 (第二頁高 300vh)
+            const posPage1 = 0;
+            const posPage2Top = viewHeight;
+            const posPage2Bottom = viewHeight * 4; // 100vh + 300vh = 400vh
+            const posPage3Top = viewHeight * 4;
+            const posPage3Bottom = viewHeight * 5; // 400vh + 100vh = 500vh
+            const posPage4 = viewHeight * 6;       // 500vh + 100vh = 600vh
+
+            const eps = 10; // 邊界誤差容許值
+
+            // 1. 第一頁區段 (0 ~ 100vh)：滾動往下滑入第二頁頂部
+            if (currentScroll < posPage2Top - eps) {
+                e.preventDefault();
+                const target = direction > 0 ? posPage2Top : posPage1;
+                scrollToTargetLinear(target);
+            }
+            // 2. 第二頁區段 (100vh ~ 400vh)：300vh 自由平滑捲動，僅在頂部往上或底部往下時觸發滑動
+            else if (currentScroll >= posPage2Top - eps && currentScroll < posPage2Bottom - eps) {
+                // 在第二頁頂部向上滾動 -> 滑回第一頁
+                if (direction < 0 && currentScroll <= posPage2Top + eps) {
+                    e.preventDefault();
+                    scrollToTargetLinear(posPage1);
+                }
+                // 在第二頁底部向下滾動 -> 滑入第三頁頂部
+                else if (direction > 0 && currentScroll >= posPage2Bottom - eps) {
+                    e.preventDefault();
+                    scrollToTargetLinear(posPage3Top);
+                }
+                // 第二頁內部：允許一般正常自由平滑捲動
+            }
+            // 3. 第三頁上半部與中間自由滾動區段 (400vh ~ 500vh)
+            else if (currentScroll >= posPage3Top - eps && currentScroll < posPage3Bottom - eps) {
+                // 在第三頁頂部且繼續向上滾動 -> 切換至第二頁底部
+                if (direction < 0 && currentScroll <= posPage3Top + eps) {
+                    e.preventDefault();
+                    scrollToTargetLinear(posPage2Bottom);
+                }
+            }
+            // 4. 第三頁下半部區段 (500vh 處)
+            else if (currentScroll >= posPage3Bottom - eps && currentScroll < posPage4 - eps) {
+                // 當滑至第三頁下半部，向下滾動直接觸發滑入第四頁 (600vh)
+                if (direction > 0) {
+                    e.preventDefault();
+                    scrollToTargetLinear(posPage4);
+                }
+                // 向上滾動時，若在下半部頂端向上滾則銜接回上半部
+                else if (direction < 0 && currentScroll <= posPage3Bottom + eps) {
+                    e.preventDefault();
+                    scrollToTargetLinear(posPage3Top);
+                }
+            }
+            // 5. 第四頁區段 (600vh 滿版)
+            else if (currentScroll >= posPage4 - eps) {
+                if (direction < 0) {
+                    e.preventDefault();
+                    scrollToTargetLinear(posPage3Bottom);
+                }
+            }
+        }, { passive: false });
+    </script>
+</body>
+</html>
