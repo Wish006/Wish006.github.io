@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>四頁單頁滾動網頁</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: auto;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+    }
+
+    section {
+      width: 100%;
+      color: white;
+      font-size: 20px;
+    }
+
+    /* 文字置中 */
+    .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    /* ======================
+       第一頁：紅色 100vh
+    ====================== */
+    #page1 {
+      height: 100vh;
+      background-color: #e53935;
+    }
+
+    /* ======================
+       第二頁：藍色 300vh
+    ====================== */
+    #page2 {
+      height: 300vh;
+      background-color: #1565c0;
+    }
+
+    /* ======================
+       第三頁：總高 200vh
+    ====================== */
+    #page3 {
+      height: 200vh;
+    }
+
+    /* 第三頁上下區塊 */
+    .half {
+      height: 100vh;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+      padding: 24px;
+      gap: 15px;
+    }
+
+    /* 第三頁上半部 */
+    .upper {
+      background-color: #2e9c51;
+    }
+
+    /* 第三頁下半部 */
+    .lower {
+      background-color: #075b3c;
+    }
+
+    .half p {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.7;
+    }
+
+    /* ======================
+       第四頁：紫色 100vh
+    ====================== */
+    #page4 {
+      height: 100vh;
+      background-color: #7b1fa2;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- 第一頁 -->
+  <section id="page1" class="center">
+    第一頁
+  </section>
+
+  <!-- 第二頁 -->
+  <section id="page2" class="center">
+    第二頁
+  </section>
+
+  <!-- 第三頁 -->
+  <section id="page3">
+
+    <div class="half upper">
+      <div>第三頁：上半部</div>
+      <p>這是第三頁的上半部，可以自由上下捲動。</p>
+    </div>
+
+    <div class="half lower">
+      <div>第三頁：下半部</div>
+      <p>繼續往下捲動，可以平滑銜接第四頁。</p>
+    </div>
+
+  </section>
+
+  <!-- 第四頁 -->
+  <section id="page4" class="center">
+    第四頁
+  </section>
+
+
+  <script>
+
+    // ============================
+    // 取得頁面元素
+    // ============================
+
+    const page2 = document.getElementById("page2");
+    const page3 = document.getElementById("page3");
+    const page4 = document.getElementById("page4");
+
+    // 是否正在執行動畫
+    let animating = false;
+
+    // 允許的像素誤差
+    const EPS = 2;
+
+    // 動畫時間（毫秒）
+    const DURATION = 650;
+
+
+    // ============================
+    // 取得元素在文件中的位置
+    // ============================
+
+    function topOf(element) {
+
+      return element.getBoundingClientRect().top
+             + window.scrollY;
+
+    }
+
+
+    // ============================
+    // Linear 等速平滑滾動
+    // ============================
+
+    function linearScrollTo(destination) {
+
+      if (animating) return;
+
+      const start = window.scrollY;
+
+      const maxScroll =
+        document.documentElement.scrollHeight
+        - window.innerHeight;
+
+      const end = Math.max(
+        0,
+        Math.min(destination, maxScroll)
+      );
+
+      const distance = end - start;
+
+      if (Math.abs(distance) < EPS) return;
+
+      animating = true;
+
+      let startTime = null;
+
+      function frame(timestamp) {
+
+        if (startTime === null) {
+          startTime = timestamp;
+        }
+
+        const elapsed = timestamp - startTime;
+
+        const progress = Math.min(
+          elapsed / DURATION,
+          1
+        );
+
+        // Linear 等速移動
+        window.scrollTo(
+          0,
+          start + distance * progress
+        );
+
+        if (progress < 1) {
+
+          requestAnimationFrame(frame);
+
+        } else {
+
+          window.scrollTo(0, end);
+          animating = false;
+
+        }
+
+      }
+
+      requestAnimationFrame(frame);
+
+    }
+
+
+    // ============================
+    // 滑鼠滾輪控制
+    // ============================
+
+    window.addEventListener("wheel", function(event) {
+
+      if (event.ctrlKey || event.deltaY === 0) {
+        return;
+      }
+
+      // 動畫執行時，防止重複觸發
+      if (animating) {
+        event.preventDefault();
+        return;
+      }
+
+      const y = window.scrollY;
+
+      const vh = window.innerHeight;
+
+      const p2 = topOf(page2);
+      const p3 = topOf(page3);
+      const p4 = topOf(page4);
+
+      const down = event.deltaY > 0;
+
+      let target = null;
+
+
+      // ============================
+      // 第一頁 → 第二頁
+      // ============================
+
+      if (y < p2 - EPS) {
+
+        if (down) {
+
+          target = p2;
+
+        } else {
+
+          event.preventDefault();
+          return;
+
+        }
+
+      }
+
+
+      // ============================
+      // 第四頁 → 第三頁
+      // ============================
+
+      else if (y >= p4 - EPS) {
+
+        if (!down) {
+
+          target = p4 - vh;
+
+        } else {
+
+          event.preventDefault();
+          return;
+
+        }
+
+      }
+
+
+      // ============================
+      // 第二頁、第三頁
+      // 自由捲動區域
+      // ============================
+
+      else if (y >= p2 - EPS && y < p4 - EPS) {
+
+        // 第二頁最頂端，往上返回第一頁
+        if (!down && y <= p2 + EPS) {
+
+          target = 0;
+
+        }
+
+        // 第三頁最底端，往下進入第四頁
+        else if (
+          down &&
+          y >= p4 - vh - EPS
+        ) {
+
+          target = p4;
+
+        }
+
+        // 其他情況不設定 target
+        // 讓瀏覽器依照滑鼠滾輪自由捲動
+        //
+        // 包含：
+        // 第二頁內部
+        // 第二頁 ↔ 第三頁
+        // 第三頁上半 ↔ 下半
+
+      }
+
+
+      // ============================
+      // 執行需要自動切換的動畫
+      // ============================
+
+      if (target !== null) {
+
+        event.preventDefault();
+
+        linearScrollTo(target);
+
+      }
+
+    }, { passive: false });
+
+  </script>
+
+</body>
+</html>
