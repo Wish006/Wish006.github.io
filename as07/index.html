@@ -1,0 +1,1022 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>同一座台北，兩種答案｜台北市長辯論</title>
+<style>
+*{box-sizing:border-box}html{color-scheme:dark}body{margin:0;background:#000;color:#fff6e7;font:16px/1.65 system-ui,"Microsoft JhengHei",sans-serif}button{font:inherit;cursor:pointer}a{color:inherit;text-underline-offset:.25em}button:focus-visible,a:focus-visible{outline:3px solid #ffc978;outline-offset:5px}[hidden]{display:none!important}
+.intro{min-height:84svh;display:grid;place-items:center;text-align:center;padding:48px 20px;background:radial-gradient(ellipse at 50% 100%,#322e46,transparent 70%),#111624}.intro p{margin:0;color:#e8bd83;letter-spacing:.14em;font-size:.89rem}.intro h1{font-family:"Noto Serif TC","PMingLiU",serif;font-size:clamp(2.65rem,8.2vw,7rem);margin:12px 0 24px;line-height:1.12}.intro a{display:inline-block;border:1px solid #e8bd83;border-radius:100px;padding:9px 20px;text-decoration:none}.intro a:hover{background:#e8bd83;color:#151b2a}
+.sequence{position:relative}.scene{position:sticky;top:min(0px,calc(100svh - var(--scene-height,100svh)));min-height:100svh;isolation:isolate;display:flex;flex-direction:column;align-items:center;padding:0 14px 24px;background:#000}
+.question{position:sticky;z-index:3;top:0;flex-shrink:0;width:min(790px,100%);transform:translateY(var(--lift,60svh));padding:13px 22px 16px;background:#fff1d8;color:#242337;border-radius:4px 4px 16px 16px;box-shadow:0 12px 35px #0005;text-align:center;pointer-events:none}.question p{margin:0;color:#795332;font-size:.8rem;font-weight:800;letter-spacing:.14em}.question h2{margin:2px 0 0;font-size:clamp(1.24rem,3.6vw,2.15rem);line-height:1.32}
+.speakers{margin-top:clamp(34px,9svh,88px);opacity:var(--reveal,.25);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:min(910px,100%);gap:clamp(14px,6vw,78px)}
+.speaker{--accent:#6099df;position:relative;isolation:isolate;border:0;color:inherit;background:none;display:grid;justify-items:center;gap:0;padding:0;min-width:0}.speaker.green{--accent:#63bd9c}.speaker::before{content:"";position:absolute;inset:0 4% 0;z-index:-1;opacity:0;background:radial-gradient(ellipse,color-mix(in srgb,var(--accent),transparent 52%),transparent 70%);transition:opacity .25s}.speaker:hover::before,.speaker[aria-pressed=true]::before{opacity:1}
+.character{display:block;position:relative;width:126px;height:124px;transform-origin:bottom center}.body{position:absolute;bottom:-3px;left:24px;width:78px;height:55px;border-radius:31px 31px 8px 8px;background:#263b5a;border:3px solid #161a2a}.body::before{content:"";position:absolute;left:24px;top:2px;border:14px solid transparent;border-top:22px solid #fffaf0}.tie{position:absolute;left:35px;top:6px;width:8px;height:29px;clip-path:polygon(50% 0,100% 22%,68% 37%,100% 83%,50% 100%,0 83%,32% 37%,0 22%);background:var(--accent)}.green .body{background:#627080}
+.head{position:absolute;left:23px;top:16px;width:80px;height:75px;border-radius:37% 40% 45% 45%;border:3px solid #201c29;background:#f4c197;box-shadow:inset -7px -3px #dc9d77}.head::before,.head::after{content:"";position:absolute;top:33px;width:11px;height:16px;background:#e5aa83;border:2px solid #201c29;border-radius:50%;z-index:-1}.head::before{left:-9px}.head::after{right:-9px}.hair{position:absolute;top:6px;left:21px;width:85px;height:42px;background:#222331;border-radius:58% 58% 16% 20%;clip-path:polygon(0 0,100% 0,100% 100%,90% 94%,83% 41%,47% 58%,25% 60%,12% 100%,0 88%);transform:rotate(-5deg)}.green .hair{transform:rotate(4deg);clip-path:polygon(0 0,100% 0,100% 91%,87% 96%,79% 48%,54% 59%,35% 37%,14% 65%,7% 100%,0 89%)}
+.eyes{position:absolute;top:30px;left:15px;width:42px;height:12px;border-radius:8px;background:radial-gradient(circle at 5px 6px,#252333 0 3px,transparent 3.5px),radial-gradient(circle at 37px 6px,#252333 0 3px,transparent 3.5px)}.green .eyes::before,.green .eyes::after{content:"";position:absolute;width:18px;height:14px;top:-2px;border:2px solid #252333;border-radius:4px}.green .eyes::before{left:-5px}.green .eyes::after{right:-5px}.green .eyes{box-shadow:inset 0 1px transparent;background-color:transparent}.mouth{position:absolute;width:18px;height:7px;top:51px;left:27px;border-bottom:2px solid #8d4f48;border-radius:50%}
+.podium{position:relative;display:block;width:min(178px,94%);background:linear-gradient(120deg,#273149,#171d2f);border-top:4px solid var(--accent);border-radius:5px 5px 12px 12px;padding:8px 5px;color:#fff7e9;font-size:clamp(.97rem,3.6vw,1.24rem);font-weight:800;box-shadow:0 10px 15px #0003}.podium::before{content:"";position:absolute;width:18px;height:22px;top:-23px;right:15%;border-right:3px solid #9ba7b4;border-top:4px solid #9ba7b4;border-radius:3px;transform:skew(15deg)}
+.controls{margin:14px 0 0;text-align:center}.controls p{font-size:.85rem;color:#e4d8c6;margin:0 0 8px}.controls button{border:1px solid #afabc2;border-radius:100px;background:#20273a;color:#fff6e7;padding:5px 15px}.controls button[aria-pressed=true]{background:#fff1d8;color:#232338;border-color:#fff1d8}
+.answers{position:relative;display:grid;width:min(910px,100%);grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}.answers.single article:not([hidden]){grid-column:1/-1;width:min(100%,610px);justify-self:center}.reply{background:#1d2940;border:1px solid #699acf;border-radius:15px;padding:12px 15px;min-width:0}.reply.green{background:#1a332f;border-color:#65ab90}.reply h3{margin:0 0 3px;font-size:.96rem;color:#c1deff}.reply.green h3{color:#b7f3dc}.metric{font-size:clamp(1.22rem,3vw,1.55rem);font-weight:850;margin:0}.summary{margin:3px 0 6px}.reply a{font-size:.87rem}
+.reveal-space{height:clamp(72px,23svh,180px);pointer-events:none}.end{position:relative;background:#000;border-top:1px solid #ffffff29;padding:24px max(18px,calc((100vw - 910px)/2));font-size:.9rem;color:#ddd8d2}.end p{margin:0 0 7px}
+@media(max-width:620px){.speakers{margin-top:40px}.character{transform:scale(.82);margin-top:-15px}.answers{grid-template-columns:1fr}.reply{padding:10px 12px}.summary{font-size:.93rem}.question{padding-inline:10px}}
+@media(prefers-reduced-motion:reduce){.speaker::before{transition:none}.scene{position:relative}.reveal-space{display:none}}
+
+.visual{height:88px;display:flex;align-items:center;gap:14px;margin:7px 0 9px;padding:8px 12px;border-radius:10px;background:#111a2c;color:#c5e1ff}.green .visual{background:#112722;color:#b7f3dc}.visual strong{font-size:2.55rem;line-height:1;white-space:nowrap}.visual span{font-weight:750;line-height:1.3}.bars{width:72px;height:48px;display:flex;align-items:end;gap:6px}.bars i{background:#86baff;width:30px;height:100%;border-radius:3px 3px 0 0}.bars i+i{height:48%;background:#5095df}.rank{display:grid;place-items:center;width:65px;height:58px;border:2px solid #78caaa;border-radius:50%;font-size:1.4rem;font-weight:800}.metric-note{grid-column:1/-1;margin:0;padding:6px 10px;text-align:center;color:#f6deba;font-size:.88rem}.summary a{white-space:nowrap}
+.intro{min-height:100vh;min-height:100svh;background:#000}.report{padding:clamp(34px,7vw,88px) 18px;background:#000;color:#fff}.report-inner{max-width:900px;margin:auto}.report h2{font-family:"PMingLiU",serif;font-size:clamp(2rem,5.2vw,3.45rem);line-height:1.18;margin:8px 0 18px}.report p{margin:0 0 14px}.eyebrow{color:#784924;font-weight:800;font-size:.88rem;letter-spacing:.11em}.lede{font-size:clamp(1.02rem,2.5vw,1.28rem);max-width:42em}.scene-link{display:inline-block;font-weight:750}.skip{display:inline-block;margin:10px 8px 0 0;color:#f3ddb9;font-size:.9rem}.lens-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:20px 0}.lens{padding:16px;background:#eaf1fb;border-left:4px solid #285787;border-radius:7px}.lens+.lens{background:#e8f2eb;border-color:#23654f}.lens strong{display:block;font-size:1.45rem}.lens p{margin:3px 0 0}.evidence{margin:24px 0 0;padding:16px 18px;background:#fffaf0;border:1px solid #ddd0b9;border-radius:9px}.evidence h3{margin:0 0 8px}.evidence dl{margin:0 0 12px}.evidence dt{font-weight:750}.evidence dd{margin:0 0 7px}.chart{display:grid;grid-template-columns:6em minmax(0,1fr);gap:5px 8px;margin:8px 0 12px;align-items:center;font-size:.87rem}.chart b{display:block;width:var(--size);background:#335d87;color:#fff;padding:2px 6px;border-radius:3px;min-width:max-content}.chart b:last-child{background:#23654f}.report a{color:#65ddff}.end details{margin-top:12px}.end summary{cursor:pointer;font-weight:750}
+@media(max-width:520px){.lens-grid{grid-template-columns:1fr}}
+
+#commute{--card-lift:0px;display:flex;align-items:center;min-height:100svh;background:#000;color:#fff}
+#commute .report-inner{width:min(100%,610px);padding:clamp(16px,3.5vw,30px);border:1px solid #666b79;background:#15161b;border-radius:12px;transform:translateY(var(--card-lift,0px))}
+#commute h2{font-size:clamp(1.35rem,3.6vw,2.1rem);margin:6px 0 12px}
+#commute .lede{font-size:clamp(.94rem,2vw,1.03rem)}
+#commute .scene-link{font-size:.9rem}
+#commute .eyebrow,#commute a{color:#ffdb71}
+#evidence,#follow-up{overflow:clip}
+.article-section .report-inner{transform:translateY(var(--card-lift,0px))}
+.article-section h2{font-size:clamp(1.25rem,2.5vw,1.65rem)}
+.article-section p,.article-section .lede{font-size:.95rem}
+.article-section .eyebrow{font-size:.76rem}
+#evidence .lens strong,#evidence .evidence h3{font-size:1rem}
+#evidence .lens p{font-size:.9rem}
+#evidence .chart{font-size:.82rem}
+#follow-up{display:grid;align-items:center;min-height:75svh}
+#evidence .eyebrow{color:#ffdb71}
+#evidence .lens{background:#15161b;border-color:#65ddff}
+#evidence .lens + .lens{border-color:#baf76b}
+#evidence .lens strong,#evidence a{color:#65ddff}
+#evidence .lens + .lens strong,#evidence .lens + .lens a{color:#baf76b}
+#evidence .evidence{background:#15161b;border-color:#666b79}
+#evidence .chart b{
+  --bar-color:#65ddff;
+  color:#000;
+  background:linear-gradient(var(--bar-color),var(--bar-color)) left center / 100% 100% no-repeat;
+  clip-path:inset(0 round 3px);
+}
+#evidence .chart b:last-child{--bar-color:#baf76b}
+#evidence .chart.is-visible b{animation:grow-evidence-bar 950ms ease-out both}
+@keyframes grow-evidence-bar{
+  from{clip-path:inset(0 100% 0 0 round 3px)}
+  to{clip-path:inset(0 round 3px)}
+}
+@media(prefers-reduced-motion:reduce){#evidence .chart.is-visible b{animation:none}}
+
+.categories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-width:540px;margin:auto}
+.categories a,.categories button{display:grid;place-content:center;min-height:52px;padding:7px 12px;border:1px solid #e8bd83;border-radius:12px;color:#fff6e7;background:transparent;line-height:1.35;font-weight:750}
+.categories button:disabled{border-color:#5b5b62;color:#bcb9c1;cursor:default}
+.categories small{font-size:.68rem;font-weight:400}
+.topic-analysis .report-inner{max-width:680px}
+.scene .visual strong.keyword{font-size:clamp(1rem,3.4vw,1.65rem);white-space:normal}
+@media(max-width:460px){.categories{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.chapter-index .report-inner,.topic-divider{max-width:680px}
+.chapter-index h2{font-size:clamp(1.65rem,4vw,2.4rem)}
+.topic-list{margin:0;padding-left:2rem}
+.topic-list li{padding:9px 4px;border-bottom:1px solid #36353a}
+.topic-list li::marker{color:#ffdb71;font-weight:700}
+.chapter-index .topic-list a{display:block;padding:5px 3px;color:#fff6e7}
+.topic-divider{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:20px auto 0;width:calc(100% - 36px);border-top:1px solid #b89a62;padding:19px 0;color:#fff6e7}
+.topic-divider a[href$="-index"]{font-size:.85rem;color:#ffdb71;white-space:nowrap}
+
+.topic-check{overflow:clip}
+.topic-check .eyebrow{color:#ffdb71}
+.topic-check .lens{background:#15161b;border-color:#65ddff}
+.topic-check .lens+.lens{border-color:#baf76b}
+.topic-check .lens h3{margin:0 0 5px;font-size:1rem;color:#65ddff}
+.topic-check .lens+.lens h3{color:#baf76b}
+.topic-check .lens p+p{margin-top:8px}
+.topic-check a{color:#65ddff}
+
+.intro > div{min-width:0;max-width:100%}
+.topic-transition{justify-content:flex-end}
+.podium small{display:block;margin-top:3px;font-size:.72rem;font-weight:600;color:#fff6e7}
+
+.direct-stage .scene{position:relative;top:auto;min-height:0;padding-bottom:48px}
+.direct-stage .question{transform:translateY(var(--lift,0px))}
+.direct-stage .speakers{opacity:1;margin-top:clamp(18px,4svh,40px)}
+.stage-lead{width:min(790px,100%);margin:16px 0 0;text-align:center;color:#e4d8c6;line-height:1.55;font-size:.98rem}
+
+.public-voices .eyebrow{color:#ffdb71}
+.public-voices a{overflow-wrap:anywhere}
+.topic-check .lens:only-child{grid-column:1/-1}
+.chapter-index{min-height:100vh;min-height:100dvh;display:grid;align-items:center}
+.chapter-index .report-inner{width:100%}
+
+:root{--ink:#f6f1e8;--muted:#bdb8ad;--gold:#f5c96c;--divider:#34312c}
+body{background:#101010;color:var(--ink)}
+.reading-nav{position:sticky;z-index:20;top:0;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:0 max(18px,calc((100% - 1040px)/2));height:48px;background:#101010;border-bottom:1px solid var(--divider);font-size:.85rem}
+.reading-nav a{text-decoration:none}.reading-nav a:last-child{color:var(--gold)}
+:where(section,div,h2)[id]{scroll-margin-top:48px}
+.intro{min-height:calc(100svh - 48px);text-align:left;padding:clamp(32px,6vw,92px) 20px;background:radial-gradient(ellipse at 86% 15%,#292118,#101010 55%)}
+.intro>div{width:min(100%,1000px)}
+.intro h1{font-size:clamp(2.8rem,8vw,6.2rem);line-height:1.02;margin:8px 0 18px;letter-spacing:.01em}
+.feature{max-width:650px;padding:18px 20px;border:1px solid #715b35;border-left:4px solid var(--gold);background:#201b14;margin:0 0 26px}
+.feature h2{margin:5px 0;font-size:clamp(1.45rem,4vw,2.2rem);line-height:1.2}
+.intro .feature p:not(.eyebrow){color:var(--muted);font-size:.94rem;letter-spacing:normal;margin:0 0 9px}
+.feature>a{display:inline-flex;color:var(--gold);font-size:.9rem;font-weight:700}
+.chapter-heading{margin:0 0 10px;font-size:1.15rem}.chapter-heading span{margin-left:8px;font-size:.78rem;color:var(--muted);font-weight:400}
+.categories{max-width:650px;margin:0}.categories a{justify-content:start;min-height:43px;background:#191814;border-color:#615137}
+.report,.direct-stage .scene,.end{background:#101010}
+.chapter-index{min-height:calc(100dvh - 48px);border-bottom:1px solid var(--divider)}
+.direct-stage .scene{padding:0 18px 28px}
+.direct-stage .question{top:48px;padding:14px 18px;color:var(--ink);background:#201d18;border-radius:0;border-bottom:2px solid var(--gold);box-shadow:none;text-align:left;width:min(910px,100%);transform:none}
+.direct-stage .question p{color:var(--gold);letter-spacing:.08em}
+.question-number{display:inline-block;margin-inline-end:.55em;font-variant-numeric:tabular-nums}
+.direct-stage .question h2{font-size:clamp(1.3rem,4vw,2.25rem)}
+.stage-brief{width:min(910px,100%);margin:15px 0 0;text-align:left;color:var(--ink);font-size:1rem;line-height:1.6}
+.stage-brief span{display:block;color:var(--gold);font-size:.75rem;font-weight:800;margin-bottom:3px}
+.answers{margin-top:12px}
+.reply{background:#192231;border-radius:9px}.reply.green{background:#192920}
+.reply .visual{margin:7px 0 4px}
+.direct-stage .speakers{order:2;width:min(440px,100%);margin-top:14px;gap:16px}
+.speaker-hint{grid-column:1/-1;margin:0;text-align:center;color:var(--ink);font-size:.9rem;line-height:1.5}
+.direct-stage .character{height:124px;transform:scale(.65);transform-origin:center bottom;margin-top:-39px}
+.direct-stage .podium{font-size:.92rem}
+.direct-stage .controls{display:flex;order:1;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;margin:10px 0 0}
+.direct-stage .controls .skip{margin:0;padding:4px}
+.sober .character,.sober .podium::before{display:none}
+.sober .podium{background:#252525;border-color:#777}
+.sober .question{border-bottom-color:#999}
+.sober .reply,.sober .reply.green{background:#202020;border-color:#666}
+.sober .visual,.sober .green .visual{background:#252525;color:var(--ink)}
+.topic-check,.public-voices{padding-block:clamp(24px,5vw,58px)}
+.topic-check .report-inner{max-width:910px}
+.topic-check h2,.public-voices h2{font-size:clamp(1.2rem,3vw,1.65rem)}
+.public-voices .report-inner{box-sizing:border-box;width:100%;max-width:680px;margin-inline:auto;border-left:2px solid #6f603f;padding-left:15px}
+.public-voices h2{text-align:center;margin:6px 0 19px}
+.public-voices p{max-width:39em;margin:0 auto 16px;line-height:1.85;text-align:justify}
+.topic-divider{width:min(910px,calc(100% - 36px));max-width:910px}
+.baseline{min-width:0;border:1px solid #777;margin:12px 0;padding:12px;border-radius:8px}
+.baseline-options{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.baseline button{padding:5px 9px;border-radius:6px;border:1px solid #888;background:#232323;color:var(--ink)}
+.baseline button[aria-pressed=true]{background:var(--gold);color:#1b150a;border-color:var(--gold)}
+@media(max-width:620px){.answers{grid-template-columns:1fr}.direct-stage .question{padding:10px 12px}.direct-stage .question h2{font-size:1.18rem}.stage-brief{font-size:.92rem}.reading-nav{padding-inline:13px}}
+
+.chapter-index .feature{margin:22px 0 0}
+.chapter-index .feature h2{font-size:1.25rem}
+.chapter-index .feature p{margin:0;color:var(--muted)}
+.chapter-index .feature .eyebrow{color:var(--gold)}
+.reply-detail{margin:12px 0 2px;padding-top:10px;border-top:1px solid #ffffff30}
+.reply-detail h4{font-size:.94rem;margin:0 0 3px}
+.reply-detail p{margin:0;font-size:.95rem;line-height:1.75}
+
+.context-note{max-width:46em;margin:0 0 20px;color:var(--ink);line-height:1.8}
+.context-note p{margin:0 0 10px}
+.context-source{font-size:.86rem}
+
+.intro .opening-note{max-width:680px;margin:0 0 26px}
+.intro .opening-note p{margin:0 0 12px;color:var(--ink);font-size:clamp(.94rem,2vw,1.04rem);line-height:1.8;letter-spacing:normal}
+
+.kinmen-route{width:min(100%,390px);margin:24px 0 0 auto;padding:12px 0 0;border-top:1px solid var(--divider)}
+.kinmen-route figcaption{text-align:right;color:var(--muted);font-size:.8rem}
+.kinmen-route ol{position:relative;isolation:isolate;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:12px 0 0;padding:0;list-style:none;text-align:center;font-size:.82rem}
+.kinmen-route ol::before,.kinmen-route ol::after{content:"";position:absolute;z-index:-1;top:5px;inset-inline:12.5%;height:2px;background:var(--divider)}
+.kinmen-route ol::after{background:var(--gold);transform-origin:left center}
+.kinmen-route li::before{content:"";display:block;width:12px;height:12px;margin:0 auto 6px;border:2px solid var(--gold);border-radius:50%;background:#000}
+.kinmen-route.is-waiting ol::after{transform:scaleX(0)}
+.kinmen-route.is-playing ol::after{animation:draw-kinmen-route 4.5s ease-in-out both}
+@keyframes draw-kinmen-route{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(prefers-reduced-motion:reduce){.kinmen-route.is-waiting ol::after,.kinmen-route.is-playing ol::after{animation:none;transform:none}}
+
+.opening-map{position:relative;display:grid;background:#101010}
+.opening-map>.intro,.taiwan-map{grid-area:1/1;align-self:start}
+.opening-map>.intro{position:relative;background:transparent;text-shadow:0 1px 6px #101010,0 0 16px #101010}
+.opening-map.is-scroll-enabled{min-height:175svh}
+.taiwan-map{position:sticky;top:48px;height:calc(100svh - 48px);overflow:hidden;pointer-events:none;mask-image:linear-gradient(to bottom,transparent,#000 8%,#000 82%,transparent)}
+.taiwan-map-art{position:absolute;left:73%;top:58%;width:min(48vw,360px);height:min(68svh,540px);transform:translate(-50%,-50%) translate(var(--map-x,0%),var(--map-y,0%)) scale(var(--map-scale,1))}
+.taiwan-outline{position:absolute;inset:0;background:linear-gradient(155deg,#645035,#3e3224 62%,#282219);clip-path:polygon(72% 2%,79% 4%,84% 9%,91% 12%,97% 17%,87% 23%,85% 31%,80% 37%,74% 42%,71% 49%,66% 56%,61% 62%,57% 68%,51% 75%,45% 84%,42% 92%,44% 98%,38% 100%,33% 93%,28% 90%,26% 84%,17% 79%,13% 74%,8% 70%,6% 64%,9% 59%,6% 54%,10% 50%,12% 45%,18% 40%,19% 34%,27% 29%,34% 25%,41% 20%,50% 15%,56% 10%,63% 7%,64% 4%)}
+.taipei-marker{position:absolute;left:78%;top:13%;width:12px;height:12px;border:2px solid #fff1cb;border-radius:50%;background:var(--gold);box-shadow:0 0 0 6px #f5c96c36;transform:translate(-50%,-50%) scale(var(--marker-scale,1))}
+.taipei-marker span{position:absolute;left:19px;top:50%;transform:translateY(-50%);white-space:nowrap;color:#fff9e8;font-size:1.12rem;font-weight:900;text-shadow:0 1px 3px #000,0 0 12px #000}
+@media(max-width:620px){
+  .taiwan-map-art{left:64%;width:min(69vw,300px);height:min(59svh,400px)}
+}
+
+#traffic-index{grid-template-rows:1fr auto;row-gap:22px;padding-bottom:18px}
+.street-divider{position:relative;height:clamp(90px,15vw,154px);overflow:hidden;border:1px solid #42392f;border-radius:8px;background:linear-gradient(#242028,#393039)}
+.street-buildings{position:absolute;inset:0 0 40%;display:flex;align-items:end;justify-content:space-around;gap:clamp(3px,1vw,14px);padding:0 3%}
+.street-building{width:100%;height:var(--height);max-width:112px;border-top:3px solid #766355;border-inline:3px solid var(--facade);background:repeating-linear-gradient(to bottom,transparent 0 5px,var(--facade) 5px 12px),repeating-linear-gradient(to right,#d8ab67 0 4px,var(--facade) 4px 13px)}
+.street-road{position:absolute;inset:60% 0 0;border-top:4px solid #9b8873;background:#25282d}
+.street-road::before{content:"";position:absolute;inset:50% 0 auto;border-top:2px dashed #91806b}
+.street-car{position:absolute;top:9%;left:-54px;width:42px;height:9px;border-radius:6px 9px 2px 2px;background:var(--paint);box-shadow:inset -4px 0 #fff4ca;animation:street-drive var(--duration) linear var(--delay) infinite paused}
+.street-car::before{content:"";position:absolute;left:9px;top:-5px;width:22px;height:6px;border-radius:6px 6px 0 0;background:#b5c6c9;border-inline:3px solid var(--paint)}
+.street-car::after{content:"";position:absolute;left:6px;bottom:-3px;width:6px;height:6px;border-radius:50%;background:#131418;box-shadow:24px 0 #131418}
+.street-car.is-returning{top:62%;animation-direction:reverse;scale:-1 1}
+.street-divider.is-visible .street-car{animation-play-state:running}
+@keyframes street-drive{from{left:-54px}to{left:100%}}
+@media(prefers-reduced-motion:reduce){
+  .street-divider .street-car{animation:none;left:var(--parked)}
+}
+
+#housing-index{grid-template-rows:1fr auto;row-gap:18px;padding-bottom:18px}
+.housing-skyline{position:relative;isolation:isolate;justify-self:end;width:min(100%,500px);height:clamp(116px,21vw,190px);overflow:hidden;border-bottom:1px solid #685848;background:linear-gradient(transparent,#29222c)}
+.housing-buildings{position:absolute;inset:28% 3% 0;display:flex;align-items:end;gap:clamp(4px,1vw,12px)}
+.housing-building{flex:1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(var(--floors),minmax(0,1fr));gap:3px 4px;height:var(--height);padding:6px;border-top:2px solid #716057;background:linear-gradient(110deg,#3f3945,#292630)}
+.housing-window{background:#a97843;animation:housing-window-light 19s ease-in-out var(--delay) infinite paused}
+.housing-plane{position:absolute;z-index:1;left:0;top:18%;color:#e4d4bf;font-size:23px;line-height:1;animation:housing-plane-flight 29s linear -4s infinite paused}
+.housing-skyline.is-visible :is(.housing-window,.housing-plane){animation-play-state:running}
+@keyframes housing-window-light{0%,22%,78%,100%{background:#443945}30%,65%{background:#efbd75}}
+@keyframes housing-plane-flight{
+  0%{transform:translateX(-40px)}
+  32%,100%{transform:translateX(540px)}
+}
+@media(prefers-reduced-motion:reduce){
+  .housing-window{animation:none}
+  .housing-window:nth-child(3n){background:#443945}
+  .housing-plane{display:none}
+}
+
+#industry-index{position:relative}
+.industry-scene{position:absolute;right:18px;bottom:clamp(28px,10svh,96px);isolation:isolate;width:min(34%,460px);height:clamp(170px,24vw,300px);overflow:hidden;pointer-events:none}
+.industry-campus{position:absolute;inset:29% 8% 28% 6%;display:flex;align-items:end;gap:5%}
+.industry-building{position:relative;flex:1;height:var(--height);border:1px solid #67808b;border-top:4px solid #9a8062;background:repeating-linear-gradient(to bottom,transparent 0 7px,#26343f 7px 11px),repeating-linear-gradient(to right,#5b8189 0 3px,#354953 3px 9px)}
+.industry-building.is-center{flex:1.4}
+.industry-building.is-center span{position:absolute;inset:8px 5px auto;padding:2px;text-align:center;background:#19222c;color:#d7ebb9;font-size:clamp(.7rem,1.6vw,1rem);font-weight:800}
+.industry-runway{position:absolute;inset:75% 0 0;border-block:3px solid #746456;background:#22252c}
+.industry-runway::before{content:"";position:absolute;inset:45% 0 auto;border-top:2px dashed #c3b28d}
+.industry-plane{position:absolute;left:8%;top:76%;color:#fff3d8;font-size:clamp(26px,4vw,44px);line-height:1;rotate:45deg;animation:industry-takeoff 12s linear infinite paused}
+.industry-scene.is-visible .industry-plane{animation-play-state:running}
+@keyframes industry-takeoff{
+  0%,12%{left:8%;top:76%;rotate:45deg}
+  40%{left:47%;top:76%;rotate:45deg;animation-timing-function:ease-out}
+  49%{left:61%;top:66%;rotate:27deg}
+  76%,100%{left:104%;top:12%;rotate:25deg}
+}
+@media(max-width:860px){
+  #industry-index{grid-template-rows:1fr auto;row-gap:20px}
+  .industry-scene{position:relative;right:auto;bottom:auto;justify-self:end;width:min(100%,460px)}
+}
+@media(prefers-reduced-motion:reduce){.industry-plane{animation:none}}
+
+#education-index,#environment-index,#governance-index{grid-template-rows:1fr auto;row-gap:22px;padding-bottom:18px}
+.index-vignette{position:relative;justify-self:end;width:min(100%,460px);height:150px;overflow:hidden;pointer-events:none}
+.index-vignette::after{content:"";position:absolute;inset:auto 0 0;height:1px;background:linear-gradient(90deg,transparent,#73634e,transparent)}
+.school-house{position:absolute;left:36%;bottom:9px;width:48%;height:85px;background:#534449;border-top:8px solid #b78761}
+.school-house::before{content:"";position:absolute;inset:15px 10px 30px;background:repeating-linear-gradient(90deg,#d9b272 0 11px,transparent 11px 24px)}
+.school-house::after{content:"";position:absolute;bottom:0;left:42%;width:22%;height:29px;background:#241f29;border:2px solid #c69d71}
+.school-clock{position:absolute;left:61%;bottom:97px;width:26px;height:26px;border:3px solid #b78761;border-radius:50%;background:#f3dbaf}
+.school-clock::before{content:"";position:absolute;left:9px;top:3px;width:2px;height:8px;background:#574249;transform-origin:bottom;animation:school-clock-turn 18s linear infinite paused}
+.school-child{position:absolute;bottom:9px;left:4%;width:13px;height:22px;background:var(--coat);border-radius:6px 6px 2px 2px;animation:school-arrival 14s linear var(--delay) infinite paused}
+.school-child::before{content:"";position:absolute;top:-11px;left:1px;width:11px;height:11px;border-radius:50%;background:#e7ba92}
+.school-child::after{content:"";position:absolute;bottom:-8px;left:2px;width:3px;height:9px;background:#a59f9a;box-shadow:6px 0 #a59f9a}
+.park-tree{position:absolute;bottom:7px;left:var(--left);width:8px;height:66px;background:#887158}
+.park-tree::before{content:"";position:absolute;left:-23px;top:-27px;width:54px;height:66px;border-radius:49% 52% 42% 46%;background:var(--leaf);transform-origin:50% 100%;animation:park-breeze 5s ease-in-out var(--delay) infinite alternate paused}
+.park-bench{position:absolute;bottom:24px;left:45%;width:72px;height:23px;border-block:5px solid #a38b65}
+.park-bench::after{content:"";position:absolute;top:16px;left:7px;width:5px;height:23px;background:#82715b;box-shadow:52px 0 #82715b}
+.park-walker{position:absolute;left:-20px;bottom:9px;width:12px;height:24px;border-radius:6px 6px 0 0;background:#92b0ae;animation:park-walk 21s linear infinite paused}
+.park-walker::before{content:"";position:absolute;top:-12px;width:12px;height:12px;border-radius:50%;background:#e2b994}
+.park-walker::after{content:"";position:absolute;bottom:-8px;left:1px;width:4px;height:9px;background:#bdb5a5;box-shadow:7px 0 #bdb5a5}
+.civic-hall{position:absolute;bottom:10px;left:35%;width:30%;height:64px;border-top:7px solid #a58d68;border-bottom:6px solid #a58d68;background:repeating-linear-gradient(90deg,#82765f 0 9px,#29282c 9px 23px)}
+.civic-hall::before{content:"";position:absolute;left:-10%;top:-32px;width:120%;height:25px;background:#a58d68;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.civic-node{position:absolute;bottom:10px;left:var(--left);width:36px;height:42px;background:#425760;border-top:4px solid #8cabb3}
+.civic-node::before{content:"";position:absolute;inset:8px;background:repeating-linear-gradient(90deg,#bcad88 0 4px,transparent 4px 9px)}
+.civic-link{position:absolute;left:15%;right:15%;bottom:87px;height:32px;border:1px dashed #756b59;border-bottom:0;border-radius:45% 45% 0 0}
+.civic-message{position:absolute;left:15%;bottom:113px;width:7px;height:7px;border-radius:50%;background:#f2cc83;box-shadow:0 0 8px #f2cc8355;animation:civic-exchange 7s ease-in-out infinite alternate paused}
+.index-vignette.is-visible .school-child,.index-vignette.is-visible .school-clock::before,.index-vignette.is-visible .park-tree::before,.index-vignette.is-visible .park-walker,.index-vignette.is-visible .civic-message{animation-play-state:running}
+@keyframes school-arrival{0%{left:4%;opacity:0}8%,84%{opacity:1}92%,100%{left:58%;opacity:0}}
+@keyframes school-clock-turn{to{transform:rotate(360deg)}}
+@keyframes park-breeze{from{transform:rotate(-3deg)}to{transform:rotate(4deg)}}
+@keyframes park-walk{to{left:105%}}
+@keyframes civic-exchange{0%,12%{left:15%}88%,100%{left:83%}}
+@media(prefers-reduced-motion:reduce){
+ .index-vignette .school-child,.index-vignette .school-clock::before,.index-vignette .park-tree::before,.index-vignette .park-walker,.index-vignette .civic-message{animation:none}
+ .index-vignette .school-child{left:var(--still)}
+ .index-vignette .park-walker{left:72%}
+}
+
+/* Editorial readability and source provenance */
+.topic-list{list-style:none;padding-left:0}
+.chapter-index .topic-list a{display:flex;gap:12px;align-items:baseline}
+.index-number{color:#ffdb71;flex:0 0 2.6em;font-variant-numeric:tabular-nums;font-weight:700}
+.reply-detail h4{margin:16px 0 5px;color:#ffe2a0;font-size:1rem}
+.reply-detail .speech-meta{font-size:.8rem;line-height:1.6;color:#d2c9b9;margin:0 0 10px}
+.public-voices .source-meta{font-size:.85rem;line-height:1.65;text-align:left;color:#d7c7a6;margin-top:22px;margin-bottom:6px}
+.end{max-width:760px;margin-inline:auto}.end p{line-height:1.85}.end h2{font-size:1.35rem}.end details{text-align:left}.end summary{cursor:pointer;font-weight:700}
+</style>
+</head>
+<body><nav class="reading-nav" aria-label="專題導覽"><a href="#top">同一座台北，兩種答案</a><a href="#chapters">六章索引</a></nav>
+<div class="opening-map" id="top">
+<div class="taiwan-map" role="img" aria-label="台灣本島與台北位置示意">
+  <div class="taiwan-map-art">
+    <div class="taiwan-outline"></div>
+    <div class="taipei-marker"><span>台北</span></div>
+  </div>
+</div>
+<header class="intro"><div><p>2026 台北市長電視辯論</p><h1>同一座台北，<br>兩種答案</h1><div class="opening-note">
+<p>選舉腳步近了，候選人卯足全力，想讓市民看見自己的施政理念，以及打算如何解決台北的日常難題。2026 年 10 月 31 日，台北市長候選人蔣萬安與沈伯洋在首場電視辯論會交鋒，透過交互詰問與媒體提問，說明各自想把台北帶往哪裡。</p>
+<p>本專題從交通與街區、都更與住宅、產業與松機、育兒與教育、環境與健康、治理與兩岸六個面向切入。你可以從最關心的一題開始，看兩人怎麼回答，再對照公開資料和民間觀點，想想這些主張若落實，會怎麼改變你我生活的台北。</p>
+</div>
+<h2 id="chapters" tabindex="-1" class="chapter-heading">依議題閱讀 <span>6 章 · 29 題</span></h2><nav class="categories" aria-label="辯論議題分類"><a href="#traffic-index">交通與街區</a><a href="#housing-index">都更與住宅</a><a href="#industry-index">產業與松機</a><a href="#education-index">育兒與教育</a><a href="#environment-index">環境與健康</a><a href="#governance-index">治理與兩岸</a></nav></div></header>
+</div>
+<main>
+<section class="report chapter-index" id="traffic-index" tabindex="-1" aria-labelledby="traffic-index-title"><div class="report-inner"><h2 id="traffic-index-title">交通與街區</h2><nav aria-label="交通與街區題目索引"><ol class="topic-list"><li><a href="#commute"><span class="index-number">#1</span><span>公館圓環拆除後，交通事故變少了嗎？</span></a></li><li><a href="#commuting"><span class="index-number">#2</span><span>未來四年上班通勤會有哪些改變？</span></a></li><li><a href="#walking"><span class="index-number">#3</span><span>市民大道怎麼改善兩側街區的步行連結？</span></a></li><li><a href="#underpass"><span class="index-number">#4</span><span>市民大道橋下做藝文空間，停車位怎麼辦？</span></a></li></ol></nav></div>
+<div class="street-divider" aria-hidden="true">
+  <div class="street-buildings">
+    <span class="street-building" style="--height:56%;--facade:#49414a"></span>
+    <span class="street-building" style="--height:86%;--facade:#615056"></span>
+    <span class="street-building" style="--height:65%;--facade:#474653"></span>
+    <span class="street-building" style="--height:95%;--facade:#574745"></span>
+    <span class="street-building" style="--height:72%;--facade:#675656"></span>
+    <span class="street-building" style="--height:55%;--facade:#434452"></span>
+    <span class="street-building" style="--height:90%;--facade:#614c50"></span>
+    <span class="street-building" style="--height:63%;--facade:#4f474f"></span>
+    <span class="street-building" style="--height:78%;--facade:#5a4c49"></span>
+    <span class="street-building" style="--height:50%;--facade:#46414a"></span>
+  </div>
+  <div class="street-road">
+    <span class="street-car" style="--paint:#e7ab59;--duration:13s;--delay:-3s;--parked:23%"></span>
+    <span class="street-car" style="--paint:#c87370;--duration:16s;--delay:-10s;--parked:61%"></span>
+    <span class="street-car is-returning" style="--paint:#80adb7;--duration:15s;--delay:-5s;--parked:74%"></span>
+    <span class="street-car is-returning" style="--paint:#b7ac90;--duration:18s;--delay:-12s;--parked:34%"></span>
+  </div>
+</div>
+</section>
+<section class="report" id="commute" aria-labelledby="commute-title"><div class="report-inner">
+<p class="eyebrow">2025 年 9 月 30 日 · 公館</p>
+<h2 id="commute-title">改建後的第一個通勤日，車流一度回堵到福和橋</h2>
+<p class="lede">公館圓環改成正交路口後，公視在第一個上班日記錄到回堵。北市府改建這個路口，原本希望減少長年頻繁發生的事故。一年後，兩位市長候選人談到改建成果，卻拿出了兩種不同的數字。</p>
+<p class="lede"><strong>路口改建以後，真的更安全了嗎？</strong></p>
+<a class="scene-link" href="https://www.youtube.com/watch?v=6UdX4jtLtlg">看公視當天的通勤現場</a>
+</div></section>
+<section class="sequence direct-stage" id="stage" aria-labelledby="question">
+<div class="scene">
+<div class="question"><p><span class="question-number">#1</span> 交通 · 公館圓環</p><h2 id="question">公館圓環拆除後，交通事故變少了嗎？</h2></div>
+
+<div class="answers" id="answers">
+<article class="reply" id="chiang" data-reply="chiang"><h3>蔣萬安 · 事故率變化</h3><div class="visual"><div class="bars" aria-hidden="true"><i></i><i></i></div><strong>↓ 52%</strong><span>事故率降幅<br>蔣萬安在辯論中的說法</span></div><p class="summary">他表示拆除後事故率降低，並主張應合看 A1、A2、A3 各類事故。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=6358s" target="_blank" rel="noopener">看申論 1:45:58</a>　<a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=9993s" target="_blank" rel="noopener">看答辯 2:46:33</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>工程期程</h4><p>蔣萬安回顧，工程原估 65 天，實際施工縮至 17 天。</p><h4>事故統計口徑</h4><p>他把 52% 的降幅當作支持拆除決定的依據，後來在交叉詰問又說，計算事故時應把 A1、A2、A3 一起納入。</p></div></article>
+<article class="reply green" id="shen" data-reply="shen"><h3>沈伯洋 · 事故路口排名</h3><div class="visual"><div class="rank" aria-hidden="true">#1</div><strong>第 1</strong><span>事故路口排名<br>沈伯洋在辯論中的說法</span></div><p class="summary">他表示辯論當天看到圓環路口重回首位，附近另一路口也進入前十，並質疑事前評估。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=7255s" target="_blank" rel="noopener">看交叉詰問 2:00:55</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>兩處路口的排名</h4><p>沈伯洋指出，辯論當天他看到原圓環路口再度排第一，附近一處原先不在前十的路口也進了前十。</p><h4>對事前評估的追問</h4><p>他把這兩處的排名變動連回改建前的評估，追問市府是否充分考量周邊路口。</p></div></article>
+</div>
+<div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="answers">雙方對照</button><a class="skip" href="#evidence">看改建前後數據</a></div>
+</div>
+
+</section>
+<section class="report article-section" id="evidence" tabindex="-1" aria-labelledby="evidence-title"><div class="report-inner">
+<p class="eyebrow">辯論之後 · 核對數字</p>
+<h2 id="evidence-title">交工處公布的改建前後數據</h2>
+<div class="evidence">
+<fieldset class="baseline"><legend>同樣看受傷人數，換個比較基準</legend><div class="baseline-options"><button type="button" data-baseline="average" aria-controls="average" aria-pressed="true">和改建前三年月均比</button><button type="button" data-baseline="season" aria-controls="season" aria-pressed="false">和前一年同期比</button></div>
+<div id="average"><p><strong>每月平均受傷人數下降</strong></p><dl><dt>每月平均事故件數</dt><dd><div class="chart"><span>改建前</span><b style="--size:100%">22.4 件</b><span>改建後</span><b style="--size:53.6%">12.0 件</b></div></dd>
+<dt>每月平均受傷人數</dt><dd><div class="chart"><span>改建前</span><b style="--size:100%">9.7 人</b><span>改建後</span><b style="--size:62.9%">6.1 人</b></div></dd></dl>
+</div>
+<div id="season" hidden><p><strong>同期間受傷人數增加</strong></p><div class="chart"><span>前一年同期</span><b style="--size:91.3%">42 人</b><span>改建後同期</span><b style="--size:100%">46 人</b></div><p>比較期間為 9 月 29 日至隔年 4 月 30 日。圖中是總人數。</p></div></fieldset>
+<p>這份資料比較改建前三年的月平均與 2025 年 9 月 29 日至 2026 年 5 月 20 日的月平均。它提供一段可核對的觀察期，辯論中的 52% 仍需知道完整算法才能比對。 <a href="https://www.gov.taipei/News_Content.aspx?n=F0DDAF49B89E9413&amp;s=BEDD9D580E1DE92A">看台北市交工處原始資料</a></p><p>換個期間，比較結果也會變。交工處同一份資料還引述議員的算法：2025 年 9 月 29 日至 2026 年 4 月 30 日有 46 人受傷，前一年同期為 42 人。</p>
+</div></div></section>
+<section class="report article-section public-voices" id="follow-up" aria-labelledby="follow-up-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="follow-up-title">拆除前，路權團體、里長和學生各在意什麼？</h2><p>行人零死亡推動聯盟把問題指向進入圓環前的車道指引。聯盟認為，原本只有出口畫設導引線，駕駛容易到出環時才發現走錯車道。理事長陳愷寧也擔心，填平地下道後，尖峰每小時約 300 輛公車將改走平面。</p><p>學府里里長李淳琳關心的是居民怎麼出入。她指出，羅斯福路四段 119 巷原有出路將受影響，車流改走 123 巷 21 弄，但替代道路不到 5 公尺寬。她擔心狹窄巷道難以消化車流，也會讓沿線住戶承受噪音與空污。</p><p>台師大學生會會長黃莨騰則從跨校區上課談起。學生要在約 20 分鐘的下課時間內搭乘約 12 分鐘的校車，原本就只有少量緩衝。他擔心地下道填平後車程拉長，學生可能因此避開需要跨校區接續的課程。</p><p>這些是公視在施工前記錄的公開意見。團體談車道與公車動線，里長談巷弄出入口，學生談跨校區上課。三種經驗呈現事故統計以外，改建也會影響哪些人、怎麼影響。</p><p class="source-meta">2025-08-28 · 公視／洪詩宸 · 施工前意見整理</p><p class="context-source"><a href="https://news.pts.org.tw/article/767854">公視｜公館圓環拆除前的各方說法</a></p></div></section>
+<nav class="topic-divider topic-transition" aria-label="題目分隔與導覽"><a href="#traffic-index">回題目索引</a></nav>
+<div id="commuting" class="stage-anchor"></div>
+<section class="sequence direct-stage" id="commuting-stage" aria-labelledby="commuting-question">
+<div class="scene">
+<div class="question"><p><span class="question-number">#2</span> 交通與街區</p><h2 id="commuting-question">未來四年上班通勤會有哪些改變？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣談新增運具與路線，沈談既有路網、通勤時間與通勤方式。</p>
+
+
+<div class="answers" id="commuting-answers">
+<article class="reply" id="commuting-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">新運具與路線</strong></div><p class="summary">描繪搭乘自駕公車經過北士科，並預期萬大線一期通車、環狀線南北環段接近完工。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=10489s" target="_blank" rel="noopener">看原始發言 2:54:49</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>四年後的交通情景</h4><p>他描繪通勤族可坐自駕公車行經北士科，也把萬大線一期通車、環狀線南北環段接近完工作為四年後的交通情景。</p><h4>目標的性質</h4><p>這一段是他希望達成的未來畫面。</p></div></article>
+<article class="reply green" id="commuting-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">調整既有通勤</strong></div><p class="summary">主張捷運總體檢、公車路線重整，針對內科和北士科提出彈性工時、智慧及綠色通勤。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=10631s" target="_blank" rel="noopener">看原始發言 2:57:11</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>節省通勤時間</h4><p>他把節省日常時間當作目標，除了盤點捷運和重劃公車路線，也提到通學路網安全。</p><h4>園區通勤的三個方向</h4><p>談到內科與北士科時，他列出彈性工時、智慧通勤和綠色通勤三個方向。</p></div></article>
+</div>
+<div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="commuting-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="commuting-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="commuting-answers">雙方對照</button><a class="skip" href="#commuting-check">看辯論之後的查證</a></div>
+</div>
+
+</section>
+<section class="report article-section topic-check" id="commuting-check" aria-labelledby="commuting-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="commuting-check-title">從工程進度到搭得上車，還有幾步？</h2><div class="context-note"><p>通勤時間由等車、車程、轉乘和步行組成。新捷運可能改善其中一段，但車站到公司若還要等接駁，整趟未必省下同樣多的時間。蔣談的是未來交通建設，沈談的路線重整與彈性工時，則可以用不同的指標評估。</p></div><div class="lens-grid"><div class="lens"><h3>87%｜施工進度</h3><p>捷運局公布萬大線一期截至 2026 年 9 月的施工進度達 87%，當時以 2027 年底完工為目標。</p><p><a href="https://www.dorts.gov.taipei/News_Content.aspx?n=E14C2501B49FA671&amp;s=C827D812D1EAD48F&amp;sms=78D644F2755ACCAA">臺北市捷運局｜萬大線一期進度</a></p></div><div class="lens"><h3>南環、北環｜施工中</h3><p>國發會的計畫資料列南環、北環均在施工。實際搭乘日期要等營運資訊公布。</p><p><a href="https://fi.ndc.gov.tw/result-content.php?nid=112808MwUmBJVg3c&amp;rn=02&amp;rs=4">國發會｜環狀線南北環</a></p></div></div><p>工程進度、計畫完工與開始載客是不同里程碑。公車班距、轉乘距離與尖峰出門時間，也會影響通勤者實際省下多少時間。</p></div></section>
+<section class="report article-section public-voices" id="commuting-voices" aria-labelledby="commuting-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="commuting-voices-title">內科企業發起通勤轉型</h2><p>捷運東環段工程動工前，內湖科技園區發展協會發起通勤轉型計畫，鼓勵企業員工改搭公車、捷運。這項倡議來自園區協會，反映企業端希望在工程期間降低對汽機車的依賴，也把既有公車和捷運能否承接上班人潮帶進討論。</p><p>計畫邀集瑞光路沿線的研華、台達、仁寶、精誠與致伸等企業參與。中央社指出，捷運東環段將在瑞光路設置兩站；協會在施工前推動通勤轉型，目的是鼓勵員工改用大眾運輸，降低施工期間對道路交通的壓力。這份報導呈現企業端的行動，並非通勤族對兩位候選人的支持度調查。</p><p class="source-meta">2025-10-17 · 中央社 · 園區協會倡議</p><p class="context-source"><a href="https://www.cna.com.tw/news/aloc/202510170273.aspx">中央社｜內科通勤轉型</a></p></div></section>
+
+<nav class="topic-divider topic-transition" aria-label="題目分隔與導覽"><a href="#traffic-index">回題目索引</a></nav>
+<div id="walking" class="stage-anchor"></div>
+<section class="sequence direct-stage" id="walking-stage" aria-labelledby="walking-question">
+<div class="scene">
+<div class="question"><p><span class="question-number">#3</span> 交通與街區</p><h2 id="walking-question">市民大道怎麼改善兩側街區的步行連結？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣質疑如何界定高架造成的阻隔，沈主張從行人的步行路線著手。</p>
+
+
+<div class="answers" id="walking-answers">
+<article class="reply" id="walking-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">回看道路沿革</strong></div><p class="summary">從鐵路地下化後的城市發展談市民大道，質疑把高架直接歸為南北阻隔的說法。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=7801s" target="_blank" rel="noopener">看原始發言 2:10:01</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>鐵路地下化的背景</h4><p>蔣萬安把市民大道放回鐵路地下化的歷史脈絡。</p><h4>以其他高架道路反問</h4><p>他以新生高架和建國高架反問，是否也應用同一套標準判定東西向街區遭到切割。</p></div></article>
+<article class="reply green" id="walking-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">改善行人動線</strong></div><p class="summary">以 SOGO 到微風為例，認為有路口仍可能難以引導人潮，應改善步行動線與空間，讓兩側自然串起來。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=7866s" target="_blank" rel="noopener">看原始發言 2:11:06</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>從商圈步行舉例</h4><p>沈伯洋以從 SOGO 走到微風為例，說有路口不代表人潮自然會往另一側走。</p><h4>線形公園與車站串聯</h4><p>他又舉線形公園、臺北車站到雙子星的串聯，說明自己所稱的「縫合」想解決什麼。</p></div></article>
+</div>
+<div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="walking-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="walking-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="walking-answers">雙方對照</button><a class="skip" href="#walking-check">看辯論之後的查證</a></div>
+</div>
+
+</section>
+<section class="report article-section topic-check" id="walking-check" aria-labelledby="walking-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="walking-check-title">台北車站旁，已有一段跨市民大道的規劃</h2><div class="context-note"><p>以 SOGO 走到微風為例，地圖上畫出連線很容易，實際走一遍卻要看路口能不能直接穿越、是否要繞路，以及輪椅或推車過不過得去。車站空廊是另一個地點的方案，能提供做法參考，實際效果仍須逐段檢視。</p></div><div class="lens-grid"><div class="lens"><h3>約 45 公尺｜跨越市民大道</h3><p>市府規劃用空廊跨越市民大道，跨越段約 45 公尺，並設計電梯與無障礙通道。</p><p><a href="https://www.gov.taipei/News_Content.aspx?n=F0DDAF49B89E9413&amp;s=97EE43D28C5E2586&amp;sms=72544237BBE4C5F6">臺北市政府｜臺北長廊東延段</a></p></div><div class="lens"><h3>臺北車站 → 線形公園 → 雙子星</h3><p>這條示意動線是市府規劃的西區門戶空廊系統，服務車站與周邊街區。</p><p><a href="https://www.gov.taipei/News_Content.aspx?n=F0DDAF49B89E9413&amp;s=97EE43D28C5E2586&amp;sms=72544237BBE4C5F6">臺北市政府｜臺北長廊東延段</a></p></div></div><p>車站周邊的計畫可以說明「縫合」如何落到設計上。辯論提到的 SOGO 至微風另屬一段步行路線，仍需實地觀察過街、繞行與無障礙動線。</p></div></section>
+<section class="report article-section public-voices" id="walking-voices" aria-labelledby="walking-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="walking-voices-title">人行道一分為二，行人走哪裡？</h2><p>東森新聞報導，有民眾注意到市民大道一段約 6.5 公尺寬的人行道被實體護欄分隔，其中一部分成了機車停車區。對行人來說，原有路幅和實際能走的寬度可能不同。這是民眾對既有道路配置的反映。</p><p>這則報導記錄的是人行道與機車停車區共用路幅的情況，並未量測市民大道所有路口的步行距離，也沒有針對兩位候選人的街區串聯方案訪問使用者。因此，它能呈現既有配置的爭議，不能據以判定哪一份新方案已解決問題。</p><p class="source-meta">東森新聞 · 影音報導 · 發布日期尚未確認</p><p class="context-source"><a href="https://www.youtube.com/watch?v=dKh4xoxil9I">東森新聞｜市民大道人行道與機車停車區</a></p></div></section>
+
+<nav class="topic-divider topic-transition" aria-label="題目分隔與導覽"><a href="#traffic-index">回題目索引</a></nav>
+<div id="underpass" class="stage-anchor"></div>
+<section class="sequence direct-stage" id="underpass-stage" aria-labelledby="underpass-question">
+<div class="scene">
+<div class="question"><p><span class="question-number">#4</span> 交通與街區</p><h2 id="underpass-question">市民大道橋下做藝文空間，停車位怎麼辦？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣追問可用面積和滿位時段，沈主張先盤點空間並保留停車格。</p>
+
+
+<div class="answers" id="underpass-answers">
+<article class="reply" id="underpass-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">追問車位與需求</strong></div><p class="summary">追問可用面積、停車場及車位數和滿位時段，要求說明藝文用途與停車需求如何兼顧。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=7640s" target="_blank" rel="noopener">看原始發言 2:07:20</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>要求先盤點的資料</h4><p>他的追問依序指向市府管轄且可利用的面積、停車場數、總車位和平均滿位時數。</p><h4>停車影響的判斷</h4><p>他希望用這些資訊判斷拿橋下空間做藝文活動會怎麼影響停車。</p></div></article>
+<article class="reply green" id="underpass-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">先盤點空間</strong></div><p class="summary">表示會先盤點橋下空間，構想是串起人流，並說沒有要撤掉橋下停車格。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=7760s" target="_blank" rel="noopener">看原始發言 2:09:20</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>保留車格的立場</h4><p>他表示盤點的目的在於把步行人流串起來，並沒有要廢除橋下的車格。</p><h4>步行串聯的案例</h4><p>他以市府跨市民大道串聯線形公園、臺北車站和雙子星的規劃來解釋概念。</p></div></article>
+</div>
+<div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="underpass-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="underpass-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="underpass-answers">雙方對照</button><a class="skip" href="#underpass-check">看辯論之後的查證</a></div>
+</div>
+
+</section>
+<section class="report article-section topic-check" id="underpass-check" aria-labelledby="underpass-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="underpass-check-title">先釐清車位在哪，再看什麼時候滿</h2><div class="context-note"><p>判斷橋下能不能辦活動，首先要知道活動會用到哪一塊，再對照附近車格何時最常滿。地下停車場和高架橋下的地面車格用途有別。即時空位只反映查詢當下，想知道週末會不會不夠停，還需要連續的場別與時段資料。</p></div><div class="lens-grid"><div class="lens"><h3>地下停車位｜中林段</h3><p>市府資料把市民大道中林段停車場列在中山北路至林森北路的地下 1 至 2 層。討論橋下可用面積時，要區分地面與地下。</p><p><a href="https://atis.taipei.gov.tw/aspx/park/parkF.aspx?lang=zh-Hant-TW&amp;sn=TPE0100">臺北市交通資訊網｜中林段停車場</a></p></div><div class="lens"><h3>即時空位｜當下快照</h3><p>市府提供即時剩餘車位查詢。要回答平均滿位多久，還要按場別和時段整理一段歷史紀錄。</p><p><a href="https://www.gov.taipei/News_Services.aspx?n=3BB7681FE17E9929&amp;sms=F42E65234BA456F9">臺北市政府｜停車場即時資訊</a></p></div></div><p>目前這些來源可確認場址與查詢方式。藝文活動會用哪一段、會不會影響既有車位，仍要拿活動範圍與車位配置逐段比對。</p></div></section>
+<section class="report article-section public-voices" id="underpass-voices" aria-labelledby="underpass-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="underpass-voices-title">停車和步行空間已在同一條路上碰面</h2><p>東森新聞曾報導市民大道一段人行道以護欄分出機車停車區，引起民眾注意。這個案例能說明，同一處空間改了用途，就可能改變步行動線。公開報導談的是既有路段配置，與橋下藝文提案的範圍仍須區分。</p><p>報導中的停車區位於人行道，並非一份橋下展演空間的停車供需調查。現有材料沒有提供藝文提案涉及多少車位、各時段滿位率或替代停車位置；這裡保留案例的實際範圍，不把民眾對現況的反映當成對新提案的贊成或反對。</p><p class="source-meta">東森新聞 · 影音報導 · 發布日期尚未確認</p><p class="context-source"><a href="https://www.youtube.com/watch?v=dKh4xoxil9I">東森新聞｜市民大道人行道與機車停車區</a></p></div></section>
+
+<nav class="topic-divider" aria-label="交通與街區章節結尾"><span>交通與街區 · 全章結束</span><a href="#traffic-index">回題目索引</a></nav>
+<section class="report chapter-index" id="housing-index" tabindex="-1" aria-labelledby="housing-title"><div class="report-inner"><h2 id="housing-title">都更與住宅</h2><nav aria-label="都更與住宅題目索引"><ol class="topic-list"><li><a href="#coordination"><span class="index-number">#5</span><span>住戶卡在協調、試算或審議，市府怎麼幫？</span></a></li><li><a href="#height"><span class="index-number">#6</span><span>松機航高限制影響都更，住戶該何時得知？</span></a></li><li><a href="#old-homes"><span class="index-number">#7</span><span>高風險老屋的住戶談不攏，市府如何介入？</span></a></li><li><a href="#tokyo"><span class="index-number">#8</span><span>台北的都更可以從東京學什麼？</span></a></li></ol></nav><a href="#top">回議題分類</a></div>
+<div class="housing-skyline" aria-hidden="true">
+  <div class="housing-buildings">
+    <div class="housing-building" style="--floors:4;--height:69%"><span class="housing-window" style="--delay:-0s"></span><span class="housing-window" style="--delay:-0.7s"></span><span class="housing-window" style="--delay:-1.4s"></span><span class="housing-window" style="--delay:-2.1s"></span><span class="housing-window" style="--delay:-3.1s"></span><span class="housing-window" style="--delay:-3.8s"></span><span class="housing-window" style="--delay:-4.5s"></span><span class="housing-window" style="--delay:-5.2s"></span><span class="housing-window" style="--delay:-6.2s"></span><span class="housing-window" style="--delay:-6.9s"></span><span class="housing-window" style="--delay:-7.6s"></span><span class="housing-window" style="--delay:-8.3s"></span><span class="housing-window" style="--delay:-9.3s"></span><span class="housing-window" style="--delay:-10s"></span><span class="housing-window" style="--delay:-10.7s"></span><span class="housing-window" style="--delay:-11.4s"></span></div>
+    <div class="housing-building" style="--floors:6;--height:98%"><span class="housing-window" style="--delay:-1.1s"></span><span class="housing-window" style="--delay:-1.8s"></span><span class="housing-window" style="--delay:-2.5s"></span><span class="housing-window" style="--delay:-3.2s"></span><span class="housing-window" style="--delay:-4.2s"></span><span class="housing-window" style="--delay:-4.9s"></span><span class="housing-window" style="--delay:-5.6s"></span><span class="housing-window" style="--delay:-6.3s"></span><span class="housing-window" style="--delay:-7.3s"></span><span class="housing-window" style="--delay:-8s"></span><span class="housing-window" style="--delay:-8.7s"></span><span class="housing-window" style="--delay:-9.4s"></span><span class="housing-window" style="--delay:-10.4s"></span><span class="housing-window" style="--delay:-11.1s"></span><span class="housing-window" style="--delay:-11.8s"></span><span class="housing-window" style="--delay:-12.5s"></span><span class="housing-window" style="--delay:-13.5s"></span><span class="housing-window" style="--delay:-14.2s"></span><span class="housing-window" style="--delay:-14.9s"></span><span class="housing-window" style="--delay:-15.6s"></span><span class="housing-window" style="--delay:-16.6s"></span><span class="housing-window" style="--delay:-17.3s"></span><span class="housing-window" style="--delay:-18s"></span><span class="housing-window" style="--delay:-18.7s"></span></div>
+    <div class="housing-building" style="--floors:5;--height:82%"><span class="housing-window" style="--delay:-2.2s"></span><span class="housing-window" style="--delay:-2.9s"></span><span class="housing-window" style="--delay:-3.6s"></span><span class="housing-window" style="--delay:-4.3s"></span><span class="housing-window" style="--delay:-5.3s"></span><span class="housing-window" style="--delay:-6s"></span><span class="housing-window" style="--delay:-6.7s"></span><span class="housing-window" style="--delay:-7.4s"></span><span class="housing-window" style="--delay:-8.4s"></span><span class="housing-window" style="--delay:-9.1s"></span><span class="housing-window" style="--delay:-9.8s"></span><span class="housing-window" style="--delay:-10.5s"></span><span class="housing-window" style="--delay:-11.5s"></span><span class="housing-window" style="--delay:-12.2s"></span><span class="housing-window" style="--delay:-12.9s"></span><span class="housing-window" style="--delay:-13.6s"></span><span class="housing-window" style="--delay:-14.6s"></span><span class="housing-window" style="--delay:-15.3s"></span><span class="housing-window" style="--delay:-16s"></span><span class="housing-window" style="--delay:-16.7s"></span></div>
+    <div class="housing-building" style="--floors:3;--height:55%"><span class="housing-window" style="--delay:-3.3s"></span><span class="housing-window" style="--delay:-4s"></span><span class="housing-window" style="--delay:-4.7s"></span><span class="housing-window" style="--delay:-5.4s"></span><span class="housing-window" style="--delay:-6.4s"></span><span class="housing-window" style="--delay:-7.1s"></span><span class="housing-window" style="--delay:-7.8s"></span><span class="housing-window" style="--delay:-8.5s"></span><span class="housing-window" style="--delay:-9.5s"></span><span class="housing-window" style="--delay:-10.2s"></span><span class="housing-window" style="--delay:-10.9s"></span><span class="housing-window" style="--delay:-11.6s"></span></div>
+    <div class="housing-building" style="--floors:5;--height:89%"><span class="housing-window" style="--delay:-4.4s"></span><span class="housing-window" style="--delay:-5.1s"></span><span class="housing-window" style="--delay:-5.8s"></span><span class="housing-window" style="--delay:-6.5s"></span><span class="housing-window" style="--delay:-7.5s"></span><span class="housing-window" style="--delay:-8.2s"></span><span class="housing-window" style="--delay:-8.9s"></span><span class="housing-window" style="--delay:-9.6s"></span><span class="housing-window" style="--delay:-10.6s"></span><span class="housing-window" style="--delay:-11.3s"></span><span class="housing-window" style="--delay:-12s"></span><span class="housing-window" style="--delay:-12.7s"></span><span class="housing-window" style="--delay:-13.7s"></span><span class="housing-window" style="--delay:-14.4s"></span><span class="housing-window" style="--delay:-15.1s"></span><span class="housing-window" style="--delay:-15.8s"></span><span class="housing-window" style="--delay:-16.8s"></span><span class="housing-window" style="--delay:-17.5s"></span><span class="housing-window" style="--delay:-18.2s"></span><span class="housing-window" style="--delay:-18.9s"></span></div>
+  </div>
+  <span class="housing-plane">✈︎</span>
+</div>
+</section>
+<div id="coordination" class="stage-anchor"></div>
+<section class="sequence direct-stage" id="coordination-stage" aria-labelledby="coordination-question"><div class="scene">
+<div class="question"><p><span class="question-number">#5</span> 都更與住宅</p><h2 id="coordination-question">住戶卡在協調、試算或審議，市府怎麼幫？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣談市府何時能進場試算，沈談如何陪住戶走完協調、估價和爭議處理。</p>
+
+
+<div class="answers" id="coordination-answers">
+<article class="reply" id="coordination-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">門檻與試算</strong></div><p class="summary">以都更八箭、都更輔導團和 7599 為例，說明達門檻可由市府協助試算，並舉康樂街案已簽約為例。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=7094s" target="_blank" rel="noopener">看原始發言 1:58:14</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>7599 與協助試算</h4><p>他說 7599 方案的意願達到 75% 時，市府會介入協助試算，並舉康樂街案已簽約說明進度。</p><h4>住戶整合的案例</h4><p>質詢一開始也以斯文里二期為例，提及住戶整合費時多年。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=6936s">補充發言 1:55:36</a></div></article>
+<article class="reply green" id="coordination-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">單一窗口與陪伴</strong></div><p class="summary">主張增加陪伴人力與整宅基金，透過單一窗口協助住戶處理產權、估價落差及停滯案件。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=7063s" target="_blank" rel="noopener">看原始發言 1:57:43</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>基金與陪伴人力</h4><p>他建議提高整宅基金 20%，並增加人力陪住戶走完協調。</p><h4>動工前的卡關因素</h4><p>他以產權、審議時間及試算與估價落差為例，說明為何除了降低進場門檻，也要追蹤能否真的動工、完工。</p></div></article>
+</div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="coordination-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="coordination-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="coordination-answers">雙方對照</button><a class="skip" href="#coordination-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="coordination-check" aria-labelledby="coordination-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="coordination-check-title">試算、估價與審議，各在解決什麼？</h2><div class="context-note"><p>住戶在意的通常是分回的坪數、是否需要補錢，以及要等多久。初步試算能讓大家用同一份假設討論，正式分配仍須依核定計畫。用申請件數看市府的服務量，用各階段耗時與完工件數，才看得出案件推進到哪裡。</p></div><div class="lens-grid"><div class="lens"><h3>先整合｜公辦都更</h3><p>更新處說明，7599 專案將公辦都更第一階段意願門檻降至 75%，讓有意願的社區較早取得協助。</p><p><a href="https://uro.gov.taipei/News_Content.aspx?n=FDB0CAB1DD42E805&amp;s=D1447611E6D11BEC&amp;sms=72544237BBE4C5F6">臺北市都市更新處｜都更新制</a></p></div><div class="lens"><h3>再審議｜有正式分配依據</h3><p>更新處說明，更新前後權利價值與共同負擔需經審議，最後以核定的權利變換計畫為準。</p><p><a href="https://uro.gov.taipei/News_Content.aspx?n=5E79553CBBAE8DFB&amp;s=8A4664278A465262&amp;sms=87415A8B9CE81B16">臺北市都市更新處｜權利變換分配</a></p></div></div><p>初步試算可以幫住戶理解可能的分配。追蹤市府協助成效時，還要看住戶能否看懂試算假設、爭議怎麼處理，以及案件最後進到哪個階段。</p></div></section>
+<section class="report article-section public-voices" id="coordination-voices" aria-labelledby="coordination-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="coordination-voices-title">住戶等的不只是一次試算</h2><p>公視曾採訪內湖樂康里海砂屋住戶。住戶指出，從 2014 年起推動都更，到受訪時仍未改建，也因此質疑市府的處理速度。當時都更處表示還在等建商送件審核。這起舊案呈現住戶已在等待、市府程序卻仍須等送件的落差。</p><p>公視記錄，這三棟五層樓建物原有 60 戶，已有 26 戶搬離，留住者多為較難搬遷的長者或身心障礙者。住戶已取得全體同意，市府當時仍表示要等建商送件審核。這是 2019 年的個案狀態，呈現取得同意與正式送審之間仍可能存在等待，並非該案目前進度。</p><p class="source-meta">2019-08-09 · 公視 · 歷史個案／住戶訪談</p><p class="context-source"><a href="https://news.pts.org.tw/article/441497">公視｜內湖海砂屋住戶訪談</a></p></div></section>
+<nav class="topic-divider topic-transition" aria-label="題目分隔與導覽"><a href="#housing-index">回題目索引</a></nav>
+<div id="height" class="stage-anchor"></div>
+<section class="sequence direct-stage" id="height-stage" aria-labelledby="height-question"><div class="scene">
+<div class="question"><p><span class="question-number">#6</span> 都更與住宅</p><h2 id="height-question">松機航高限制影響都更，住戶該何時得知？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣用航高解釋都更為何卡關，沈追問住戶何時能拿到這項資訊。</p>
+
+
+<div class="answers" id="height-answers">
+<article class="reply" id="height-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">航高可能卡關</strong></div><p class="summary">指出松山機場航高限制是他所舉都更案例長年難以推動的原因之一。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=7094s" target="_blank" rel="noopener">看原始發言 1:58:14</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>航高與整合困境</h4><p>蔣萬安先點出斯文里二期等案例的整合困境，之後把松機航高列為一些案件推動困難的因素。</p><h4>未交代的告知時點</h4><p>他的發言著重辨識卡關原因，沒有在這段交代告知住戶的時間點。</p></div></article>
+<article class="reply green" id="height-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">啟動時先說明</strong></div><p class="summary">主張從啟動時就提供充分資訊，透過單一窗口及早說明航高等法規限制。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=7158s" target="_blank" rel="noopener">看原始發言 1:59:18</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>何時告知住戶</h4><p>他問，如果航高確實是障礙，為什麼沒有一開始就向住戶充分說明。</p><h4>單一窗口的角色</h4><p>他把航高當成單一窗口與陪伴機制該及早處理的法規問題。</p></div></article>
+</div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="height-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="height-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="height-answers">雙方對照</button><a class="skip" href="#height-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="height-check" aria-labelledby="height-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="height-check-title">把航高查詢放在初步試算之前</h2><div class="context-note"><p>容積決定基地可興建的樓地板面積，高度限制則可能影響這些面積怎麼排進建築物。住戶若要判斷能分回多少，應在試算時確認基地的高度條件和設計假設，否則即使兩個方案寫著相同容積，實際配置也可能不同。</p></div><div class="lens-grid"><div class="lens"><h3>先查址｜民航局禁限建系統</h3><p>民航局提供松山機場等機場的禁限建查詢與圖資，住戶可先從個案基地查起。</p><p><a href="https://web-gis2000.caa.gov.tw/">民航局｜機場禁限建查詢</a></p></div><div class="lens"><h3>再試算｜把限制寫進假設</h3><p>把查詢結果交給規劃團隊確認，並了解是否影響樓層、設計配置及住戶可分回的面積。</p><p><a href="https://web-gis2000.caa.gov.tw/">民航局｜機場禁限建查詢</a></p></div></div><p>辯論的爭點是住戶何時拿得到這項資訊。本頁未查到辯論所舉個案的航高審查文件，個案影響要依基地及正式審查結果確認。</p></div></section>
+<section class="report article-section public-voices" id="height-voices" aria-labelledby="height-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="height-voices-title">網路討論把航高和重建機會連在一起</h2><p>媒體整理的網路留言中，有人把松機周邊限高視為老屋重建的障礙，希望遷移機場後解除限制。這是部分留言者對政策的期待，沒有交代個別住戶在什麼時候得知限高。建物實際可蓋多高，仍取決於基地所在位置和適用條件。</p><p>同篇整理也收錄反對遷移的留言：有人珍惜市區機場的便利，擔心赴桃園搭機更麻煩；有人提出軍民兩用功能與桃園承接運量的疑問。這些是媒體挑選的網路意見，留言者身分與代表性未經本專題獨立確認，也無法回答個別都更住戶實際何時收到限高資訊。</p><p class="source-meta">2026-10-09 · 中天新聞／吳孟潔 · 網路留言整理</p><p class="context-source"><a href="https://ctinews.com/news/items/gOnL11J4Wk">媒體整理｜松機遷移的網路討論</a></p></div></section>
+<nav class="topic-divider topic-transition" aria-label="題目分隔與導覽"><a href="#housing-index">回題目索引</a></nav>
+<div id="old-homes" class="stage-anchor"></div>
+<section class="sequence direct-stage" id="old-homes-stage" aria-labelledby="old-homes-question"><div class="scene">
+<div class="question"><p><span class="question-number">#7</span> 都更與住宅</p><h2 id="old-homes-question">高風險老屋的住戶談不攏，市府如何介入？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣談公辦門檻與容積誘因，沈談到府評估、耐震補助與轉介。</p>
+
+
+<div class="answers" id="old-homes-answers">
+<article class="reply" id="old-homes-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">公辦門檻與容積誘因</strong></div><p class="summary">提出大街廓容積誘因、過半同意後進場試算的公辦都更，以及防災型都更獎勵、海砂屋 575 等做法。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=11228s" target="_blank" rel="noopener">看原始發言 3:07:08</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>三種介入途徑</h4><p>他列出三條路：讓更多老屋納入大街廓更新、過半同意時由公辦都更進場試算，以及使用防災容積獎勵或海砂屋 575 方案。</p><h4>試算與實施的差別</h4><p>他也把試算與後續實施的門檻分開談。</p></div></article>
+<article class="reply green" id="old-homes-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">到府評估與轉介</strong></div><p class="summary">主張由老宅行動服務團到府，協助住戶了解耐震補助與都更選項，並整合中央和地方資源。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=11028s" target="_blank" rel="noopener">看原始發言 3:03:48</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>從耐震初篩開始</h4><p>他先提由市府做耐震風險初篩，再讓老宅行動服務團到府，整合耐震補助與都更協助，最後才談資訊揭露，保障購屋人的知情權。</p></div></article>
+</div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="old-homes-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="old-homes-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="old-homes-answers">雙方對照</button><a class="skip" href="#old-homes-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="old-homes-check" aria-labelledby="old-homes-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="old-homes-check-title">「市府進場」和「可以重建」有多遠？</h2><div class="context-note"><p>市府能進場協助評估、試算，是住戶開始協調的一步。重建之前若已有居住安全疑慮，還要另外處理檢查、補強或搬遷。比較兩人的方案時，可以分開看市府何時介入，以及等待期間誰負責提供安全支援。</p></div><div class="lens-grid"><div class="lens"><h3>50%｜危險建物初期意願門檻</h3><p>更新處說明，575 專案把危險建物公辦都更的第一階段意願門檻降至 50%。</p><p><a href="https://uro.gov.taipei/News_Content.aspx?n=FDB0CAB1DD42E805&amp;s=D1447611E6D11BEC&amp;sms=72544237BBE4C5F6">臺北市都市更新處｜都更新制</a></p></div><div class="lens"><h3>試算與評估｜進場後的工作</h3><p>市府的 575 說明列有試算及後續服務。仍須依個案釐清鑑定、住戶意願、重建或補強方式與適用條件。</p><p><a href="https://www-ws.gov.taipei/Download.ashx?icon=..pdf&amp;n=MTE0NTQ4Nzk2XzExNTYwMDQ2NDRfQVRUQ0gxLnBkZg%3D%3D&amp;u=LzAwMS9VcGxvYWQvMzIwL3JlbGZpbGUvMTQwNjYvOTcxNDU5OC83ODBjYTZiMi0xYTIxLTQ4ZDQtOGQxMC0zYjU5MDU3ZjlkNDIucGRm">臺北市政府｜危險建築 575 說明</a></p></div></div><p>可以追蹤兩件事：市府何時能進場協助，以及居民在整合期間如何獲得耐震評估與安全支援。</p></div></section>
+<section class="report article-section public-voices" id="old-homes-voices" aria-labelledby="old-homes-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="old-homes-voices-title">福林路住戶在 2023 年等到拆除動工</h2><p>福林路海砂屋住戶告訴公視，房子出現龜裂，水泥也會剝落，住在裡面讓人不安。對這些住戶而言，市府何時介入，關係到整合期間還要住在有安全疑慮的房子多久。</p><p>這個案例並非仍停在等待重建。公視於 2023 年 5 月 23 日報導，福林路 95 戶建物在市府專案協助下已開始拆除，當時規劃興建地上 17 層、地下 4 層的新建物。報導所列約四年期程是當時的拆除與施工規劃，不能當成已完工的證明。</p><p class="source-meta">2023-05-23 · 公視 · 歷史個案／拆除當日報導</p><p class="context-source"><a href="https://news.pts.org.tw/article/638096">公視｜福林路海砂屋住戶訪談</a></p></div></section>
+<nav class="topic-divider topic-transition" aria-label="題目分隔與導覽"><a href="#housing-index">回題目索引</a></nav>
+<div id="tokyo" class="stage-anchor"></div>
+<section class="sequence direct-stage" id="tokyo-stage" aria-labelledby="tokyo-question"><div class="scene">
+<div class="question"><p><span class="question-number">#8</span> 都更與住宅</p><h2 id="tokyo-question">台北的都更可以從東京學什麼？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣舉虎之門的空間規劃，沈聚焦重建後的權利如何分配。</p>
+
+
+<div class="answers" id="tokyo-answers">
+<article class="reply" id="tokyo-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">虎之門街區案例</strong></div><p class="summary">以虎之門之丘為例，提到台北與東京團隊交流，並將北市的整合障礙歸於誘因不足及住戶信任與資訊不足。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=11186s" target="_blank" rel="noopener">看原始發言 3:06:26</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>東京交流的案例</h4><p>他提到曾和東京都知事小池百合子交流，並把虎之門之丘當成參考案例。</p><h4>住戶的分配與負擔</h4><p>回到台北，他說住戶在意的是能分回多少、要補多少錢，以及程序和分攤能否理解。</p></div></article>
+<article class="reply green" id="tokyo-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">權利變換與老屋選項</strong></div><p class="summary">提出研究東京的權利轉換制度，視為可能加速都更的做法，也提到危老重建與老宅延壽。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=10923s" target="_blank" rel="noopener">看原始發言 3:02:03</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>權利轉換與其他選項</h4><p>他把東京的權利轉換制度列為可能借鏡的方向，也提到危老重建、老宅延壽等其他選項。</p><h4>制度移植的說明範圍</h4><p>他在現場沒有展開日本制度如何直接移植到台北。</p></div></article>
+</div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="tokyo-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="tokyo-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="tokyo-answers">雙方對照</button><a class="skip" href="#tokyo-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="tokyo-check" aria-labelledby="tokyo-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="tokyo-check-title">東京案例怎麼比，才知道台北能學什麼？</h2><div class="context-note"><p>虎之門案例可以用來看道路、公共空間和開發如何一起規劃；權利變換則處理原有產權如何分配到更新後的建物。台北要借鏡時，前者要看公共設施怎麼整合，後者要問估價、費用分攤和選屋流程是否透明。</p></div><div class="lens-grid"><div class="lens"><h3>東京｜道路與建物一起規劃</h3><p>東京都資料顯示，虎之門街區以立體道路制度讓環狀第二號線穿過建物，並配置辦公、居住和商業等用途。</p><p><a href="https://www.toshiseibi.metro.tokyo.lg.jp/dainiseibi/shikozumi/kanjyounigou/gaiku_03">東京都｜虎之門街區</a></p></div><div class="lens"><h3>台北｜也有權利變換</h3><p>台北市更新處已有權利變換分配的說明。日本國土交通省也把權利變換列為第一種市街地再開發的實施方式。</p><p><a href="https://uro.gov.taipei/News_Content.aspx?n=5E79553CBBAE8DFB&amp;s=8A4664278A465262&amp;sms=87415A8B9CE81B16">臺北市都市更新處｜權利變換分配</a></p></div></div><p>虎之門可以用來追問公共設施如何與重建一起規劃。比較權利變換時，則可以對照估價、資訊公開與住戶參與的做法，進一步確認哪些做法適用於台北的老屋。</p><p><a href="https://www.mlit.go.jp/toshi/city/sigaiti/toshi_urbanmainte_tk_000060.html">日本國土交通省｜市街地再開發</a></p></div></section>
+<section class="report article-section public-voices" id="tokyo-voices" aria-labelledby="tokyo-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="tokyo-voices-title">東京案例裡，土地權利人怎麼參與？</h2><p>日本都市再生機構記錄，新橋至虎之門周邊的土地權利人曾組成再開發協議會，討論建築更新和安全步行網絡。這份材料呈現權利人如何參與規劃，但沒有呈現租戶、店家與其他居民各自的意見。</p><p>UR 記錄的虎之門更新採分階段施工：先拆除印刷局建物、興建新醫院，等醫院搬遷後才拆舊院舍、建辦公大樓，最後再拆共同通信會館並整備廣場。這個安排讓醫院能持續運作，具體呈現更新如何配合既有服務；資料來自執行機構的案例介紹，並非各類居民的意見調查。</p><p class="source-meta">日本都市再生機構 UR PRESS 第79期 · 機構案例介紹；文內照片攝於2024-02</p><p class="context-source"><a href="https://www.ur-net.go.jp/urpress/79/pageindices/index12.html">日本都市再生機構｜新橋至虎之門的參與紀錄</a></p></div></section>
+<nav class="topic-divider" aria-label="題目分隔與導覽"><span>都更與住宅 · 全章結束</span><a href="#housing-index">回題目索引</a></nav>
+<section class="report chapter-index" id="industry-index" tabindex="-1" aria-labelledby="industry-title"><div class="report-inner"><h2 id="industry-title">產業與松機</h2><nav aria-label="產業與松機題目索引"><ol class="topic-list"><li><a href="#ai-strategy"><span class="index-number">#9</span><span>台北怎麼布局 AI 產業？</span></a></li><li><a href="#airport-relocation"><span class="index-number">#10</span><span>松山機場遷建計畫準備到哪一步？</span></a></li><li><a href="#ai-benefits"><span class="index-number">#11</span><span>松機原址做 AI 園區，預估效益怎麼看？</span></a></li></ol></nav><a href="#top">回議題分類</a></div>
+<div class="industry-scene" role="img" aria-label="AI 園區與飛機起飛示意">
+  <div class="industry-campus" aria-hidden="true">
+    <div class="industry-building" style="--height:55%"></div>
+    <div class="industry-building is-center" style="--height:95%"><span>AI 園區</span></div>
+    <div class="industry-building" style="--height:72%"></div>
+    <div class="industry-building" style="--height:39%"></div>
+  </div>
+  <div class="industry-runway" aria-hidden="true"></div>
+  <span class="industry-plane" aria-hidden="true">✈︎</span>
+</div>
+</section>
+<div id="ai-strategy" class="stage-anchor"></div>
+<section class="sequence direct-stage" id="ai-strategy-stage" aria-labelledby="ai-strategy-question"><div class="scene">
+<div class="question"><p><span class="question-number">#9</span> 產業與松機</p><h2 id="ai-strategy-question">台北怎麼布局 AI 產業？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣重科技園區串聯與招商，沈重軟體應用、新創與人才。</p>
+
+
+<div class="answers" id="ai-strategy-answers"><article class="reply" id="ai-strategy-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">串聯科技園區</strong></div><p class="summary">主張串聯科技園區形成廊帶，並以輝達海外總部落腳北士科說明招商成果。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=6167s">看原始發言 1:42:47</a>　<a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=7611s">看原始發言 2:06:51</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>北士科與科技廊帶</h4><p>他把輝達選擇北士科當作基隆河北岸科技廊帶的成果，並提到競爭選址和地上權協調。</p><h4>首都圈與園區串聯</h4><p>他也以首都圈、淡海到北士科的廊帶論述，追問沈對台北市內園區串聯的看法。</p></div></article><article class="reply green" id="ai-strategy-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">聚焦軟體、應用與人才</strong></div><p class="summary">認為台北適合軟體與應用，主張透過台北研究院、國科會合作和北士科的新創資源來招商、育才。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=7714s">看原始發言 2:08:34</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>台北的產業定位</h4><p>他區分快速運算、軟體與應用在產業中的角色，認為台北較適合後兩者。</p><h4>人才與國際合作</h4><p>他提出以台北研究院、國科會合作與北士科 TTA 據點，串接人才到國際合作。</p></div></article></div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="ai-strategy-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="ai-strategy-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="ai-strategy-answers">雙方對照</button><a class="skip" href="#ai-strategy-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="ai-strategy-check" aria-labelledby="ai-strategy-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="ai-strategy-check-title">招商與育成，各有哪些已公開的進度？</h2><div class="context-note"><p>企業完成地上權簽約，代表基地取得有了進展；新創據點則要看團隊能否得到研究資源、人才與合作機會。要判斷科技廊帶是否形成，可以再追蹤園區之間實際合作了什麼，以及新增職缺和進駐企業的情況。</p></div><div class="lens-grid"><div class="lens"><h3>北士科｜已完成地上權簽約</h3><p>中央社報導，2026 年 2 月 11 日，北市府與輝達子公司就北士科 T17、T18 基地完成設定地上權簽約。</p><p><a href="https://www.cna.com.tw/news/afe/202602110209.aspx">中央社｜北士科簽約大事記</a></p></div><div class="lens"><h3>TTA｜新據點仍待研議</h3><p>行政院長卓榮泰在 2026 年 8 月請國科會立案研議台灣科技新創基地（TTA）的新據點，並與北市府溝通。</p><p><a href="https://www.cna.com.tw/news/aipl/202608200289.aspx">中央社｜TTA 北士科研議</a></p></div></div><p>地上權簽約是單一企業進駐的里程碑，新創據點研議則是育成資源的規劃。要看產業布局成效，可以繼續追蹤園區間的合作、新創取得的資源，以及實際新增的研發職缺。</p></div></section>
+<section class="report article-section public-voices" id="ai-strategy-voices" aria-labelledby="ai-strategy-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="ai-strategy-voices-title">北投公民討論把交通與回饋放進產業議程</h2><p>北投文化基金會邀集約百名居民與相關利害關係人，經三場討論整理地方意見。與會者把交通、生態、企業對地方的回饋，以及公私合作列為優先議題。對這些參與者而言，企業進駐的效益也包括地方生活會怎麼改變。</p><p>基金會在 9 月 23 日發表公民意見報告，將討論整理成公私協力、企業回饋、交通、生態與環境五項優先議題，並送交市府。這是約百名參與者經三場討論提出的地方議程，能呈現參與者的訴求，但不是對全體北投居民抽樣的民意調查。</p><p class="source-meta">2026-09-24 · 中央社好生活 · 北投文化基金會公民討論</p><p class="context-source"><a href="https://howlife.cna.com.tw/local/20260924s002.aspx">中央社好生活｜北士科公民意見報告</a></p></div></section>
+<nav class="topic-divider topic-transition" aria-label="題目分隔與導覽"><a href="#industry-index">回題目索引</a></nav>
+<div id="airport-relocation" class="stage-anchor"></div>
+<section class="sequence direct-stage" id="airport-relocation-stage" aria-labelledby="airport-relocation-question"><div class="scene">
+<div class="question"><p><span class="question-number">#10</span> 產業與松機</p><h2 id="airport-relocation-question">松山機場遷建計畫準備到哪一步？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣強調市府已發函表態，沈追問可執行的方案與跨機關協調。</p>
+
+
+<div class="answers" id="airport-relocation-answers"><article class="reply" id="airport-relocation-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">已發函表達立場</strong></div><p class="summary">表示市府在 2023 年已發函行政院表達遷移立場，認為遷移有利城市發展。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=9764s">看原始發言 2:42:44</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>遷移立場與前提</h4><p>他說 2023 年已以公文表達市府支持遷移的立場，並把保障離島交通與醫療後送列為前提。</p><h4>後送交通的構想</h4><p>他舉出保留直升機停機坪、定翼機改飛桃園並由周邊醫院支援的構想。</p></div></article><article class="reply green" id="airport-relocation-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">追問計畫與協調進度</strong></div><p class="summary">指出先前公文只談遷移的可能，追問具體計畫、專案報告和跨機關會議推進情形。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=9890s">看原始發言 2:44:50</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>回函與專案進度</h4><p>他指出行政院回函是在談可能性，並追問專案報告和跨機關會議。</p><h4>承接航線的疑問</h4><p>先前提問時，他也質疑桃園第三跑道是否真能承接松機國內外航線和後送需求。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=9700s">補充發言 2:41:40</a></div></article></div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="airport-relocation-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="airport-relocation-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="airport-relocation-answers">雙方對照</button><a class="skip" href="#airport-relocation-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="airport-relocation-check" aria-labelledby="airport-relocation-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="airport-relocation-check-title">從發函、公開構想到遷建可行性</h2><div class="context-note"><p>一座機場的功能有不同接手難度。一般旅客能否轉飛桃園，要看航廈與跑道容量；離島就醫還要看下機後到醫院的時間與安排。發函、提構想、完成可行性評估和核定，是不同階段，應分別說明進度。</p></div><div class="lens-grid"><div class="lens"><h3>2026 年 10 月｜北市提出構想</h3><p>北市府公開提出遷移松山機場、利用機場與周邊土地的構想。蔣萬安也在 10 月下旬赴議會報告。</p><p><a href="https://www.cna.com.tw/news/aipl/202610210062.aspx">中央社｜市府赴議會報告</a></p></div><div class="lens"><h3>2026 年 10 月｜交通部仍有疑慮</h3><p>交通部長陳世凱在立法院答詢時表示，目前評估未見可行性，並指出桃園機場還有航廈與跑道整建、容量等問題。</p><p><a href="https://www.cna.com.tw/news/ahel/202610280226.aspx">中央社｜交通部答詢</a></p></div></div><p>公開報告能確認北市府已提出方案方向。這些資料仍無法證明遷建已核定；要判斷能否執行，還要看中央與地方如何處理航線承接、機場容量和遷建時程。</p></div></section>
+<section class="report article-section public-voices" id="airport-relocation-voices" aria-labelledby="airport-relocation-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="airport-relocation-voices-title">金門受訪者在意就醫與返鄉的時間</h2><p>金門地方媒體整理的調查與評論指出，離島受訪者關心松機搬遷後，返鄉和就醫要多花多少時間及交通費。從離島出發，到機場只是行程的一段；轉乘與到院時間也會影響就醫安排。</p><p>該媒體說明，問卷於 2026 年 10 月 29 日至 11 月 7 日進行，約有 150 份有效回覆；約七成擔心轉乘時間與成本增加，約五成關切急重症就醫。這些比例來自該次受訪樣本，不能推論為全體金門居民的態度。社論另整理票價補助、接駁規劃及過渡期航班等受訪者期待。</p><p class="source-meta">2026-11-11 · 金門全球資訊網 Quemoy社論 · 辯論後評論／自辦問卷</p><p class="context-source"><a href="https://www.kinmen.com.tw/article/jqsva0q382eamoiepgmd3p6x">金門全球資訊網｜金門民意與松機遷建</a></p>
+<figure class="kinmen-route">
+<figcaption>金門赴台北就醫｜行程示意</figcaption>
+<ol role="list"><li>金門出發</li><li>抵達機場</li><li>地面轉乘</li><li>到達醫院</li></ol>
+</figure></div></section>
+<nav class="topic-divider topic-transition" aria-label="題目分隔與導覽"><a href="#industry-index">回題目索引</a></nav>
+<div id="ai-benefits" class="stage-anchor"></div>
+<section class="sequence direct-stage" id="ai-benefits-stage" aria-labelledby="ai-benefits-question"><div class="scene">
+<div class="question"><p><span class="question-number">#11</span> 產業與松機</p><h2 id="ai-benefits-question">松機原址做 AI 園區，預估效益怎麼看？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣談園區紅利如何分享，沈追問「12 兆」究竟用哪種口徑估算。</p>
+
+
+<div class="answers" id="ai-benefits-answers"><article class="reply" id="ai-benefits-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">強調園區紅利</strong></div><p class="summary">主張園區稅收可讓台北市民分享，也可支援離島和桃園醫療，強調應及早推動。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=9821s">看原始發言 2:43:41</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>預期紅利的用途</h4><p>他主張園區稅收可用於照顧台北市民，也可支持離島醫療在地化和桃園醫療服務。</p><h4>效益試算的說明範圍</h4><p>他強調應提早協調，這段答覆主要談紅利用途，沒有列出 12 兆的計算表。</p></div></article><article class="reply green" id="ai-benefits-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">質疑估算口徑</strong></div><p class="summary">質疑蔣提出的 12 兆估算以內科營業額推算，主張應區分營業額與產值，也質疑開發時程。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=9890s">看原始發言 2:44:50</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>營業額與產值</h4><p>他追問市府以內科營業額推估時，是否把營業額與產值混為一談，並拿竹科的規模及數字作對照。</p><h4>產業變化與開發時程</h4><p>他先前也以 AI 產業變化速度質疑開發時程。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=9700s">補充發言 2:41:40</a></div></article></div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="ai-benefits-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="ai-benefits-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="ai-benefits-answers">雙方對照</button><a class="skip" href="#ai-benefits-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="ai-benefits-check" aria-labelledby="ai-benefits-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="ai-benefits-check-title">先看用地規劃，再看 12 兆的算法</h2><div class="context-note"><p>營業額通常看企業賣了多少，產值要看採用哪一套統計口徑，市府稅收則是另一個數字。即使園區能帶來產業活動，也要知道估算涵蓋哪些企業、哪幾年、何時進駐，以及開發成本，才有辦法判斷 12 兆代表多少可實現的效益。</p></div><div class="lens-grid"><div class="lens"><h3>約 300 公頃｜用地構想</h3><p>市府初步構想把機場及周邊約 300 公頃分成 AI 產業聚落（100 公頃）、公園（110 公頃）及生活聚落（90 公頃）。</p><p><a href="https://www.gov.taipei/News_Content.aspx?n=2044902FC839D045&amp;s=8ED4D25BC664CF21">臺北市府｜園區構想</a></p></div><div class="lens"><h3>12 兆元｜市府的產值推估</h3><p>市府以內科的每公頃數字及未來產業成長作為估算基礎。沈伯洋在辯論中質疑，不能直接把營業額當成產值使用。</p><p><a href="https://news.pts.org.tw/live/105">公視｜候選人辯論現場</a></p></div></div><p>要判斷這個推估有多可靠，還要核對內科基準的統計口徑、企業進駐速度、估算年份與開發成本。園區產值、市庫稅收和居民實際得到的利益，各自需要不同資料。</p></div></section>
+<section class="report article-section public-voices" id="ai-benefits-voices" aria-labelledby="ai-benefits-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="ai-benefits-voices-title">專家提醒，招商還要看供電條件</h2><p>刊出的專家意見指出，招商不能只看電價或預估產值，也要看台北能否提供穩定供電。若園區用電規模很大，對周邊住家、商店及小型工廠的影響也會成為地方議題。這是受訪專家的分析，目前未找到居民直接評論 12 兆元的估算法。</p><p>受訪者是清華大學原子科學院院長葉宗洸。他擔心 AI 等產業持續集中北部會增加供電壓力，尤其重要科技用戶獲優先保障時，周邊小型工廠、住家及商店可能受到影響。這是專家提出的風險判斷，並非松機園區已造成缺電的事實，也不是對 12 兆元估算完成的獨立驗證。</p><p class="source-meta">2026-10-30 · 台灣大紀元／莊璦筠 · 專家訪談</p><p class="context-source"><a href="https://www.epochtimes.com.tw/n517134/AI%E5%9C%92%E5%8D%80%E6%8B%9B%E5%95%86-%E5%B0%88%E5%AE%B6-%E5%85%88%E7%A2%BA%E4%BF%9D%E7%A9%A9%E5%AE%9A%E4%BE%9B%E9%9B%BB.html">大紀元｜AI 園區供電的專家意見</a></p></div></section>
+<nav class="topic-divider" aria-label="產業與松機章節結尾"><span>產業與松機 · 全章結束</span><a href="#industry-index">回題目索引</a></nav>
+<section class="report chapter-index" id="education-index" tabindex="-1" aria-labelledby="education-title"><div class="report-inner"><h2 id="education-title">育兒與教育</h2><nav aria-label="育兒與教育題目索引"><ol class="topic-list"><li><a href="#family-support"><span class="index-number">#12</span><span>未來四年，怎麼讓家長更容易找到育兒支援？</span></a></li><li><a href="#temporary-care"><span class="index-number">#13</span><span>0 至 6 歲免費臨托，師資與場所夠嗎？</span></a></li><li><a href="#co-teachers"><span class="index-number">#14</span><span>國小雙導師要怎麼推？</span></a></li><li><a href="#school-lunch"><span class="index-number">#15</span><span>免費營養午餐如何維持品質？</span></a></li><li><a href="#school-milk"><span class="index-number">#16</span><span>學童鮮乳政策應怎麼評估？</span></a></li><li><a href="#child-protection"><span class="index-number">#17</span><span>發生兒虐後，怎麼處置機構並支援受害家庭？</span></a></li><li><a href="#child-abuse-sentencing"><span class="index-number">#18</span><span>兒虐案件的刑責應怎麼調整？</span></a></li></ol></nav><a href="#top">回議題分類</a></div>
+<div class="index-vignette" role="img" aria-label="孩子走向校園的示意動畫">
+<div class="school-house" aria-hidden="true"></div><div class="school-clock" aria-hidden="true"></div>
+<span class="school-child" aria-hidden="true" style="--coat:#c78e67;--delay:-2s;--still:18%"></span>
+<span class="school-child" aria-hidden="true" style="--coat:#85a8ae;--delay:-7s;--still:27%"></span>
+<span class="school-child" aria-hidden="true" style="--coat:#ae9cbe;--delay:-11s;--still:34%"></span></div>
+</section>
+<div id="family-support" class="stage-anchor"></div>
+<section class="sequence direct-stage" id="family-support-stage" aria-labelledby="family-support-question"><div class="scene">
+<div class="question"><p><span class="question-number">#12</span> 育兒與教育</p><h2 id="family-support-question">未來四年，怎麼讓家長更容易找到育兒支援？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣著重公托量能與接送工時，沈著重家長能否透過單一窗口找到服務。</p>
+
+
+<div class="answers" id="family-support-answers"><article class="reply" id="family-support-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">擴大公托與工時支持</strong></div><p class="summary">主張擴大育兒減工時不減薪措施和公托量能，提出四年後校校有公托的目標。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=10444s">看原始發言 2:54:04</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>公托與減工時</h4><p>他把家長接送時的減工時支持與公托量能一起談，提出四年後希望能做到校校有公托。</p><h4>服務量與使用時間</h4><p>這一段著重服務名額和家長能不能騰出時間使用。</p></div></article><article class="reply green" id="family-support-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">家長諮詢單一窗口</strong></div><p class="summary">主張提供類似家長版 1999 的單一諮詢窗口，協助 0 至 18 歲家庭找到公托、臨托等資源並增加心理諮商。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=10680s">看原始發言 2:58:00</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>家長求助專線</h4><p>他把方案形容為家長版 1999，希望從孩子出生到 18 歲都有地方求助。</p><h4>轉介與心理支持</h4><p>除了既有公托或臨托，他也提出用專線接到相應資源，並增加心理諮商。</p></div></article></div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="family-support-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="family-support-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="family-support-answers">雙方對照</button><a class="skip" href="#family-support-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="family-support-check" aria-labelledby="family-support-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="family-support-check-title">有入口之後，家長能接到什麼服務？</h2><div class="context-note"><p>遇到育兒問題時，家庭可能先要知道去哪裡問，接著才是找不找得到名額、是否能配合自己的工作時間。單一窗口是資訊入口，公托擴充和接送工時支持則影響家長能否實際使用服務，可以分開追蹤。</p></div><div class="lens-grid"><div class="lens"><h3>定點臨托已有查詢入口</h3><p>臺北市的定點臨托網站可查據點與預約資訊。家長版 1999 則是辯論裡提出的跨服務諮詢構想。</p><p><a href="https://childcare.gov.taipei/">查詢臺北市定點臨托據點與預約</a></p></div><div class="lens"><h3>減工時與托育名額是兩件事</h3><p>北市勞動局已有鼓勵事業單位提供育兒減工時不減薪的補助計畫。評估擴大政策時，可以分別看參與雇主、涵蓋家庭和新增公托名額。</p><p><a href="https://www-ws.gov.taipei/Download.ashx?icon=.pdf&amp;n=6ZmE5Lu2Mi7oh7rljJfluILmlL%2Flupzli57li5XlsYAxMTXlubTluqboo5zliqnkuovmpa3llq7kvY3mlrzlk6Hlt6XogrLlhZLmnJ%2FlkI%2B5bCR5bel5pmC5a%2Bm5pa96KiI55WrMi4wLnBkZg%3D%3D&amp;u=LzAwMS9VcGxvYWQvMzA3L3JlbGZpbGUvNjYzOTkvOTU0NDA5OC9hNjJiOTRlZS04YzQwLTQ3M2YtOTEzMi1kOGJlNjFkNmZlNWUucGRm">看勞動局補助計畫</a></p></div></div></div></section>
+<section class="report article-section public-voices" id="family-support-voices" aria-labelledby="family-support-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="family-support-voices-title">公托協會看到家長的接送焦慮</h2><p>台灣公共托育協會表示，第一線早已看到不少家長為接送時間焦慮，政策提出後，也有家長想進一步了解減工時措施。協會提醒，家長提早下班後還得接送和照顧孩子，因此這段工時對家庭的價值在於能否接住原本趕不上的照顧安排。</p><p>協會理事長呂佳旻本身育有兩名孩子。她向聯合報表示，第一線常看到家長因交通而趕不上接送；支持減工時方向，同時認為成本分擔與雇主配合仍需討論。對跨縣市工作的家庭，她也期待其他縣市能提供相應支持，讓工作地點不成為使用措施的落差。</p><p class="source-meta">2026-03-03 · 聯合報／邱書昱 · 台灣公共托育協會訪談</p><p class="context-source"><a href="https://udn.com/news/story/7266/9356270">聯合報｜台灣公共托育協會看育兒減工時</a></p></div></section>
+<nav class="topic-divider topic-transition" aria-label="題目分隔與導覽"><a href="#education-index">回題目索引</a></nav>
+<div id="temporary-care" class="stage-anchor"></div>
+<section class="sequence direct-stage" id="temporary-care-stage" aria-labelledby="temporary-care-question"><div class="scene">
+<div class="question"><p><span class="question-number">#13</span> 育兒與教育</p><h2 id="temporary-care-question">0 至 6 歲免費臨托，師資與場所夠嗎？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣質疑照顧人力如何補足，沈提議先從 0 至 2 歲推行。</p>
+
+
+<div class="answers" id="temporary-care-answers"><article class="reply" id="temporary-care-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">質疑照顧人力能否補足</strong></div><p class="summary">質疑每週免費四小時的人力估算，稱即使有執照的保母都投入，仍需大量擴充。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=7129s">看原始發言 1:58:49</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>照顧人力從哪裡來</h4><p>他追問的是 0 至 6 歲每週免費四小時如果兌現，照顧者從哪裡來。</p><h4>對擴充幅度的質疑</h4><p>他聲稱即使把全市有執照的保母納入，仍需要大幅擴增人力。</p></div></article><article class="reply green" id="temporary-care-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">先從 0 至 2 歲推行</strong></div><p class="summary">說明會先從 0 至 2 歲推行，按擴充場所、培訓與補充人力等步驟逐步擴大。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=7190s">看原始發言 1:59:50</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>分階段擴大年齡</h4><p>他說 0 至 6 歲是逐步擴大的目標，第一階段從 0 至 2 歲開始。</p><h4>場所與人力的順序</h4><p>他列出先擴場所，再培訓、補充照顧人力的順序。</p></div></article></div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="temporary-care-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="temporary-care-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="temporary-care-answers">雙方對照</button><a class="skip" href="#temporary-care-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="temporary-care-check" aria-labelledby="temporary-care-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="temporary-care-check-title">免費時數如何換成實際名額？</h2><div class="context-note"><p>每週免費時數是家長可用的額度，真正能服務多少孩子，還要看據點的開放時段和每時段可容納人數。若優先照顧 0 至 2 歲，尤其要盤點現有幼兒名額、照顧人力和家長最常需要的時段。</p></div><div class="lens-grid"><div class="lens"><h3>現行定點臨托的對象</h3><p>北市定點臨托原則上收托 6 個月至學齡前兒童，也有預約與收托人數規定。辯論提出的 0 至 6 歲是政策範圍，和既有服務資格不同。</p><p><a href="https://childcare.gov.taipei/guidelines/">看定點臨托須知</a></p></div><div class="lens"><h3>2 歲以下另有名額上限</h3><p>市府須知列出部分據點每時段至多收托 4 名，其中 2 歲以下至多 2 名。要估算擴張能力，還要知道各區開放時段、現有人力和預約需求。</p><p><a href="https://dosw.gov.taipei/News_Content.aspx?n=B2FFCD51DE49E16C&amp;s=0D9B2035F304EBE3&amp;sms=09BA849A6400B3FA">看社會局定點臨托說明</a></p></div></div></div></section>
+<section class="report article-section public-voices" id="temporary-care-voices" aria-labelledby="temporary-care-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="temporary-care-voices-title">臨托第一線在意孩子能否熟悉環境</h2><p>公視訪問內湖臨托工作人員時，督導指出，孩子常是第一次來或隔很久才來，分離焦慮是照顧時的難題。另一處育兒友善園的館長則說，固定的托育人員較容易讓孩子和家長建立熟悉感。</p><p>內湖居家托育服務中心督導游宜親建議，第一次臨托先從較短時間開始，再逐步延長。報導中的內湖據點採獨立照顧空間、專任托育人員輪班，平日服務可到晚上八點；這是該據點的安排，不能推論所有臨托場所都有相同時段。大安小古意歡樂園館長黃俊瑛則強調固定人員帶來的熟悉感。</p><p class="source-meta">2025-04-08 · 公視獨立特派員 · 臨托工作人員訪談</p><p class="context-source"><a href="https://news.pts.org.tw/article/745901">公視獨立特派員｜定點臨托第一線</a></p></div></section>
+<nav class="topic-divider topic-transition" aria-label="題目分隔與導覽"><a href="#education-index">回題目索引</a></nav>
+<div id="co-teachers" class="stage-anchor"></div>
+<section class="sequence direct-stage" id="co-teachers-stage" aria-labelledby="co-teachers-question"><div class="scene">
+<div class="question"><p><span class="question-number">#14</span> 育兒與教育</p><h2 id="co-teachers-question">國小雙導師要怎麼推？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣追問能否找到足夠導師，沈提出縮小範圍試辦後再評估。</p>
+
+
+<div class="answers" id="co-teachers-answers"><article class="reply" id="co-teachers-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">先看導師人力</strong></div><p class="summary">指出目前已有導師人力不足的情形，質疑雙導師制需要多少人、能否推動。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=7129s">看原始發言 1:58:49</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>現有缺師問題</h4><p>他以現有學校連一名導師都不易補足為由，質疑雙導師制度必須先說清楚需要多少人。</p><h4>對可行性的追問</h4><p>這段是對提案可行性的追問。</p></div></article><article class="reply green" id="co-teachers-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">先試辦再調整</strong></div><p class="summary">以新北秀朗國小為例，主張台北先試辦，再依第一線教師負擔和實施成效調整。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=7221s">看原始發言 2:00:21</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>以試辦案例說明</h4><p>他舉新北秀朗國小在一年級和六年級試辦為例，主張台北也先小規模試辦，再依第一線教師的負擔與結果調整。</p></div></article></div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="co-teachers-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="co-teachers-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="co-teachers-answers">雙方對照</button><a class="skip" href="#co-teachers-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="co-teachers-check" aria-labelledby="co-teachers-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="co-teachers-check-title">試辦要用什麼標準評估？</h2><div class="context-note"><p>兩位導師要做什麼得先分清楚，例如誰帶班、誰處理家長聯繫、誰負責行政。既有案例可作試辦參考，但比較成效時還要看原本的分工、增加多少工時，以及試辦後教師實際少了哪些負擔。</p></div><div class="lens-grid"><div class="lens"><h3>秀朗國小是辯論援引的案例</h3><p>沈伯洋在辯論中說，秀朗國小曾在一年級及六年級試辦類似做法。這是候選人援引的案例，現有資料不足以量化教師減負效果。</p><p><a href="https://rwdnews.sanlih.com.tw/news/1931242">看三立辯論報導</a></p></div><div class="lens"><h3>台北政見列為試辦</h3><p>沈伯洋的教育政見同時列出雙導師、導師行政助理和行政流程改善。評估雙導師時，可以看每班投入工時、行政負擔如何分攤，以及教學與親師溝通有何變化。</p><p><a href="https://puma.taipei/policies/%E6%95%99%E8%82%B2%E6%94%BF%E7%AD%96">看候選人教育政見</a></p></div></div></div></section>
+<section class="report article-section public-voices" id="co-teachers-voices" aria-labelledby="co-teachers-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="co-teachers-voices-title">第一線老師的時間已經怎麼分配？</h2><p>公視採訪一位內湖國小一年級導師，報導指出，一週 23 節課中有 16 節由該導師負責，其餘部分由科任老師授課。這是校園既有分工的實例；受訪教師在這段報導談的是工作量，沒有直接對雙導師政見表態。</p><p>報導中的蕭老師帶 29 名一年級學生，還要自製注音教材。內湖國小校長朱怡珊說，教師可能連上三、四節課，下課時間還要喝水、上廁所與備課；介壽國中校長陳建廷則提到缺額無人應徵，需靠退休或兼任教師補位。這些訪談呈現現有人力壓力，並未直接評估雙導師試辦成效。</p><p class="source-meta">2026-11-05 · 公視獨立特派員；11-18更新 · 辯論後校園報導</p><p class="context-source"><a href="https://news.pts.org.tw/article/834390">公視獨立特派員｜教師工作量與缺師</a></p></div></section>
+<nav class="topic-divider topic-transition" aria-label="題目分隔與導覽"><a href="#education-index">回題目索引</a></nav>
+<div id="school-lunch" class="stage-anchor"></div>
+<section class="sequence direct-stage" id="school-lunch-stage" aria-labelledby="school-lunch-question"><div class="scene">
+<div class="question"><p><span class="question-number">#15</span> 育兒與教育</p><h2 id="school-lunch-question">免費營養午餐如何維持品質？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣強調補助和午餐委員會，沈追問廠商流標及供餐品質。</p>
+
+
+<div class="answers" id="school-lunch-answers"><article class="reply" id="school-lunch-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">補助與午餐委員會把關</strong></div><p class="summary">主張保持原有招標方式，由午餐供應委員會把關，並以補助水準支持政策。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=8024s">看原始發言 2:13:44</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>招標與品質把關</h4><p>他說免費政策沿用既有招標模式，由午餐供應委員會把關，以補助水準說明維持品質的做法。</p><h4>爭議後的檢查</h4><p>回應爭議時，他另舉金華國中等校的事後檢查說明。</p></div></article><article class="reply green" id="school-lunch-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">追問流標與品質</strong></div><p class="summary">表示支持免費，追問開學前流標等執行問題，主張用更健全的制度維持品質。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=7962s">看原始發言 2:12:42</a>　<a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=8151s">看原始發言 2:15:51</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>流標風險與政策立場</h4><p>他指出部分學校開學前碰到流標風險，並澄清支持免費午餐。</p><h4>物價、溯源與食農教育</h4><p>他在申論還主張經費應能因應物價變化，並提到食材溯源和食農教育。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=5961s">補充發言 1:39:21</a></div></article></div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="school-lunch-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="school-lunch-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="school-lunch-answers">雙方對照</button><a class="skip" href="#school-lunch-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="school-lunch-check" aria-labelledby="school-lunch-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="school-lunch-check-title">單餐補助、招標與供餐是三道關卡</h2><div class="context-note"><p>免費描述的是誰付錢，品質則要看廠商是否穩定供餐、食材是否符合規格及學生是否吃得到。遇到流標，可以追蹤備援餐怎麼供應；提高補助後，也能用食材查驗與供餐紀錄核對是否落實。</p></div><div class="lens-grid"><div class="lens"><h3>87 元與 92 元怎麼算？</h3><p>教育局公布的每餐補助由國小 70 元、國中 75 元，加上每餐 17 元食材補助，合計國小 87 元、國中 92 元。</p><p><a href="https://english.udd.gov.taipei/News_Content.aspx?n=DD9CEC17A97FBC64&amp;s=9CD770A8A8FB8EF1&amp;sms=72544237BBE4C5F6">看北市教育局說明</a></p></div><div class="lens"><h3>部分招標曾流標</h3><p>台灣事實查核中心整理，2026 年招標較晚，部分學校因投標廠商不足而流標，8 月底才全數完成。這項紀錄可用來追蹤備援供餐，也要另外查食材查驗與實際供餐紀錄才能評估品質。</p><p><a href="https://tfc-taiwan.org.tw/taipei-free-school-lunch-bidding-failures-and-fresh-milk-redemption-rates-claim/">看台灣事實查核中心</a></p></div></div></div></section>
+<section class="report article-section public-voices" id="school-lunch-voices" aria-labelledby="school-lunch-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="school-lunch-voices-title">免費之外，家長也在意菜色與份量</h2><p>2026 年 9 月，家長對學校午餐水果份量提出質疑。太報記錄，一所學校供應三顆藍莓引發討論，也有家長表示願意自行負擔費用，希望孩子吃得足夠。這些反映把免費政策的討論帶回實際菜色與份量。</p><p>太報查閱教育部校園食材登錄平台，發現各校菜單安排不同，有的搭配水果，有的提供乳品或豆漿，也有菜單未列水果。家長對份量與選擇的反映，必須對照各校實際供餐；單一學校的餐點照片，不能直接代表全市免費午餐的品質。</p><p class="source-meta">2026-09-27 · 太報／楊亞璇 · 家長反映／菜單查閱</p><p class="context-source"><a href="https://www.taisounds.com/news/content/74/289927">太報｜免費營養午餐與家長需求</a></p></div></section>
+<nav class="topic-divider topic-transition" aria-label="題目分隔與導覽"><a href="#education-index">回題目索引</a></nav>
+<div id="school-milk" class="stage-anchor"></div>
+<section class="sequence direct-stage" id="school-milk-stage" aria-labelledby="school-milk-question"><div class="scene">
+<div class="question"><p><span class="question-number">#16</span> 育兒與教育</p><h2 id="school-milk-question">學童鮮乳政策應怎麼評估？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣談政策推動成果，沈追問哪些學童實際兌換、哪些沒有。</p>
+
+
+<div class="answers" id="school-milk-answers"><article class="reply" id="school-milk-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">列為市府推動成果</strong></div><p class="summary">將生生喝鮮乳列為政績之一，提到市府推動和獲獎。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=6261s">看原始發言 1:44:21</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>施政成果與兌換方式</h4><p>他把生生喝鮮奶列為施政成果；後續答辯還說曾與四大超商及賣場討論執行困難，最後以數位學生卡證兌換。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=8107s">補充發言 2:15:07</a></div></article><article class="reply green" id="school-milk-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">追問整體與弱勢兌換率</strong></div><p class="summary">以兌換率下降及弱勢學童領取率偏低，質疑政策是否照顧到目標對象。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=7962s">看原始發言 2:12:42</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>區分整體與弱勢兌換率</h4><p>他把整體兌換率和弱勢學生的領取情形分開問，指出如果弱勢學生領取率偏低，就需要回頭檢視政策是否真的接觸到目標家庭。</p></div></article></div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="school-milk-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="school-milk-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="school-milk-answers">雙方對照</button><a class="skip" href="#school-milk-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="school-milk-check" aria-labelledby="school-milk-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="school-milk-check-title">同時看整體兌換率和不同群體</h2><div class="context-note"><p>兌換率反映有資格的人實際領取的情形，不能單憑這個比例推論學童喝了多少或營養改善多少。若弱勢學生領得較少，可以再問合作通路好不好到、卡證操作是否順利，以及是否有適合的替代飲品。</p></div><div class="lens-grid"><div class="lens"><h3>2025 年後期兌換率下降</h3><p>台灣事實查核中心整理的 2025 年資料顯示，計畫後期兌換率下降，弱勢學生兌換率也低於整體。這個結論有特定觀察期間。</p><p><a href="https://tfc-taiwan.org.tw/taipei-free-school-lunch-bidding-failures-and-fresh-milk-redemption-rates-claim/">看台灣事實查核中心</a></p></div><div class="lens"><h3>兌換可以選鮮奶或豆漿</h3><p>市府問答列出原味鮮奶與豆漿兩種選項。後續可以按學童群體追蹤兌換，並調查通路、領取時段和產品選擇是否影響使用。</p><p><a href="https://www.gov.taipei/News_Content.aspx?n=EEC70A4186D4C828&amp;s=5BB965A5E8F37F50">看北市政策問答</a></p></div></div></div></section>
+<section class="report article-section public-voices" id="school-milk-voices" aria-labelledby="school-milk-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="school-milk-voices-title">家長反映免費兌換卻被扣款</h2><p>中央社報導，有家長向 1999 反映，學生到合作門市兌換鮮乳時，門市把操作當成一般消費而扣款。市府表示已協調退款，並將和通路改善流程。家長遇到的問題在兌換當下，與是否符合領取資格是兩回事。</p><p>蔣萬安在 11 月 4 日受訪時表示，已請超商協助退款，並會與通路業者溝通改善兌換程序。這則報導確認的是家長曾經反映誤扣款，以及市長對後續處理的說明；報導未提供全市異常交易的件數與比例，因此不能把個案當成普遍發生率。</p><p class="source-meta">2026-11-04 · 中央社／楊淑閔 · 辯論後報導／家長申訴與市府回應</p><p class="context-source"><a href="https://www.cna.com.tw/news/aipl/202611040251.aspx">中央社｜家長反映兌換被誤扣款</a></p></div></section>
+<nav class="topic-divider topic-transition" aria-label="題目分隔與導覽"><a href="#education-index">回題目索引</a></nav>
+<div id="child-protection" class="stage-anchor"></div>
+<section class="sequence direct-stage sober" id="child-protection-stage" aria-labelledby="child-protection-question"><div class="scene">
+<div class="question"><p><span class="question-number">#17</span> 育兒與教育</p><h2 id="child-protection-question">發生兒虐後，怎麼處置機構並支援受害家庭？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣列舉停業停聘、稽查與共訪，沈追問家長何時能獲得支援。</p>
+
+
+<div class="answers" id="child-protection-answers"><article class="reply" id="child-protection-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">停業停聘、稽查與共訪</strong></div><p class="summary">列舉通報後停業停聘、擴大無預警稽查及三方共訪等改進，也說曾面對面聽取家長陳情。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=9116s">看原始發言 2:31:56</a>　<a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=7363s">看原始發言 2:02:43</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>共訪與無預警稽查</h4><p>他以剴剴案的三方共訪安排、相關園所無預警稽查等措施說明如何改進，也說曾在議會親自聽家長說明並接下陳情書。</p></div></article><article class="reply green" id="child-protection-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">及早支援並追問等待時間</strong></div><p class="summary">主張確認事實後迅速停業、停職，及早提供受害者支援，也追問心理諮商為何因個案而有不同等候時間。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=5928s">看原始發言 1:38:48</a>　<a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=8998s">看原始發言 2:29:58</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>機構處置與專業支持</h4><p>他主張事實確定後應迅速停業或停職，也要讓社工和幼保人員獲得市府支持。</p><h4>諮商等待時間</h4><p>他另外追問受害家庭為何在心理諮商上遇到不同等待時間。</p></div></article></div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="child-protection-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="child-protection-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="child-protection-answers">雙方對照</button><a class="skip" href="#child-protection-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="child-protection-check" aria-labelledby="child-protection-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="child-protection-check-title">機構處置和家庭支援可以並行</h2><div class="context-note"><p>機構停業或人員停聘關係到能不能立即避免再發生，家屬收到通知、轉介和心理支持則是另一條處理流程。追蹤兩條時間線，可以看出孩子受到保護後，家庭有沒有接上需要的服務。</p></div><div class="lens-grid"><div class="lens"><h3>通報後有調查和申訴流程</h3><p>北市社會局的公開流程指定，安置兒少保護事件應循相關通報程序處理。這份流程適用於安置機構等情境，不能直接套到所有托育機構。</p><p><a href="https://dosw.gov.taipei/News_Content.aspx?n=AD68B6C042F74966&amp;s=2FB1A51E45E23FC0&amp;sms=F7E2AA488F68A40C">看北市社會局流程</a></p></div><div class="lens"><h3>家庭支援依個案評估</h3><p>北市家防中心列出法律諮詢、心理諮商、醫療轉介及經濟扶助等。要了解服務是否及時，還要看通報、初評及實際獲得服務分別花了多久。</p><p><a href="https://www.dvsa.gov.taipei/News_Content.aspx?n=DE331A38A33EC5D1&amp;s=12407AABBC128962">看北市家防中心服務</a></p></div></div></div></section>
+<section class="report article-section public-voices" id="child-protection-voices" aria-labelledby="child-protection-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="child-protection-voices-title">家長要求公開調查，也說出家庭的心理負擔</h2><p>聯合報報導，連鎖幼兒園不當對待案中，有家長公開說出得知孩子遭遇後的自責。家長要求市府儘速處理並公開調查結果，讓機構處置與家庭遭遇能被看見。</p><p>家長在記者會要求加速調查、公布結果，並描述孩子出現惡夢與不安，也有家長表示自己需要身心科協助。教育局當時回應，已將行為人停職並裁罰 20 萬元。這是報導當時的指控與行政處理狀態，不等於案件所有事實已經司法認定。</p><p class="source-meta">2026-07-15 · 聯合報／邱書昱 · 家長指控與教育局回應</p><p class="context-source"><a href="https://udn.com/news/amp/story/6885/9628924">聯合報｜幼兒園事件家長發聲</a></p></div></section>
+<nav class="topic-divider topic-transition" aria-label="題目分隔與導覽"><a href="#education-index">回題目索引</a></nav>
+<div id="child-abuse-sentencing" class="stage-anchor"></div>
+<section class="sequence direct-stage sober" id="child-abuse-sentencing-stage" aria-labelledby="child-abuse-sentencing-question"><div class="scene">
+<div class="question"><p><span class="question-number">#18</span> 育兒與教育</p><h2 id="child-abuse-sentencing-question">兒虐案件的刑責應怎麼調整？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣強調家長加重刑責的訴求，沈質疑部分提案是否符合比例原則。</p>
+
+
+<div class="answers" id="child-abuse-sentencing-answers"><article class="reply" id="child-abuse-sentencing-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">轉述家長要求加重刑責</strong></div><p class="summary">轉述家長希望加重兒虐刑責，質疑沈在立法院的表決立場。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=9165s">看原始發言 2:32:45</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>家長訴求與表決立場</h4><p>他轉述家長當面希望加重兒虐刑責，並據此質疑沈在立法院的立場。</p><h4>具體條文的說明範圍</h4><p>這段重點在家長訴求與表決，沒有提出新的具體條文。</p></div></article><article class="reply green" id="child-abuse-sentencing-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">質疑部分提案是否合比例</strong></div><p class="summary">表示支持托育專法和己方版本，反對他認為不符合比例原則的提案。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=9186s">看原始發言 2:33:06</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>支持與反對的版本</h4><p>他說支持托育專法及己方提案，反對他認為不符比例原則的版本。</p><h4>受害家庭的支持標準</h4><p>回到市政，他接著追問受害家庭獲得心理諮商的標準。</p></div></article></div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="child-abuse-sentencing-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="child-abuse-sentencing-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="child-abuse-sentencing-answers">雙方對照</button><a class="skip" href="#child-abuse-sentencing-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="child-abuse-sentencing-check" aria-labelledby="child-abuse-sentencing-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="child-abuse-sentencing-check-title">先對照條文，再看雙方主張</h2><div class="context-note"><p>討論加重刑責時，要先辨別雙方在談凌虐行為、致死結果，還是以凌虐方式故意殺人。這些情況的法律要件不同。若要查候選人究竟支持哪一種修法，應把他談的版本和正式表決條文對在一起。</p></div><div class="lens-grid"><div class="lens"><h3>刑法已在 2025 年修正</h3><p>2025 年修法增訂刑法第 272 條之 1。對未滿 7 歲兒童以凌虐方式犯殺人罪，條文規定死刑或無期徒刑。</p><p><a href="https://mojlaw.moj.gov.tw/LawContent.aspx?LSID=fl001424&amp;TypeSort=2&amp;lawNumber=271">看法務部刑法條文</a></p></div><div class="lens"><h3>凌虐與凌虐方式殺人分列條文</h3><p>同次修法也修改第 286 條，依被害人年齡與行為結果區分刑責。比對候選人對表決的說法，需要核對所指版本與表決紀錄。</p><p><a href="https://www.cna.com.tw/news/aipl/202507180112.aspx">看中央社三讀報導</a></p></div></div></div></section>
+<section class="report article-section public-voices" id="child-abuse-sentencing-voices" aria-labelledby="child-abuse-sentencing-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="child-abuse-sentencing-voices-title">倡議家長支持加重刑責，也要求專責機制</h2><p>刑法修正三讀後，剴剴網路爸媽群等團體肯定加重虐童刑責，並再度呼籲設立專責兒少保護機制。該團體的公開訴求涵蓋刑事處罰，也要求把兒少保護工作獨立出來統籌。</p><p>團體同時提出設立專責兒少保護機關的要求，希望保護工作能由專責體系統籌。因此，這份聲明的訴求包括事後刑責與事前保護兩部分。它發表於 2025 年修法時，不能當成團體已對 2026 年辯論中每個版本爭點逐一表態。</p><p class="source-meta">2025-07-18 · 中央社 · 修法當日／家長團體聲明</p><p class="context-source"><a href="https://www.cna.com.tw/news/aipl/202507180276.aspx">中央社｜兒虐修法後的家長團體聲明</a></p></div></section>
+<nav class="topic-divider" aria-label="育兒與教育章節結尾"><span>育兒與教育 · 全章結束</span><a href="#education-index">回題目索引</a></nav>
+<section class="report chapter-index" id="environment-index" tabindex="-1" aria-labelledby="environment-index-title"><div class="report-inner"><h2 id="environment-index-title">環境與健康</h2><nav aria-label="環境與健康題目索引"><ol class="topic-list"><li><a href="#tree-canopy"><span class="index-number">#19</span><span>怎麼看松山區樹冠變化和全市種樹成果？</span></a></li><li><a href="#dongmen-tree"><span class="index-number">#20</span><span>東門市場茄苳樹為何遭移除？</span></a></li><li><a href="#smoke-free"><span class="index-number">#21</span><span>無菸城市上路前的評估足夠嗎？</span></a></li><li><a href="#senior-card"><span class="index-number">#22</span><span>敬老卡升級後，可以用在哪裡？</span></a></li><li><a href="#baolin-food-safety"><span class="index-number">#23</span><span>寶林茶室案後，怎樣改善食安治理？</span></a></li></ol></nav><a href="#top">回議題分類</a></div>
+<div class="index-vignette" role="img" aria-label="樹木輕搖、居民散步的公園示意動畫">
+<span class="park-tree" aria-hidden="true" style="--left:15%;--leaf:#59745e;--delay:-1s"></span>
+<span class="park-tree" aria-hidden="true" style="--left:31%;--leaf:#718665;--delay:-3s"></span>
+<span class="park-tree" aria-hidden="true" style="--left:84%;--leaf:#536c65;--delay:-2s"></span>
+<div class="park-bench" aria-hidden="true"></div><span class="park-walker" aria-hidden="true"></span></div>
+</section>
+<div id="tree-canopy" class="stage-anchor"></div>
+<section class="sequence direct-stage" id="tree-canopy-stage" aria-labelledby="tree-canopy-question"><div class="scene">
+<div class="question"><p><span class="question-number">#19</span> 環境與健康</p><h2 id="tree-canopy-question">怎麼看松山區樹冠變化和全市種樹成果？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣談種了多少棵樹，沈談衛星影像看到多少樹冠。兩種數字的基礎不同。</p>
+
+
+<div class="answers" id="tree-canopy-answers"><article class="reply" id="tree-canopy-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">新植數量</strong></div><p class="summary">用松山區新增綠化及全市植樹量回應，稱研究所示樹冠減少包含私人及非市府管轄用地。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=8080s">看原始發言 2:14:40</a>　<a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=8217s">看原始發言 2:16:57</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>提出的兩組數字</h4><p>他分別提出松山區增加 808 平方公尺與 1.6 萬株喬灌木的說法，並稱樹冠研究涵蓋私人開發、中央轄管地和大學校園。</p><h4>研究範圍與口徑</h4><p>這些是他在辯論提出的不同口徑。</p></div></article><article class="reply green" id="tree-canopy-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">樹冠變化</strong></div><p class="summary">表示自己引用研究指出松山區樹冠減少，並說私人開發與工程都可能是原因，沒有指稱都由市府砍除。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=8179s">看原始發言 2:16:19</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>引用樹冠研究</h4><p>他說他引用的是中研院的松山區樹冠變化，並舉私人用地和工程為可能原因。</p><h4>釐清歸因</h4><p>他也澄清，引用這項變化時沒有把它全部歸因於市府砍樹。</p></div></article></div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="tree-canopy-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="tree-canopy-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="tree-canopy-answers">雙方對照</button><a class="skip" href="#tree-canopy-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="tree-canopy-check" aria-labelledby="tree-canopy-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="tree-canopy-check-title">樹冠面積與植樹數要分開看</h2><div class="context-note"><p>樹冠面積看的是樹葉與枝幹從上方覆蓋了多少地面，植樹株數看的是種了幾株。因為大樹和新苗提供的遮蔭不同，株數增加與樹冠面積下降可以同時發生。比較松山區和全市之前，也要先對齊年份與範圍。</p></div><div class="lens-grid"><div class="lens"><p>中央社報導的衛星影像估算指全市樹冠約從 628 降至 615 公頃；市府回應部分變化涉及中央或私人土地。這個全市估算不能直接當成松山區的數字，也不能換算成實際被砍株數。</p><p><a href="https://www.cna.com.tw/news/aloc/202609270166.aspx">中央社｜樹冠估算與市府回應</a></p></div></div></div></section>
+<section class="report article-section public-voices" id="tree-canopy-voices" aria-labelledby="tree-canopy-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="tree-canopy-voices-title">護樹團體追問保護流程</h2><p>護樹團體在辯論後發表聲明，認為松山區種植數量沒有回答現有樹木的保護程序有沒有落實。兩種關切落在不同地方：一個談新增多少，另一個問既有樹木受工程影響時怎麼處理。</p><p>台灣樹人會與松山區撫遠公園護樹聯盟要求，市府說明松山區 1.6 萬株中喬木與灌木各有多少、種在哪裡；對全市 4.2 萬株，也要求列出各局處清單，釐清是否包含私人土地。這是團體要求公開口徑與明細的倡議，並非本專題已驗證市府數字錯誤。</p><p class="source-meta">2026-11-02 · 公民行動影音紀錄資料庫 · 台灣樹人會等團體新聞稿／辯論後</p><p class="context-source"><a href="https://www.civilmedia.tw/archives/141925">公民行動影音紀錄資料庫｜護樹團體回應</a></p></div></section>
+<nav class="topic-divider topic-transition" aria-label="題目分隔與導覽"><a href="#environment-index">回題目索引</a></nav>
+<div id="dongmen-tree" class="stage-anchor"></div>
+<section class="sequence direct-stage" id="dongmen-tree-stage" aria-labelledby="dongmen-tree-question"><div class="scene">
+<div class="question"><p><span class="question-number">#20</span> 環境與健康</p><h2 id="dongmen-tree-question">東門市場茄苳樹為何遭移除？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣說明原定移植、廠商擅自移除，沈追問施工監督在哪一步失靈。</p>
+
+
+<div class="answers" id="dongmen-tree-answers"><article class="reply" id="dongmen-tree-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">原定移植</strong></div><p class="summary">在結論補充，公園處原要求移植，廠商卻將樹移除，市府事後追究相關人員與廠商責任。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=11578s">看原始發言 3:12:58</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>移植變成移除</h4><p>他在結論補答，公園處一開始交代的是移植，施工廠商卻移除了樹。</p><h4>主管與廠商責任</h4><p>他表示市府已處理相關主管與廠商的責任。</p></div></article><article class="reply green" id="dongmen-tree-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">追問施工程序</strong></div><p class="summary">在交叉詰問追問，移植或施工流程究竟在哪一環出問題，要求市府對外說明。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=8002s">看原始發言 2:13:22</a>　<a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=8179s">看原始發言 2:16:19</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>程序在哪裡失守</h4><p>他先問誤砍發生在作業程序的哪一環，追問既有程序如何建立、執行，以及市府能否把失守的步驟說清楚。</p></div></article></div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="dongmen-tree-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="dongmen-tree-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="dongmen-tree-answers">雙方對照</button><a class="skip" href="#dongmen-tree-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="dongmen-tree-check" aria-labelledby="dongmen-tree-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="dongmen-tree-check-title">公園處公布的施工經過</h2><div class="context-note"><p>原本的計畫是把樹移到別處繼續生長。這起事件要追的不只是廠商有沒有違約，也包括現場收到哪份指令、誰負責確認，以及發現做法改變時有沒有人能及時叫停。</p></div><div class="lens-grid"><div class="lens"><p>公園處表示原先會勘決定移植，但施工廠商未經同意移除，監造也督導不周；機關表示已檢討流程並要求廠商負責。</p><p><a href="https://pwd.gov.taipei/News_Content.aspx?n=5C3C29C78077C93E&amp;s=28831B7E8102EB08&amp;sms=72544237BBE4C5F6">北市工務局｜東門市場茄苳樹說明</a></p></div></div></div></section>
+<section class="report article-section public-voices" id="dongmen-tree-voices" aria-labelledby="dongmen-tree-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="dongmen-tree-voices-title">護樹團體要求說清楚作業程序</h2><p>護樹團體在辯論後要求市府正面說明移植和砍樹的作業程序。針對這起原定移植卻被移除的個案，團體關心的不只是哪一個廠商失誤，也包括施工與監督如何讓偏差發生。</p><p>團體把追問指向移植作業的監督與驗收：既然原本交代移植，為何直到樹木遭移除才處理？這份新聞稿呈現護樹團體對程序的質疑；它不是行政調查報告，不能單憑這份材料認定各人員的法律責任。</p><p class="source-meta">2026-11-02 · 公民行動影音紀錄資料庫 · 台灣樹人會等團體新聞稿／辯論後</p><p class="context-source"><a href="https://www.civilmedia.tw/archives/141925">公民行動影音紀錄資料庫｜護樹團體回應</a></p></div></section>
+<nav class="topic-divider topic-transition" aria-label="題目分隔與導覽"><a href="#environment-index">回題目索引</a></nav>
+<div id="smoke-free" class="stage-anchor"></div>
+<section class="sequence direct-stage" id="smoke-free-stage" aria-labelledby="smoke-free-question"><div class="scene">
+<div class="question"><p><span class="question-number">#21</span> 環境與健康</p><h2 id="smoke-free-question">無菸城市上路前的評估足夠嗎？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣引用試辦評價支持空間分流，沈質疑擴大前的評估是否充足。</p>
+
+
+<div class="answers" id="smoke-free-answers"><article class="reply" id="smoke-free-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">空間分流</strong></div><p class="summary">說明政策要分流吸菸和非吸菸空間，並稱市民正向評價近九成。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=6358s">看原始發言 1:45:58</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>空間分流與正向評價</h4><p>他把吸菸與非吸菸空間分流說成政策核心，並援引接近九成的正向評價。</p><h4>調查資料的說明範圍</h4><p>這段申論沒有交代調查覆蓋的活動與樣本。</p></div></article><article class="reply green" id="smoke-free-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">質疑事前評估</strong></div><p class="summary">質疑評估尚未做完便上路，以公務員排班清點菸蒂為例批評規劃。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=7962s">看原始發言 2:12:42</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>上路前評估</h4><p>他把無菸城市放在政策執行程序的質詢裡，主張上路前的評估尚不完整，並以公務員排班清點菸蒂為例質疑執行規劃。</p></div></article></div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="smoke-free-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="smoke-free-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="smoke-free-answers">雙方對照</button><a class="skip" href="#smoke-free-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="smoke-free-check" aria-labelledby="smoke-free-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="smoke-free-check-title">接近九成的數字，問的是哪裡？</h2><div class="context-note"><p>特定活動的高滿意度能說明受訪者怎麼看當時的場地管理。政策擴大到商圈之後，還可以觀察吸菸有沒有移到周邊巷弄、居民在日常時段的暴露是否減少，以及吸菸區是否有清楚指引。</p></div><div class="lens-grid"><div class="lens"><p>台灣事實查核中心指出，北市調查問的是年貨大街與台北燈節兩處試辦場所的無菸環境，滿意度分別為 91.0% 和 92.3%。這組數字的調查範圍是兩處試辦。</p><p><a href="https://tfc-taiwan.org.tw/election2026/reports/taipei-smoke-free-city-mayor-claim-check">台灣事實查核中心｜無菸城市民調查核</a></p></div></div></div></section>
+<section class="report article-section public-voices" id="smoke-free-voices" aria-labelledby="smoke-free-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="smoke-free-voices-title">高滿意度之外，民眾也反映吸菸區問題</h2><p>聯合報在 2026 年 11 月 24 日引述衛生局委外調查，西門町、迪化街與心中山商圈禁菸滿意度分別為 93.1%、93.5% 與 95.6%。這是辯論之後公布的報導資料，不是兩位候選人在辯論當天已引用的同一組調查；原報導未列完整抽樣方法，解讀時應保留這項限制。</p><p>同篇報導整理的民眾意見並不一致：有人認為菸味減少、孩子較少接觸二手菸；也有人反映吸菸室旁菸味重，或有人站在指定區外吸菸。這些意見指出設點與執行問題，但報導未提供留言者抽樣方式，不能拿來計算支持或反對比例。</p><p class="source-meta">2026-11-24 · 聯合報／林佳彣 · 辯論後／市府調查與民眾反映</p><p class="context-source"><a href="https://udn.com/news/story/6656/9898536">聯合報｜禁菸商圈與民眾反映</a></p></div></section>
+<nav class="topic-divider topic-transition" aria-label="題目分隔與導覽"><a href="#environment-index">回題目索引</a></nav>
+<div id="senior-card" class="stage-anchor"></div>
+<section class="sequence direct-stage" id="senior-card-stage" aria-labelledby="senior-card-question"><div class="scene">
+<div class="question"><p><span class="question-number">#22</span> 環境與健康</p><h2 id="senior-card-question">敬老卡升級後，可以用在哪裡？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣談採買與點數彈性，沈希望用點數支持社區運動。</p>
+
+
+<div class="answers" id="senior-card-answers"><article class="reply" id="senior-card-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">擴大日常消費用途</strong></div><p class="summary">主張擴大至超市、超商、農會及藥局，並讓未用完的點數可累積。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=10537s">看原始發言 2:55:37</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>擴大採買與累積點數</h4><p>他提出隔年讓敬老卡可用於超市、超商、農會與藥局，並讓用不完的點數可以累積。</p><h4>日常使用情境</h4><p>他把擴大用途放在長者日常採買與出行的想像裡。</p></div></article><article class="reply green" id="senior-card-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">支持社區運動</strong></div><p class="summary">主張可用於健身小巴，讓長者就近在社區獲得運動指導、做阻力訓練。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=10709s">看原始發言 2:58:29</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>社區健身小巴</h4><p>他希望把敬老點數用在開到社區的健身小巴，讓長者在近處做阻力訓練。</p><h4>跨專業支持</h4><p>他還提到除了教練，也可結合營養師或物理治療師。</p></div></article></div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="senior-card-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="senior-card-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="senior-card-answers">雙方對照</button><a class="skip" href="#senior-card-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="senior-card-check" aria-labelledby="senior-card-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="senior-card-check-title">既有點數與辯論提案要分開看</h2><div class="context-note"><p>敬老點數加碼會增加可用額度，擴充採買通路或增加健身小巴則會改變點數花在哪裡。對長者而言，附近有沒有合作地點、能不能走到或搭車到，也會影響升級能否真的用上。</p></div><div class="lens-grid"><div class="lens"><p>北市社會局表示，2026 年 7 月起每月敬老點數由 480 點升至 600 點。辯論提到的通路擴充、點數累積及健身小巴，應各自核對後續規則。</p><p><a href="https://www.gov.taipei/News_Content.aspx?n=F0DDAF49B89E9413&amp;s=EFF9CE431990FCDB">臺北市政府｜敬老卡點數調整</a></p></div></div></div></section>
+<section class="report article-section public-voices" id="senior-card-voices" aria-labelledby="senior-card-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="senior-card-voices-title">37 位座談長者的使用經驗</h2><p>市府公開的研究指出，焦點座談中 37 位參與長者都知道並已申辦敬老卡，多數對既有政策給予肯定。座談呈現的是這批使用者的經驗，和日後新增採買或社區運動用途的接受度有別。</p><p>研究節錄記錄，有長者肯定持卡後不必準備零錢；報告也整理出使用仍以交通為主、對擴大使用範圍的資訊接收不足等問題。37 人是焦點座談的參與人數，不能把他們的看法當成全市長者的支持率，也不宜直接解讀為對本次新增採買與運動政見的評價。</p><p class="source-meta">臺北市資料大平臺 · 研究節錄／焦點座談；研究日期待確認</p><p class="context-source"><a href="https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=d827d271-5d05-4c71-a454-8a2582c2a1f7">臺北市資料大平臺｜長者使用經驗研究</a></p></div></section>
+<nav class="topic-divider topic-transition" aria-label="題目分隔與導覽"><a href="#environment-index">回題目索引</a></nav>
+<div id="baolin-food-safety" class="stage-anchor"></div>
+<section class="sequence direct-stage sober" id="baolin-food-safety-stage" aria-labelledby="baolin-food-safety-question"><div class="scene">
+<div class="question"><p><span class="question-number">#23</span> 環境與健康</p><h2 id="baolin-food-safety-question">寶林茶室案後，怎樣改善食安治理？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣談稽查與檢驗改革，沈追問事件發生後誰出面指揮。</p>
+
+
+<div class="answers" id="baolin-food-safety-answers"><article class="reply" id="baolin-food-safety-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">增聘稽查與強化檢驗</strong></div><p class="summary">表示自己連日召開記者會公布進度，並列舉增加稽查人力、設立食因性疾病檢驗組及新增毒素篩檢。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=9250s">看原始發言 2:34:10</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>對外說明與稽查人力</h4><p>他說曾連續六天親自開記者會報告進度，並列舉增加 33 名稽查人力、成立食因性疾病檢驗組、把邦克列酸納入篩檢等措施。</p></div></article><article class="reply green" id="baolin-food-safety-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">追問指揮與出席</strong></div><p class="summary">追問市長身為召集人為何未出席相關會議，並問如果重來是否會在第一時間親自出席。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=7282s">看原始發言 2:01:22</a>　<a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=9186s">看原始發言 2:33:06</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>重大事件中的介入</h4><p>他把寶林案當成市長在重大事件中如何親自介入的例子，問蔣若重來，是否會在第一時間出席相關會議並對外說明缺席原因。</p></div></article></div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="baolin-food-safety-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="baolin-food-safety-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="baolin-food-safety-answers">雙方對照</button><a class="skip" href="#baolin-food-safety-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="baolin-food-safety-check" aria-labelledby="baolin-food-safety-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="baolin-food-safety-check-title">從個案調查到制度改善</h2><div class="context-note"><p>重大食安事件要同時處理通報、採樣、檢驗、對外說明和家屬求助。市長主持了哪些會議是一個責任問題；新增檢驗項目能否更早找出風險，則需要另看通報到採檢的實際時間。</p></div><div class="lens-grid"><div class="lens"><p>監察院曾就寶林茶室食品中毒案調查並提出糾正，公開資料列有改善與處置結果。核對治理成效時，可以區分稽查、檢驗、事件通報及對外說明。</p><p><a href="https://www-ws.cy.gov.tw/Download.ashx?icon=.pdf&amp;n=MDctM%2Bekvi0xLeWvtuael%2BiMtuWupOmjn%2BWTgeS4reavkuahiCgxMTTnpL7oqr8xIDExNOekvuatozEpLnBkZg%3D%3D&amp;u=LzAwMS9VcGxvYWQvMy9yZWxmaWxlLzg5MTUvMzY5NTEvNTZhZjZlODUtYjgzOC00ZGZkLWIyMjEtOTJiODA2YmQ0MTNkLnBkZg%3D%3D">監察院｜寶林茶室案調查與改善</a></p></div></div></div></section>
+<section class="report article-section public-voices" id="baolin-food-safety-voices" aria-labelledby="baolin-food-safety-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="baolin-food-safety-voices-title">消基會為受害消費者提出團體訴訟</h2><p>寶林茶室事件後，消基會為受害消費者提起團體訴訟。從受害者角度來看，食品中毒發生之後，還有損害如何證明、如何求償，以及能不能得到法律協助等問題。</p><p>臺北市政府法務局公布，消基會於 2024 年 12 月 11 日為 30 名受害者及家屬提起團體訴訟，請求約 2.93 億元賠償。這個金額是原告的求償額，並非已獲判賠或已領取金額；團體訴訟呈現事件之後，受害家庭仍需面對的救濟程序。</p><p class="source-meta">2024-12-11提訴 · 臺北市政府法務局 · 團體訴訟進度</p><p class="context-source"><a href="https://dlacp.gov.taipei/News_Content.aspx?n=1C749A1E94FA5646&amp;s=AC60100A10A6E669&amp;sms=1197D4334C609B8E">臺北市政府法務局｜寶林案團體訴訟進度</a></p></div></section>
+<nav class="topic-divider" aria-label="環境與健康章節結尾"><span>環境與健康 · 全章結束</span><a href="#environment-index">回題目索引</a></nav>
+<section class="report chapter-index" id="governance-index" tabindex="-1" aria-labelledby="governance-index-title"><div class="report-inner"><h2 id="governance-index-title">治理與兩岸</h2><nav aria-label="治理與兩岸題目索引"><ol class="topic-list"><li><a href="#mayor-meetings"><span class="index-number">#24</span><span>市長應親自出席哪些市政會議？</span></a></li><li><a href="#city-forum"><span class="index-number">#25</span><span>雙城論壇在什麼條件下可以交流？</span></a></li><li><a href="#fiscal-allocation"><span class="index-number">#26</span><span>《財劃法》增加地方財源，錢該怎麼用？</span></a></li><li><a href="#cash-payments"><span class="index-number">#27</span><span>什麼情況下適合普發現金？</span></a></li><li><a href="#impaired-driving"><span class="index-number">#28</span><span>酒駕、毒駕的重罰和地方預防，雙方各強調什麼？</span></a></li><li><a href="#drug-driving-law"><span class="index-number">#29</span><span>毒駕致死修法，雙方爭點在哪裡？</span></a></li></ol></nav><a href="#top">回議題分類</a></div>
+<div class="index-vignette" role="img" aria-label="市政建築與城市之間交換訊息的示意動畫">
+<div class="civic-link" aria-hidden="true"></div>
+<div class="civic-hall" aria-hidden="true"></div>
+<div class="civic-node" aria-hidden="true" style="--left:10%"></div>
+<div class="civic-node" aria-hidden="true" style="--left:82%"></div>
+<span class="civic-message" aria-hidden="true"></span></div>
+</section>
+<div id="mayor-meetings" class="stage-anchor"></div>
+<section class="sequence direct-stage" id="mayor-meetings-stage" aria-labelledby="mayor-meetings-question"><div class="scene">
+<div class="question"><p><span class="question-number">#24</span> 治理與兩岸</p><h2 id="mayor-meetings-question">市長應親自出席哪些市政會議？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣著重跨局處分工，沈追問市長何時應親自出席。</p>
+
+
+<div class="answers" id="mayor-meetings-answers"><article class="reply" id="mayor-meetings-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">分層負責</strong></div><p class="summary">強調市府分層負責，由局處準備方案，市政會議跨局處決策，市長親自主持治安、道安、公安會報。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=7510s">看原始發言 2:05:10</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>局處與市政會議分工</h4><p>他把市府運作分成局處先擬方案、跨局處再到市政會議決定，並列治安、道安與公安會報為市長親自主持的例子。</p><h4>重大事件專案會議</h4><p>對重大事件，他另主張即刻召開專案會議。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=7322s">補充發言 2:02:02</a></div></article><article class="reply green" id="mayor-meetings-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">檢視市長出席</strong></div><p class="summary">點名托育、毒防、兒少福利及韌性城市相關會議，質疑市長出席情形，要求說明缺席原因。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=7282s">看原始發言 2:01:22</a>　<a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=9186s">看原始發言 2:33:06</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>點名的市政會議</h4><p>他把托育管理、毒品防治、兒少福利、韌性城市等會議分開點名，並追問市長不親自出席時，如何掌握進度及向議會交代。</p></div></article></div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="mayor-meetings-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="mayor-meetings-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="mayor-meetings-answers">雙方對照</button><a class="skip" href="#mayor-meetings-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="mayor-meetings-check" aria-labelledby="mayor-meetings-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="mayor-meetings-check-title">公開紀錄可逐場核對</h2><div class="context-note"><p>看出席率要先知道分母包含哪些會議，以及由副市長或局處代理是否算出席。定期委員會和緊急專案會議也可能做不同決策。把逐場紀錄、主持人和後續執行情況一起看，較能回答市長何時需要介入。</p></div><div class="lens-grid"><div class="lens"><p>北市社會局公開第 11 屆兒少委員會的名冊、會議資料與發言摘要。單場紀錄和跨年度出席率應分開看，計算前也要說清楚會議範圍與代理主持怎麼算。</p><p><a href="https://dosw.gov.taipei/News_Content.aspx?n=D1D232516B2EED94&amp;s=7DD9AD32B22D1E09&amp;sms=DD635AE813AFA1DA">北市社會局｜兒少委員會會議紀錄</a></p></div></div></div></section>
+<section class="report article-section public-voices" id="mayor-meetings-voices" aria-labelledby="mayor-meetings-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="mayor-meetings-voices-title">家長團體要求有機關專責兒少保護</h2><p>剴剴案後，家長倡議團體在集會上呼籲設立專責兒少保護機制。他們關心的是多個機關的保護工作能否有人統籌。這是家長團體公開的制度訴求，與辯論中的市長會議出席率是不同層次的問題。</p><p>集會召集人李侑宭提出的機制，是由專責兒少保護機關統籌檢警、社政、教育與醫療，讓通報與跨系統聯繫更緊密。這項訴求針對保護體系如何分工，並未提供市長各類會議的出席紀錄，也不能直接證明出席與個案結果之間的因果關係。</p><p class="source-meta">2025-05-10 · 中央社／吳欣紜 · 集會倡議</p><p class="context-source"><a href="https://www.cna.com.tw/news/ahel/202505100131.aspx">中央社｜護兒集會訴求</a></p></div></section>
+<nav class="topic-divider topic-transition" aria-label="題目分隔與導覽"><a href="#governance-index">回題目索引</a></nav>
+<div id="city-forum" class="stage-anchor"></div>
+<section class="sequence direct-stage" id="city-forum-stage" aria-labelledby="city-forum-question"><div class="scene">
+<div class="question"><p><span class="question-number">#25</span> 治理與兩岸</p><h2 id="city-forum-question">雙城論壇在什麼條件下可以交流？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣將論壇視為市政交流，沈提出政治、安全與資安條件。</p>
+
+
+<div class="answers" id="city-forum-answers"><article class="reply" id="city-forum-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">維持市政交流</strong></div><p class="summary">將論壇視為市政交流議題，質疑沈過去的滲透疑慮與現在願保留交流框架的說法是否一致。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=8838s">看原始發言 2:27:18</a>　<a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=11666s">看原始發言 3:14:26</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>市長的交流職責</h4><p>他把雙城論壇列在應由台北市長處理的市政議題之中，也以沈先前談滲透風險、後來願保留交流框架的說法追問一致性。</p><h4>停辦條件的說明範圍</h4><p>這段未列出他的停辦條件。</p></div></article><article class="reply green" id="city-forum-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">交流須有條件</strong></div><p class="summary">表示沒有政治前提及資安顧慮時，可以就運動等市政交換資訊。若有共機擾台或軍演威脅，應重新評估。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=8756s">看原始發言 2:25:56</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>可交流的市政項目</h4><p>他以運動驛站為可交換資訊的例子，提出不要設政治前提、要排除資安疑慮，也以共機擾台及軍演情境說明何時應重新評估。</p></div></article></div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="city-forum-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="city-forum-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="city-forum-answers">雙方對照</button><a class="skip" href="#city-forum-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="city-forum-check" aria-labelledby="city-forum-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="city-forum-check-title">籌備往來也涉及入境審查</h2><div class="context-note"><p>論壇至少涉及議程、與會人員及交流成果。支持保留交流框架之後，仍要問有沒有政治前提、涉及哪些資料，以及遇到安全疑慮時誰決定暫停。人員能否入境是籌備的一環，也可獨立查核。</p></div><div class="lens-grid"><div class="lens"><p>中央社報導，北市府為上海市台辦副主任申請來台籌備論壇，陸委會未予准許。城市間有籌備往來，個別人員仍須經審查。</p><p><a href="https://www.cna.com.tw/news/acn/202609230090.aspx">中央社｜論壇籌備與入境申請</a></p></div></div></div></section>
+<section class="report article-section public-voices" id="city-forum-voices" aria-labelledby="city-forum-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="city-forum-voices-title">論壇場外也有人質疑交流風險</h2><p>2024 年雙城論壇在台北舉行時，台灣獨立建國聯盟、台灣北社等團體和部分政黨到場外抗議，表達對統戰風險的疑慮。這是場外參與者的政治立場，未涵蓋全體市民對論壇的態度。</p><p>抗議發生在 2024 年論壇期間，參與者表達的是對交流與統戰風險的政治判斷。這則報導記錄場外抗議者的立場，沒有對所有參與者、支持交流者或全市市民進行抽樣；因此保留它作為一種公開意見，不把它寫成市民一致的結論。</p><p class="source-meta">2024-12-17 · 民視 · 歷史事件／場外抗議</p><p class="context-source"><a href="https://www.ftvnews.com.tw/news/detail/2024C17W0070">民視｜論壇場外抗議</a></p></div></section>
+<nav class="topic-divider topic-transition" aria-label="題目分隔與導覽"><a href="#governance-index">回題目索引</a></nav>
+<div id="fiscal-allocation" class="stage-anchor"></div>
+<section class="sequence direct-stage" id="fiscal-allocation-stage" aria-labelledby="fiscal-allocation-question"><div class="scene">
+<div class="question"><p><span class="question-number">#26</span> 治理與兩岸</p><h2 id="fiscal-allocation-question">《財劃法》增加地方財源，錢該怎麼用？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣強調地方拿到更多財源，沈主張釐清中央與地方的分工和用途。</p>
+
+
+<div class="answers" id="fiscal-allocation-answers"><article class="reply" id="fiscal-allocation-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">地方財源增加</strong></div><p class="summary">強調修法為北市增加財源，追問沈為何曾批評修法，現在又用新增財源規劃政見。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=8838s">看原始發言 2:27:18</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>增加財源與政見</h4><p>他說修法替台北增加財源，並追問沈為何先前批評分配，後來又把這筆財源納入政見。</p><h4>支出比例的說明範圍</h4><p>他在這一段沒有提出逐項支出的比例。</p></div></article><article class="reply green" id="fiscal-allocation-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">先釐清權責與支出</strong></div><p class="summary">表示當時反對的理由包括舉債、權責未同步移轉及預算程序，主張規劃時優先考慮資本支出。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=8901s">看原始發言 2:28:21</a>　<a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=8945s">看原始發言 2:29:05</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>反對修法的理由</h4><p>他把反對理由拆成舉債、錢與責任沒有同步移轉、以及修法增加預算的程序疑義。</p><h4>財源使用方向</h4><p>至於用法，他說會避免先增聘人員，優先考慮資本支出。</p></div></article></div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="fiscal-allocation-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="fiscal-allocation-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="fiscal-allocation-answers">雙方對照</button><a class="skip" href="#fiscal-allocation-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="fiscal-allocation-check" aria-labelledby="fiscal-allocation-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="fiscal-allocation-check-title">分配財源與決定用途是兩道程序</h2><div class="context-note"><p>《財劃法》處理的是中央和地方如何分配財源。台北實際把新增的錢花在哪裡，則要看市府預算與決算。要分辨一次性建設和需要長年負擔的人事、服務，可以把各項支出及後續維運成本放在一起看。</p></div><div class="lens-grid"><div class="lens"><p>立法院研究報告比較不同版本的財源規模與地方財政自主性。要核對台北實際用途，還要看年度預算與後續決算。</p><p><a href="https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=56699&amp;pid=264450">立法院｜財劃法與地方財政研析</a></p></div></div></div></section>
+<section class="report article-section public-voices" id="fiscal-allocation-voices" aria-labelledby="fiscal-allocation-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="fiscal-allocation-voices-title">經民連建議把未分配款用於社福</h2><p>台灣經濟民主連合提出，因公式問題未能分配的約 345 億元統籌分配稅款，可用於全民社福。這是針對全國未分配款的倡議，也把財源用途之爭具體化：爭點除了地方能分到多少，還包括有沒有資源能用於公共服務。</p><p>經民連智庫召集人賴中強主張，這筆未分配款應以追加預算處理，並召開財政國是會議討論中央與地方分工及稅制。報導同時記錄財政部當時的立場：未能分配的款項不能由中央直接移作他用，需要修法處理。兩者分別是團體倡議與主管機關的當時說明，並非已核定的台北市支出計畫。</p><p class="source-meta">2025-10-13 · 中央社／王揚宇 · 民團修法倡議</p><p class="context-source"><a href="https://www.cna.com.tw/news/aipl/202510130131.aspx">中央社｜經民連對財劃法的主張</a></p></div></section>
+<nav class="topic-divider topic-transition" aria-label="題目分隔與導覽"><a href="#governance-index">回題目索引</a></nav>
+<div id="cash-payments" class="stage-anchor"></div>
+<section class="sequence direct-stage" id="cash-payments-stage" aria-labelledby="cash-payments-question"><div class="scene">
+<div class="question"><p><span class="question-number">#27</span> 治理與兩岸</p><h2 id="cash-payments-question">什麼情況下適合普發現金？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣重視現金對消費的影響，沈先看是否舉債和弱勢是否得到照顧。</p>
+
+
+<div class="answers" id="cash-payments-answers"><article class="reply" id="cash-payments-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">帶動地方消費</strong></div><p class="summary">以普發現金能帶動地方消費為理由，將它列為與市政有關的題目，並追問沈先前的批評。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=8838s">看原始發言 2:27:18</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>普發與地方消費</h4><p>他把普發現金與地方消費連在一起，認為這是和市政有關的問題，並要求沈回應先前對普發一萬元的批評。</p><h4>額度與財源的說明範圍</h4><p>這段沒有提出新的發放額度或財源門檻。</p></div></article><article class="reply green" id="cash-payments-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">先看舉債與弱勢照顧</strong></div><p class="summary">表示若已有可用紅利、不必舉債且弱勢已受到照顧，就可以考慮普發。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=8901s">看原始發言 2:28:21</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>三個發放前提</h4><p>他列出三個前提：有可用的 AI 紅利、不必舉債、弱勢已獲照顧。</p><h4>條件成立後的選項</h4><p>他表示在這些條件下，可以考慮普發一萬元等做法。</p></div></article></div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="cash-payments-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="cash-payments-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="cash-payments-answers">雙方對照</button><a class="skip" href="#cash-payments-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="cash-payments-check" aria-labelledby="cash-payments-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="cash-payments-check-title">過往普發的法源與政策目的</h2><div class="context-note"><p><strong>2025 年那次是怎麼發的？</strong> 立法院通過的《因應國際情勢強化經濟社會及民生國安韌性特別條例》第三條第十一款，將每人發放新臺幣一萬元列為措施之一，目的是支持民眾消費、擴大內需。第四條交由編列預算的中央機關訂定資格與執行方式，財政部另訂發放辦法。</p><p><strong>誰能領、怎麼領？</strong> 主要對象包括在臺設有戶籍的國民，以及符合辦法條件的部分居留者。發放方式包括直接入帳、登記入帳、ATM 或郵局領現，以及特定地區造冊發放；一般領取期限到 2026 年 4 月 30 日。</p><p><strong>這和台北市長辯論有什麼關係？</strong> 當年的一萬元是中央透過特別條例與特別預算辦理的措施。若要討論下一次是否普發，仍要另看由誰發、錢從哪來、要不要舉債，以及這筆錢若用於其他服務會有什麼效果。</p><p class="context-source"><a href="https://ppg.ly.gov.tw/ppg/BillThirdReadingPassesClause/download/resources/ppgb32100/D_202508041044520.pdf">立法院｜特別條例原文</a> · <a href="https://gazette.nat.gov.tw/EG_FileManager/eguploadpub/eg031201/ch04/type1/gov30/num5/Eg.pdf">行政院公報｜發放辦法</a></p></div></div></section>
+<section class="report article-section public-voices" id="cash-payments-voices" aria-labelledby="cash-payments-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="cash-payments-voices-title">有人想領一萬元，有人希望先用於重建</h2><p>民視街訪中，有民眾歡迎領取一萬元，也有人認為資金可以拿去協助災後重建或用於台電。同一筆預算在受訪者眼中有不同優先用途。街訪能呈現這些取捨，不能據以估計哪一種看法較多。</p><p>這份街訪沒有交代受訪樣本的抽取方式，也沒有提供全體受訪者的完整比例。主張把錢用於重建或電力的受訪者，提出的是個人的預算優先順序；這不等於相關用途已獲編列，更不能用這段街訪判定全體市民贊成或反對普發。</p><p class="source-meta">民視 · 街頭訪問 · 發布日期尚未確認</p><p class="context-source"><a href="https://www.youtube.com/watch?v=8BUsDvMoO-Q">民視｜普發現金街訪</a></p></div></section>
+<nav class="topic-divider topic-transition" aria-label="題目分隔與導覽"><a href="#governance-index">回題目索引</a></nav>
+<div id="impaired-driving" class="stage-anchor"></div>
+<section class="sequence direct-stage sober" id="impaired-driving-stage" aria-labelledby="impaired-driving-question"><div class="scene">
+<div class="question"><p><span class="question-number">#28</span> 治理與兩岸</p><h2 id="impaired-driving-question">酒駕、毒駕的重罰和地方預防，雙方各強調什麼？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣強調重罰、查緝與家屬訴求，沈強調地方也能從教育和臨檢預防。</p>
+
+
+<div class="answers" id="impaired-driving-answers"><article class="reply" id="impaired-driving-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">重視家屬訴求與查緝</strong></div><p class="summary">主張重視被害者家屬要求加重刑罰的聲音，也以北市查緝和跨局處防毒的作法說明市府作為。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=9350s">看原始發言 2:35:50</a>　<a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=9538s">看原始發言 2:38:58</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>跨局處防制與重罰</h4><p>他說要求警察跨局處防制毒品，也以受害家屬希望加重刑度的聲音說明立場。</p><h4>受害家屬的需求</h4><p>他在追問時把首長是否聽到家屬的需求放在核心。</p></div></article><article class="reply green" id="impaired-driving-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">臨檢、教育與阻斷來源</strong></div><p class="summary">表示接受重刑的方向，但量刑屬中央立法，地方應加強臨檢、校園拒毒教育與阻斷毒品來源。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=9476s">看原始發言 2:37:56</a>　<a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=9646s">看原始發言 2:40:46</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>中央刑罰與地方預防</h4><p>他表示接受重刑方向，但把刑度交由中央立法，地方則要檢視臨檢警力、校園拒毒教育和阻斷來源。</p><h4>早期篩檢及介入</h4><p>他也提到問卷式早期篩檢及介入的方案。</p></div></article></div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="impaired-driving-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="impaired-driving-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="impaired-driving-answers">雙方對照</button><a class="skip" href="#impaired-driving-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="impaired-driving-check" aria-labelledby="impaired-driving-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="impaired-driving-check-title">地方已有預防與戒癮的角色</h2><div class="context-note"><p>刑度是犯罪後的處理，臨檢能在駕駛上路後攔查，教育和治療則處理更早的風險或再犯問題。比較政策時可分開問地方投入了哪些人力、多少人接上服務，以及後續事故和再犯是否有變化。</p></div><div class="lens-grid"><div class="lens"><p>依防制教育與戒癮治療辦法，符合一定條件的違規駕駛，重新考領駕照前須接受教育或治療；地方政府也負責指定部分服務機構。</p><p><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=K0040075">全國法規資料庫｜酒駕毒駕防制教育與治療</a></p></div></div></div></section>
+<section class="report article-section public-voices" id="impaired-driving-voices" aria-labelledby="impaired-driving-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="impaired-driving-voices-title">民間協會把預防與家屬支援一起做</h2><p>臺灣酒駕防制社會關懷協會主張從前端加強防制教育，也將支持受害者及家屬列為工作。這個民團的做法把事故發生前的預防和發生後的支持接在一起。</p><p>協會的計畫把工作分成不同階段：短期提供急難救助與法律諮詢，中期協助心理社會支持、長照與福利資格，長期推動防制教育。這些是民間協會列出的服務內容，讓受害家庭需要的協助更具體，但不是地方政府已全面提供同等服務的證明。</p><p class="source-meta">2025-09-05至2026-09-04計畫期間 · 臺灣酒駕防制社會關懷協會 · 倡議與服務計畫</p><p class="context-source"><a href="https://tadd.org.tw/news701.htm">臺灣酒駕防制社會關懷協會｜防制倡議</a></p></div></section>
+<nav class="topic-divider topic-transition" aria-label="題目分隔與導覽"><a href="#governance-index">回題目索引</a></nav>
+<div id="drug-driving-law" class="stage-anchor"></div>
+<section class="sequence direct-stage sober" id="drug-driving-law-stage" aria-labelledby="drug-driving-law-question"><div class="scene">
+<div class="question"><p><span class="question-number">#29</span> 治理與兩岸</p><h2 id="drug-driving-law-question">毒駕致死修法，雙方爭點在哪裡？</h2></div>
+<p class="stage-brief"><span>一句話看分歧</span> 蔣支持加重再犯刑責，沈質疑部分版本的刑度比例與表決程序。</p>
+
+
+<div class="answers" id="drug-driving-law-answers"><article class="reply" id="drug-driving-law-chiang" data-reply="chiang"><h3>蔣萬安</h3><div class="visual"><strong class="keyword">支持加重再犯刑責</strong></div><p class="summary">指出該次修法對十年內再犯毒駕致死者最高可判死刑，質疑沈沒有參與投票。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=9350s">看原始發言 2:35:50</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>援引三讀版本</h4><p>他援引前一天三讀的版本，指出十年內再犯毒駕致死者最高可處死刑，並質疑沈未參與投票。</p><h4>對投票立場的質疑</h4><p>他把表決立場連結到對受害者的回應。</p></div></article><article class="reply green" id="drug-driving-law-shen" data-reply="shen"><h3>沈伯洋</h3><div class="visual"><strong class="keyword">質疑刑度比例與程序</strong></div><p class="summary">表示民進黨團反對其認為不符比例原則的版本，認為行政院版更完整，並批評表決前的修法程序。</p><a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=9415s">看原始發言 2:36:55</a>　<a href="https://www.youtube.com/watch?v=0IlnD7rfC88&amp;t=9646s">看原始發言 2:40:46</a><div class="reply-detail" hidden><p class="speech-meta">辯論發言整理 · 2026-10-31 · 非逐字稿</p><h4>比例原則與版本選擇</h4><p>他說反對的是不符比例原則的版本，認為行政院版更完整；並以酒駕、毒駕先後順序可能出現不同評價為例，批評條文與最後表決程序。</p></div></article></div><div class="speakers">
+<p class="speaker-hint">（點擊候選人可看更多辯論發言喔！）</p>
+<button type="button" class="speaker" data-select="chiang" aria-pressed="false" aria-controls="drug-driving-law-chiang"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">蔣萬安<small>看完整說法</small></span></button>
+<button type="button" class="speaker green" data-select="shen" aria-pressed="false" aria-controls="drug-driving-law-shen"><span class="character" aria-hidden="true"><span class="body"><span class="tie"></span></span><span class="head"><span class="eyes"></span><span class="mouth"></span></span><span class="hair"></span></span><span class="podium">沈伯洋<small>看完整說法</small></span></button>
+</div>
+<div class="controls"><button type="button" data-select="both" aria-pressed="true" aria-controls="drug-driving-law-answers">雙方對照</button><a class="skip" href="#drug-driving-law-check">看辯論之後的查證</a></div>
+</div></section>
+<section class="report article-section topic-check" id="drug-driving-law-check" aria-labelledby="drug-driving-law-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="drug-driving-law-check-title">從三讀條件到公布條文</h2><div class="context-note"><p>新聞說的最高刑度是特定再犯致死情況的上限。須先符合條文所列前案的確定條件，並在十年內再犯毒駕致死，才進入該刑度範圍。法院仍會依實際案情判斷；修法前的個案也不能直接套用新規定。</p></div><div class="lens-grid"><div class="lens"><p>立法院 2026 年 10 月 30 日三讀修正刑法第 185 條之 3。毒駕累犯十年內再犯致死的最高刑度為死刑，修正條文於 11 月 20 日公布。個案仍須依條文要件與法院判斷。</p><p><a href="https://laws.gov.taipei/Law/LawSearch/LawArticleAmend/FL001424">臺北市法規查詢系統｜刑法第 185 條之 3 修正</a></p></div></div></div></section>
+<section class="report article-section public-voices" id="drug-driving-law-voices" aria-labelledby="drug-driving-law-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="drug-driving-law-voices-title">個案家屬為什麼不接受一審刑度？</h2><p>公視報導，基隆一宗毒駕致死案的一審結果公布後，死者家屬表示無法接受刑度，將爭取上訴。這是家屬對特定判決的回應，發言時並未展開比較辯論中的各修法版本。</p><p>公視記錄，案件發生於 2025 年 12 月，一名七旬男子倒垃圾時遭撞死亡；被告一審獲判七年八個月，家屬表示無法接受、希望爭取上訴。這是當時的一審結果與家屬反應，不是確定判決，也不能將個案宣告刑直接等同於法律允許的最高刑度。</p><p class="source-meta">2026-10-30 · 公視 · 個案一審／家屬反應</p><p class="context-source"><a href="https://news.pts.org.tw/article/833697">公視｜毒駕致死案家屬反應</a></p></div></section>
+<nav class="topic-divider" aria-label="治理與兩岸章節結尾"><span>治理與兩岸 · 全章結束</span><a href="#governance-index">回題目索引</a></nav>
+<footer class="end"><p><a href="#top">回到議題分類</a></p><h2>製作與資料說明</h2><p>本專題為網頁課程作業，以六類議題整理候選人的辯論說法，並搭配公開報導、政府文件與民間意見。候選人回答是摘要與轉述，不是逐字稿；各段附原始影片時間連結。</p><p>辯論資料：2026 年 10 月 31 日台北市長電視辯論<br><a href="https://www.youtube.com/watch?v=0IlnD7rfC88">三立新聞網｜辯論完整版</a><br>本次內容更新：2026 年 11 月 26 日</p><p>企劃與編輯方向：作業製作者<br>資料整理、文字與程式協作：ChatGPT<br>人物、地圖與情境動畫：網頁繪製示意，非新聞現場影像</p><details open><summary>AI 使用聲明</summary><p>本作業使用生成式 AI 協助搜尋公開來源、草擬議題摘要與新聞段落、撰寫 HTML／CSS／JavaScript，以及製作示意圖與動畫。題目選擇、敘事方向與版面調整依製作者的指示逐步完成。</p><p>本頁沒有新增實地採訪。受訪者與團體說法均依所附來源轉述；網路留言、街訪與自辦問卷不視為代表全體市民的民調。歷史個案與辯論後資料已在來源旁標示時間，無法確認的日期也明確註記。</p><p>本次已回查增補段落的公開來源；尚未完成全篇候選人發言與原始影片的逐段人工覆核，因此不宣稱全文已由製作者查證。正式繳交前仍須完成這項覆核，並補上製作者姓名及課程資訊。</p></details></footer>
+</main>
+<script>
+const evidence=document.querySelector("#evidence");
+const comparisonLink=document.querySelector('.skip[href="#evidence"]');
+const liftSections=document.querySelectorAll("#commute,#evidence,#follow-up,.topic-check");
+const mobileStage=matchMedia("(max-width:620px), (hover:none) and (pointer:coarse)");
+document.querySelectorAll(".sequence").forEach(stage=>{
+  const choices=[...stage.querySelectorAll("[data-select]")];
+  const answers=stage.querySelector(".answers");
+  const replies=[...answers.querySelectorAll(".reply")];
+  const metricNote=stage.querySelector(".metric-note");
+  choices.forEach(button=>button.addEventListener("click",()=>{
+    const selection=button.dataset.select;
+    replies.forEach(reply=>{
+      const selected=selection===reply.dataset.reply;
+      reply.hidden=selection!=="both"&&!selected;
+      reply.querySelector(".reply-detail").hidden=!selected;
+    });
+    choices.forEach(choice=>choice.setAttribute("aria-pressed",choice.dataset.select===selection||(selection==="both"&&choice.classList.contains("speaker"))));
+    answers.classList.toggle("single",selection!=="both");
+    if(metricNote) metricNote.hidden=selection!=="both";
+
+    if(selection!=="both"&&mobileStage.matches){
+      const reply=replies.find(card=>card.dataset.reply===selection);
+      const navHeight=document.querySelector(".reading-nav").offsetHeight;
+      const questionHeight=stage.querySelector(".question").offsetHeight;
+      const top=reply.getBoundingClientRect().top-navHeight-questionHeight-12;
+      window.scrollBy({top,behavior:"instant"});
+    }
+
+  }));
+});
+const baselineButtons=[...document.querySelectorAll("[data-baseline]")];
+baselineButtons.forEach(button=>button.addEventListener("click",()=>{
+  baselineButtons.forEach(option=>{
+    const active=option===button;
+    option.setAttribute("aria-pressed",String(active));
+    document.getElementById(option.dataset.baseline).hidden=!active;
+  });
+}));
+const reduced=matchMedia("(prefers-reduced-motion: reduce)");
+if("IntersectionObserver" in window){
+  const sceneObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      entry.target.classList.toggle("is-visible",entry.isIntersecting);
+    });
+  });
+  document.querySelectorAll(".street-divider,.housing-skyline,.industry-scene,.index-vignette,#evidence .chart").forEach(scene=>{
+    sceneObserver.observe(scene);
+  });
+}
+
+const kinmenRoute=document.querySelector(".kinmen-route");
+if("IntersectionObserver" in window&&!reduced.matches){
+  kinmenRoute.classList.add("is-waiting");
+  const routeObserver=new IntersectionObserver(([entry],observer)=>{
+    if(!entry.isIntersecting) return;
+    entry.target.classList.replace("is-waiting","is-playing");
+    observer.disconnect();
+  },{threshold:0.2});
+  routeObserver.observe(kinmenRoute);
+}
+const openingMap=document.querySelector(".opening-map");
+const taiwanMap=openingMap.querySelector(".taiwan-map");
+let frame=0;
+
+function updateStage(){
+  frame=0;
+  openingMap.classList.toggle("is-scroll-enabled",!reduced.matches);
+  const zoomDistance=openingMap.offsetHeight-taiwanMap.offsetHeight;
+  const progress=!reduced.matches&&zoomDistance>0
+    ?Math.max(0,Math.min(1,(48-openingMap.getBoundingClientRect().top)/zoomDistance))
+    :0;
+  const zoom=1+4.2*progress;
+  taiwanMap.style.setProperty("--map-scale",zoom);
+  taiwanMap.style.setProperty("--map-x",(-28*(zoom-1)-28*progress)+"%");
+  taiwanMap.style.setProperty("--map-y",(37*(zoom-1))+"%");
+  taiwanMap.style.setProperty("--marker-scale",1/zoom);
+  liftSections.forEach(section=>{
+    const top=section.getBoundingClientRect().top;
+    const progress=Math.max(0,Math.min(1,1-top/(innerHeight*.65)));
+    const lift=reduced.matches?0:(1-progress)*Math.min(innerHeight*.25,150);
+    section.style.setProperty("--card-lift",lift+"px");
+  });
+}
+
+function schedule(){
+  if(!frame) frame=requestAnimationFrame(updateStage);
+}
+
+document.querySelectorAll(".categories a").forEach(link=>{
+  link.addEventListener("click",event=>{
+    if(event.metaKey||event.ctrlKey||event.shiftKey||event.altKey) return;
+    const target=document.querySelector(link.hash);
+    if(!target) return;
+    event.preventDefault();
+    if(location.hash!==link.hash) history.pushState(null,"",link.hash);
+    target.focus({preventScroll:true});
+    target.scrollIntoView({block:"start",behavior:"instant"});
+  });
+});
+
+comparisonLink.addEventListener("click",event=>{
+  if(event.defaultPrevented||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey) return;
+  event.preventDefault();
+  history.pushState(null,"","#evidence");
+  evidence.focus({preventScroll:true});
+  evidence.scrollIntoView({block:"start",behavior:reduced.matches?"instant":"smooth"});
+});
+addEventListener("scroll",schedule,{passive:true});
+addEventListener("resize",schedule);
+reduced.addEventListener("change",schedule);
+updateStage();
+
+</script>
+</body>
+</html>
