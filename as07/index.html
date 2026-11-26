@@ -292,6 +292,23 @@ body{background:#101010;color:var(--ink)}
 .reply-detail .speech-meta{font-size:.8rem;line-height:1.6;color:#d2c9b9;margin:0 0 10px}
 .public-voices .source-meta{font-size:.85rem;line-height:1.65;text-align:left;color:#d7c7a6;margin-top:22px;margin-bottom:6px}
 .end{max-width:760px;margin-inline:auto}.end p{line-height:1.85}.end h2{font-size:1.35rem}.end details{text-align:left}.end summary{cursor:pointer;font-weight:700}
+
+/* Full-screen closing disclosure; grow naturally on small screens. */
+.end.ai-footer{box-sizing:border-box;width:100%;max-width:none;min-height:100vh;min-height:100svh;margin:0;padding:clamp(40px,7vh,80px) 24px;background:#000;color:#eee;display:flex;align-items:center;border-top:1px solid #8e7746}
+.ai-footer-inner{width:100%;max-width:960px;margin:auto}
+.ai-footer .ai-kicker{color:#ffdb71;font-size:.85rem;letter-spacing:.15em;margin:0 0 14px}
+.ai-footer h2{font-size:clamp(2rem,5vw,3.4rem);line-height:1.2;margin:0 0 18px;color:#fff}
+.ai-footer .ai-intro{max-width:44em;color:#ccc;font-size:1rem;line-height:1.8;margin-bottom:30px}
+.ai-disclosure-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 42px}
+.ai-disclosure-grid section{border-top:1px solid #39352c;padding-top:14px}
+.ai-disclosure-grid h3{font-size:1rem;color:#ffdb71;margin:0 0 9px}
+.ai-disclosure-grid p{font-size:1rem;line-height:1.85;margin:0;text-align:justify}
+.ai-footer-bottom{margin-top:32px;padding-top:20px;border-top:1px solid #39352c;display:flex;align-items:end;justify-content:space-between;gap:20px}
+.ai-footer-bottom p{font-size:.8rem;color:#aaa;line-height:1.8;margin:0}
+.ai-footer-bottom nav{display:flex;flex-wrap:wrap;gap:12px 22px}
+.ai-footer-bottom a{font-size:.9rem;color:#ffdb71;text-underline-offset:5px}
+.ai-footer a:focus-visible{outline:2px solid #ffdb71;outline-offset:5px}
+@media(max-width:650px){.ai-disclosure-grid{grid-template-columns:1fr;gap:22px}.ai-footer-bottom{display:block}.ai-footer-bottom nav{margin-top:18px}.end.ai-footer{padding:48px 22px}}
 </style>
 </head>
 <body><nav class="reading-nav" aria-label="專題導覽"><a href="#top">同一座台北，兩種答案</a><a href="#chapters">六章索引</a></nav>
@@ -902,7 +919,7 @@ body{background:#101010;color:var(--ink)}
 <section class="report article-section topic-check" id="drug-driving-law-check" aria-labelledby="drug-driving-law-check-title"><div class="report-inner"><p class="eyebrow">辯論之後 · 查證</p><h2 id="drug-driving-law-check-title">從三讀條件到公布條文</h2><div class="context-note"><p>新聞說的最高刑度是特定再犯致死情況的上限。須先符合條文所列前案的確定條件，並在十年內再犯毒駕致死，才進入該刑度範圍。法院仍會依實際案情判斷；修法前的個案也不能直接套用新規定。</p></div><div class="lens-grid"><div class="lens"><p>立法院 2026 年 10 月 30 日三讀修正刑法第 185 條之 3。毒駕累犯十年內再犯致死的最高刑度為死刑，修正條文於 11 月 20 日公布。個案仍須依條文要件與法院判斷。</p><p><a href="https://laws.gov.taipei/Law/LawSearch/LawArticleAmend/FL001424">臺北市法規查詢系統｜刑法第 185 條之 3 修正</a></p></div></div></div></section>
 <section class="report article-section public-voices" id="drug-driving-law-voices" aria-labelledby="drug-driving-law-voices-title"><div class="report-inner"><p class="eyebrow">民間觀點</p><h2 id="drug-driving-law-voices-title">個案家屬為什麼不接受一審刑度？</h2><p>公視報導，基隆一宗毒駕致死案的一審結果公布後，死者家屬表示無法接受刑度，將爭取上訴。這是家屬對特定判決的回應，發言時並未展開比較辯論中的各修法版本。</p><p>公視記錄，案件發生於 2025 年 12 月，一名七旬男子倒垃圾時遭撞死亡；被告一審獲判七年八個月，家屬表示無法接受、希望爭取上訴。這是當時的一審結果與家屬反應，不是確定判決，也不能將個案宣告刑直接等同於法律允許的最高刑度。</p><p class="source-meta">2026-10-30 · 公視 · 個案一審／家屬反應</p><p class="context-source"><a href="https://news.pts.org.tw/article/833697">公視｜毒駕致死案家屬反應</a></p></div></section>
 <nav class="topic-divider" aria-label="治理與兩岸章節結尾"><span>治理與兩岸 · 全章結束</span><a href="#governance-index">回題目索引</a></nav>
-<footer class="end"><p><a href="#top">回到議題分類</a></p><h2>製作與資料說明</h2><p>本專題為網頁課程作業，以六類議題整理候選人的辯論說法，並搭配公開報導、政府文件與民間意見。候選人回答是摘要與轉述，不是逐字稿；各段附原始影片時間連結。</p><p>辯論資料：2026 年 10 月 31 日台北市長電視辯論<br><a href="https://www.youtube.com/watch?v=0IlnD7rfC88">三立新聞網｜辯論完整版</a><br>本次內容更新：2026 年 11 月 26 日</p><p>企劃與編輯方向：作業製作者<br>資料整理、文字與程式協作：ChatGPT<br>人物、地圖與情境動畫：網頁繪製示意，非新聞現場影像</p><details open><summary>AI 使用聲明</summary><p>本作業使用生成式 AI 協助搜尋公開來源、草擬議題摘要與新聞段落、撰寫 HTML／CSS／JavaScript，以及製作示意圖與動畫。題目選擇、敘事方向與版面調整依製作者的指示逐步完成。</p><p>本頁沒有新增實地採訪。受訪者與團體說法均依所附來源轉述；網路留言、街訪與自辦問卷不視為代表全體市民的民調。歷史個案與辯論後資料已在來源旁標示時間，無法確認的日期也明確註記。</p><p>本次已回查增補段落的公開來源；尚未完成全篇候選人發言與原始影片的逐段人工覆核，因此不宣稱全文已由製作者查證。正式繳交前仍須完成這項覆核，並補上製作者姓名及課程資訊。</p></details></footer>
+<footer class="end ai-footer" id="ai-disclosure" aria-labelledby="ai-disclosure-title"><div class="ai-footer-inner"><p class="ai-kicker">關於這份數位敘事</p><h2 id="ai-disclosure-title">AI 使用聲明</h2><p class="ai-intro">本專題使用 ChatGPT 協助內容整理與網頁製作，以下說明人與 AI 的分工，以及資料使用的範圍。</p><div class="ai-disclosure-grid"><section><h3>內容與資料</h3><p>AI 協助搜尋公開資料、整理候選人說法、草擬新聞段落及來源註記。候選人回答為摘要與轉述，非逐字稿；原始影片與報導連結附於各題。</p></section><section><h3>程式與視覺</h3><p>AI 協助撰寫 HTML、CSS 與 JavaScript，製作候選人切換、滾動效果、數據圖表與情境動畫。Q 版人物、地圖及動畫為示意素材，非新聞現場影像。</p></section><section><h3>製作者的角色</h3><p>製作者決定選題、議題分類、敘事方向與互動需求，並在製作過程中提出內容與版面修正。最終編輯取捨及繳交內容由製作者負責。</p></section><section><h3>來源與查核範圍</h3><p>本頁未進行實地採訪；民眾與團體意見依公開來源轉述。已回查本次增補段落的來源，但全篇候選人發言尚未完成與影片的逐段人工覆核，不宣稱全文已查證。</p></section></div><div class="ai-footer-bottom"><p>課程：網頁設計與敘事 · 作者：何妍萱<br>AI 協作工具：ChatGPT<br>內容更新：2026 年 11 月 26 日 · 辯論資料：2026 年 10 月 31 日</p><nav aria-label="頁尾導覽"><a href="https://www.youtube.com/watch?v=0IlnD7rfC88" target="_blank" rel="noopener">辯論原始影片</a><a href="#top">回到議題分類</a></nav></div></div></footer>
 </main>
 <script>
 const evidence=document.querySelector("#evidence");
